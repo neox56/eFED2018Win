@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "f66b154a-dfb5-458c-a523-b16d3703a70c",
+		"name": "Postman-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "current weather -Izhevsk for 5 days",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/forecast?q=Izhevsk,ru&mode=xml&=&APPID=e33262cd6a432b1c3dc5181a736dbc41",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Izhevsk,ru"
+						},
+						{
+							"key": "mode",
+							"value": "xml"
+						},
+						{
+							"key": "",
+							"value": ""
+						},
+						{
+							"key": "APPID",
+							"value": "e33262cd6a432b1c3dc5181a736dbc41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "current weather-Paris for 5 days",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/forecast?q=Paris,fr&mode=xml&=&APPID=e33262cd6a432b1c3dc5181a736dbc41",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Paris,fr"
+						},
+						{
+							"key": "mode",
+							"value": "xml"
+						},
+						{
+							"key": "",
+							"value": ""
+						},
+						{
+							"key": "APPID",
+							"value": "e33262cd6a432b1c3dc5181a736dbc41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "current weather-Washington for 5 days",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/forecast?q= Washington,us&mode=xml&=&APPID=e33262cd6a432b1c3dc5181a736dbc41",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": " Washington,us"
+						},
+						{
+							"key": "mode",
+							"value": "xml"
+						},
+						{
+							"key": "",
+							"value": ""
+						},
+						{
+							"key": "APPID",
+							"value": "e33262cd6a432b1c3dc5181a736dbc41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "current weather -Izhevsk -25.11.18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Izhevsk,ru&APPID=e33262cd6a432b1c3dc5181a736dbc41\n",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Izhevsk,ru"
+						},
+						{
+							"key": "APPID",
+							"value": "e33262cd6a432b1c3dc5181a736dbc41\n"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "current weather -Paris -25.11.18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Paris,fr&APPID=e33262cd6a432b1c3dc5181a736dbc41\n",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Paris,fr"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "APPID",
+							"value": "e33262cd6a432b1c3dc5181a736dbc41\n"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "current weather -Washington -25.11.18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Washington,us&APPID=e33262cd6a432b1c3dc5181a736dbc41\n",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Washington,us"
+						},
+						{
+							"key": "APPID",
+							"value": "e33262cd6a432b1c3dc5181a736dbc41\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "air pollution - Izhevsk 25.11.18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=e33262cd6a432b1c3dc5181a736dbc41\n",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"pollution",
+						"v1",
+						"co",
+						"56,53",
+						"current.json"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "e33262cd6a432b1c3dc5181a736dbc41\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "air pollution - Paris 25.11.18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/pollution/v1/co/48,2/current.json?appid=e33262cd6a432b1c3dc5181a736dbc41\n",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"pollution",
+						"v1",
+						"co",
+						"48,2",
+						"current.json"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "e33262cd6a432b1c3dc5181a736dbc41\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "air pollution - Washington 25.11.18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/pollution/v1/co/38,-77/current.json?appid=e33262cd6a432b1c3dc5181a736dbc41\n",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"pollution",
+						"v1",
+						"co",
+						"38,-77",
+						"current.json"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "e33262cd6a432b1c3dc5181a736dbc41\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
