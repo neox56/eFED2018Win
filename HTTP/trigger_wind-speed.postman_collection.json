@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "c7167fb8-cfa1-4456-85ce-68f20d7db8ea",
+		"name": "trigger_wind-speed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST_wind_speed -Izhevsk",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"time_period\":{\r\n      \"start\":{\r\n         \"expression\":\"after\",\r\n         \"amount\":132000000\r\n      },\r\n      \"end\":{\r\n         \"expression\":\"after\",\r\n         \"amount\":432000000\r\n      }\r\n   },\r\n   \"conditions\":[\r\n      {\r\n         \"name\":\"wind_speed\",\r\n         \"expression\":\"$gt\",\r\n         \"amount\":5\r\n      }\r\n   ],\r\n   \"area\":[\r\n      {\r\n         \"type\":\"Point\",\r\n         \"coordinates\":[\r\n            53,\r\n            37\r\n         ]\r\n      }\r\n   ]\r\n}"
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/triggers?APPID=e33262cd6a432b1c3dc5181a736dbc41\n",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"triggers"
+					],
+					"query": [
+						{
+							"key": "APPID",
+							"value": "e33262cd6a432b1c3dc5181a736dbc41\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_wind_speed - Izhevsk",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/triggers/5bfc466f5a7ec2001a8b97db?APPID=e33262cd6a432b1c3dc5181a736dbc41\n",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"triggers",
+						"5bfc466f5a7ec2001a8b97db"
+					],
+					"query": [
+						{
+							"key": "APPID",
+							"value": "e33262cd6a432b1c3dc5181a736dbc41\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
