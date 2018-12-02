@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Dmitriy Smolin", name="keywords" content="Izhevsk,weather,today,five days,history weather">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Погода в Ижевске</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu">
+            <ul>
+                <li> <a href="#">Сегодня</a> </li>
+                <li style="width:88px;"><a href="#">5 дней</a> </li>
+                <li style="width:178px;height:32px"> <a href="#">История погоды</a> </li>
+            </ul>
+        </div>
+        <div class="both"></div>
+        <div class="logo">
+            <p>Загрязнение воздуха:8.168363052618588e-8</p>
+            <form action="#"></form>
+            <input  type="search"  placeholder= "Поиск" >
+           <button  type="button"></button>
+            </form>
+        </div>
+    </div>
+    <div class="content">
+        <div class=left_block>
+            <p>Ижевск, Россия </br>среда </br>облачно</p>
+            <img src="img/Sunny Weather.png" alt="Sunny Weather 22*C">
+
+            <span>22&#176C</span>
+        </div>
+        
+        <div class="right_block">
+            <p>Вероятность осадков: 20%<br>
+                Влажность: 45%<br>
+                Ветер: 11 км/ч
+            </p>
+            <div class="weather_parametrs">
+                <form action="#">
+                    <ul>
+                        <li id="t"><button  class="weather_button">Температура</button> </li>
+                        <li id="r"> <button class="weather_button_optimize">Вероятность</br>осадков</button> </li>
+                        <li id="w"><button class="weather_button">Ветер</button> </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="both"></div>
+        
+        <div bottom_block>
+            <img class="temperature" src="img/temperature.jpg" alt="temperature graph">
+            <img class="rainfall" src="img/rainfall.jpg" alt="graph rainfall">
+            <img class="wind" src="img/wind.jpg" alt=" graph wind">
+             <div class="icons_weather">
+            <span id="wed"><img class="border" src="img/wednesday.jpg" alt="weather on wednesday"></span>
+            <span id="th"><img class="border" src="img/thursday.jpg" alt="weather on thursday"></span>
+            <span id="fr"><img class="border" src="img/friday.jpg" alt="weather on friday"></span>
+            <span id="sa"><img class="border" src="img/saturday.jpg" alt="weather on saturday"></span>
+            <span id="su"><img class="border" src="img/sunday.jpg" alt="weather on sunday"></span>
+            <span id="mo"><img class="border" src="img/monday.jpg" alt="weather on monday"></span>
+            <span id="tu"><img class="border" src="img/tuesday.jpg" alt="weather on tuesday"></span>
+            <span id="wed2"><img class="border" src="img/wednesday2.jpg" alt="weather on wednesday"></span>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <p>2018 &copy Copyright</p>
+    </div>
+</body>
+
+</html>
