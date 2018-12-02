@@ -203,3 +203,11 @@ margin-left: -5px;
 .footer{
     border:1px solid    #ccc
 }
+.footer p{
+    text-align:center;
+    font-size:20px;
+}
+
+    .border:hover{
+       outline: 3px solid #ccc
+    }
