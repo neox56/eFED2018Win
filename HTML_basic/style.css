@@ -94,3 +94,112 @@ body{
     margin-top: 35px;
     font-size:33px;
 }
+.right_block{
+    float: right;
+}
+.right_block p{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 30px;
+    font-size: 33px;
+    line-height: 39px;
+    right: 229px;
+}
+    
+.weather_parametrs{
+    position: relative;
+    top: 47px;
+    right: 286px;
+}
+.weather_button{
+    width: 101%;
+    padding: 13px;
+}
+.weather_button_optimize{
+    width: 101%;
+    padding: 6px;
+}
+.weather_parametrs ul  {
+   margin:0;
+}
+.weather_parametrs ul li {
+    text-align:center;
+    
+    margin-top:25px;
+    float:left;;
+    margin-left:20px;
+    list-style-type: none;
+    border:1px solid #ccc;
+    
+}
+.weather_parametrs ul li a {
+   display:block;
+    text-decoration: none;
+   color:black;
+   height: 100%;
+   font-size: 17px;
+    padding-top: 5px;
+}
+   #t{
+    width: 130px;
+    line-height: 38px
+   }
+   #r{
+    width: 130px;
+    
+   }
+   #w{
+    width: 108px;
+    line-height: 38px;
+   }
+ .temperature{
+    position: relative;
+    top: 145px;
+    left: 43px;
+}
+.rainfall{
+    position: relative;
+    top: 159px;
+    left: 22px;
+}
+.wind{
+    
+        position: relative;
+        top: 185px;
+        left: 61px;
+    }
+
+.icons_weather{
+    margin-top:200px;
+}
+#wed{
+    margin-left: 25px;
+}
+#th{
+  margin-left: -3px;
+}
+#fr{
+margin-left: -5px;
+}
+#sa{
+    margin-left: -5px;
+
+}
+#su{
+    margin-left:-6px;
+} 
+#mo{
+    margin-left: -4px;
+}
+
+
+#tu{
+    margin-left: 1px;
+}
+#wed2{
+    margin-left: -4px;
+}
+.footer{
+    border:1px solid    #ccc
+}
