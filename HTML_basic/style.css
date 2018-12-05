@@ -172,6 +172,7 @@ body {
 }
 
 .weather_parametrs ul li a {
+<<<<<<< HEAD
 	display: block;
 	text-decoration: none;
 	color: black;
@@ -590,3 +591,84 @@ body {
 	text-align: center;
 	font-size: 20px;
 }
+=======
+   display:block;
+    text-decoration: none;
+   color:black;
+   height: 100%;
+   font-size: 17px;
+    padding-top: 5px;
+}
+   #t{
+    width: 130px;
+    line-height: 38px
+   }
+   #r{
+    width: 130px;
+    
+   }
+   #w{
+    width: 108px;
+    line-height: 38px;
+   }
+ .temperature{
+    position: relative;
+    top: 145px;
+    left: 43px;
+}
+.rainfall{
+    position: relative;
+    top: 159px;
+    left: 22px;
+}
+.wind{
+    
+        position: relative;
+        top: 185px;
+        left: 61px;
+    }
+
+.icons_weather{
+    margin-top:200px;
+}
+#wed{
+    margin-left: 25px;
+}
+#th{
+  margin-left: -3px;
+}
+#fr{
+margin-left: -5px;
+}
+#sa{
+    margin-left: -5px;
+
+}
+#su{
+    margin-left:-6px;
+} 
+#mo{
+    margin-left: -4px;
+}
+
+
+#tu{
+    margin-left: 1px;
+}
+#wed2{
+    margin-left: -4px;
+}
+.footer{
+    border:1px solid    #ccc
+}
+.footer p{
+    text-align:center;
+    font-size:20px;
+}
+
+    .border:hover{
+       
+       outline: 3px solid #cccъ
+       
+    }
+>>>>>>> browser_tool_task
