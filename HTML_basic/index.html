@@ -13,7 +13,9 @@
     <div class="header">
         <div class="menu">
             <ul>
-                <li><a href="#">Сегодня</a> </li>
+                <li>
+                    <a href="#">Сегодня</a>
+                </li>
                 <li id="five_days"><a href="#">5 дней</a> </li>
                 <li id="weather_history"><a href="#">История погоды</a> </li>
             </ul>
@@ -68,25 +70,63 @@
                 <img class="rainfall_graph" src="img/rainfall.jpg" alt="rainfall graph ">
                 <img class="wind_graph" src="img/wind.jpg" alt=" wind graph ">
             </div>
-            <div class="time">
-                <span id="time_wed">17:00</span>
-                <span id="time_th">20:00</span>
-                <span id="time_fr">23:00</span>
-                <span id="time_sa">2:00</span>
-                <span id="time_su"> 5:00</span>
-                <span id="time_mo">8:00</span>
-                <span id="time_tu">11:00</span>
-                <span id="time_wed2">14:00</span>
-            </div>
-            <div class="icons_weather">
-                <span id="wed"><img class="border" src="img/wednesday.jpg" alt="weather on wednesday"></span>
-                <span id="th"><img class="border" src="img/thursday.jpg" alt="weather on thursday"></span>
-                <span id="fr"><img class="border" src="img/friday.jpg" alt="weather on friday"></span>
-                <span id="sa"><img class="border" src="img/saturday.jpg" alt="weather on saturday"></span>
-                <span id="su"><img class="border" src="img/sunday.jpg" alt="weather on sunday"></span>
-                <span id="mo"><img class="border" src="img/monday.jpg" alt="weather on monday"></span>
-                <span id="tu"><img class="border" src="img/tuesday.jpg" alt="weather on tuesday"></span>
-                <span id="wed2"><img class="border" src="img/wednesday2.jpg" alt="weather on wednesday"></span>
+            <div class="weather_week">
+                <div class=day_week_wednesday>
+                    <span id="time_wed">17:00</span>
+                    <span id="wed_cloudy"><img class="border" src=img/cloudy.jpeg alt="weather on wednesday"></span>
+                    <span id="name_day_wed">ср</span>
+                    <span id="big_grade_wed">22&#176</span>
+                    <span id="small_grade_wed">13&#176</span>
+                </div>
+                <div class=day_week_thursday>
+                    <span id="time_thu">20:00</span>
+                    <span id="thu_rainy"><img class="border" src=img/rainy.jpeg alt="weather on thursday"></span>
+                    <span id="name_day_thu">чт</span>
+                    <span id="big_grade_thu">21&#176</span>
+                    <span id="small_grade_thu"> 11&#176</span>
+                </div>
+                <div class=day_week_friday>
+                    <span id="time_fr">20:00</span>
+                    <span id="fr_sunny"><img class="border" src=img/sunny.jpeg alt="weather on friday"></span>
+                    <span id="name_day_fr">пт</span>
+                    <span id="big_grade_fr">21&#176</span>
+                    <span id="small_grade_fr">12&#176</span>
+                </div>
+                <div class=day_week_saturday>
+                    <span id="time_sa">2:00</span>
+                    <span id="sa_rainy"><img class="border" src=img/very_rainy.jpeg alt="weather on saturday"></span>
+                    <span id="name_day_sa">сб</span>
+                    <span id="big_grade_sa">21&#176</span>
+                    <span id="small_grade_sa">13&#176</span>
+                </div>
+                <div class=day_week_sunday>
+                    <span id="time_su">5:00</span>
+                    <span id="su_sunny"><img class="border" src=img/sunny.jpeg alt="weather on sunday"></span>
+                    <span id="name_day_su">вс</span>
+                    <span id="big_grade_su">27&#176</span>
+                    <span id="small_grade_su">14&#176</span>
+                </div>
+                <div class=day_week_monday>
+                    <span id="time_mo">8:00</span>
+                    <span id="mo_sunny"><img class="border" src=img/sunny.jpeg alt="weather on monday"></span>
+                    <span id="name_day_mo">пн</span>
+                    <span id="big_grade_mo">28&#176</span>
+                    <span id="small_grade_mo">14&#176</span>
+                </div>
+                <div class=day_week_tuesday>
+                    <span id="time_tu">11:00</span>
+                    <span id="tue_rainy"><img class="border" src=img/very_rainy.jpeg alt="weather on tuesday"></span>
+                    <span id="name_day_tu">вт</span>
+                    <span id="big_grade_tu">28&#176</span>
+                    <span id="small_grade_tu">14&#176</span>
+                </div>
+                <div class=day_week_wednesday_last>
+                    <span id="time_wed_last">14:00</span>
+                    <span id="wed_last_sunny"><img class="border" src=img/sunny.jpeg alt="weather on wednesday"></span>
+                    <span id="name_day_wed_last">ср</span>
+                    <span id="big_grade_wed_last">28&#176</span>
+                    <span id="small_grade_wed_last"> 14&#176</span>
+                </div>
             </div>
         </div>
     </div>
