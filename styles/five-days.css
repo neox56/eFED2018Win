@@ -1,0 +1,264 @@
+.city_weather {
+	width: 100%;
+	margin-top: 50px;
+	border-top: 1px solid #979797;
+	height: 49px;
+	background-color: #f2f2f2
+}
+
+.city_weather span {
+	float: left;
+	margin: 13px 0px 0px 16px;
+	font-size: 20px;
+}
+
+.city_weather input[type="search"] {
+	float: right;
+	margin: 8px 26px 0px 0px;
+	height: 34px;
+	padding-left: 27px;
+	border-radius: 7px;
+	border-color: #ccc;
+	background-color: #e4e4e4
+}
+
+.city_weather button:focus {
+	outline: none;
+}
+
+.city_weather input[type="search"]:focus {
+	outline: none;
+}
+
+.city_weather button {
+	float: right;
+	border: none;
+	cursor: pointer;
+	height: 21px;
+	width: 19px;
+	margin-top: 15px;
+	margin-right: -25px;
+	background-image: url(../assets/loupe.png);
+}
+
+.city_weather_img {
+	margin-top: -5px;
+}
+
+.content {
+	margin-left: 34px;
+}
+
+.container_day_week {
+	height: 21px;
+	text-align: center;
+	margin: 15px 0px 0px 15px;
+	width: 902px;
+}
+
+#border_right {
+	border-right: none;
+}
+
+.day {
+	border: 1px solid #9b9b9b;
+	font-size: 17px;
+	float: left;
+	width: 127.2px;
+	padding: 5px 26.8px 0px 25px;
+	border-bottom: none;
+	height: 22px;
+}
+
+.container_time_day {
+	height: 103px;
+	text-align: center;
+	margin-left: 14.5px;
+}
+
+.part_day {
+	border: 1px solid #9b9b9b;
+	font-size: 12.4px;
+	float: left;
+	padding: 0px 7.8px 0px 2px;
+	height: 95px;
+}
+
+.part_day p {
+	margin: 0;
+	text-align: center;
+	margin: 5px 0px 0px 7px;
+}
+
+.part_day p span {
+	padding-right: 11px;
+	display: inline-block;
+	width: 25px;
+	font-size: 14px;
+}
+
+.figure_fixed {
+	margin: 0;
+}
+
+.green {
+	border: 1px solid #9b9b9b;
+	background-color: greenyellow;
+}
+
+.yellow {
+	border: 1px solid #9b9b9b;
+	background-color: yellow;
+}
+
+.orange {
+	border: 1px solid #9b9b9b;
+	background-color: orange;
+}
+
+.max_wind_speed {
+	text-align: center;
+	border: 1px solid #9b9b9b;
+	margin-left: 14.6px;
+	width: 899px;
+	padding: 4px 0px 4px 0px;
+	background-color: #d8d8d8;
+}
+
+.wind_speed_value {
+	height: 39px;
+	width: 901px;
+	text-align: center;
+	margin-left: 15.5px;
+}
+
+.wind_speed_value .square {
+	height: 18px;
+	display: inline-block;
+	width: 25px;
+	margin: 12px 7px 0px 7px;
+	width: 27px;
+	height: 15px;
+	transform: skew(-40deg);
+	background: #D4D5DA
+}
+
+.wind_speed_value span {
+	border: 1px solid #9b9b9b;
+	font-size: 17px;
+	height: 38px;
+	width: 179.2px;
+	float: left;
+	margin-left: -1px;
+	margin-top: -1px;
+}
+
+.wind_speed_value span mark {
+	transform: skew(40deg);
+	display: block;
+	margin: 0;
+	width: -23px;
+	padding: -14px;
+	margin-left: -14px;
+	margin-top: -2px;
+	height: 0;
+	background-color: #D4D5DA;
+}
+
+.rainfall {
+	text-align: center;
+	border: 1px solid #9b9b9b;
+	margin-left: 15px;
+	width: 899px;
+	margin-top: -1px;
+	padding: 4px 0px 4px 0px;
+	background-color: #d8d8d8;
+}
+
+.rainfall_value {
+	width: 901px;
+	height: 84px;
+	margin-left: 16px;
+}
+
+.rainfall_value span {
+	border: 1px solid #9b9b9b;
+	font-size: 17px;
+	height: 37px;
+	width: 179.1px;
+	float: left;
+	margin-left: -1px;
+	margin-top: -1px;
+	padding-top: 47px;
+}
+
+.rainfall_value p {
+	display: inline-block;
+	margin: 0px 12px 0px 12px;
+}
+
+.chart_small {
+	background-image: url(../assets/Group.png);
+	margin: 12px 7px 0px 7px;
+	height: 18px;
+	display: inline-block;
+	width: 27px;
+}
+
+.chart_big {
+	background-image: url(../assets/Group_2.png);
+	margin: 12px 7px 0px 7px;
+	height: 18px;
+	display: inline-block;
+	width: 26px;
+	height: 38px;
+	line-height: 57px;
+}
+
+.calendar_sun_moon {
+	border: 1px solid #9b9b9b;
+	width: 899px;
+	margin: 12px 0px 0px 15px;
+	height: 36px;
+	background-color: #f1f1f1;
+}
+
+.calendar_day {
+	float: left;
+	font-size: 18px;
+	margin: 8px 0px 0px 8px;
+}
+
+.sun_moon {
+	margin: 8px 395px 0px 0px;
+	float: right;
+	font-size: 18px;
+}
+
+.sun_settings,
+.moon_settings {
+	display: inline-block;
+}
+
+.sun_settings figcaption {
+	margin: 10px 0px 0px 26px;
+	font-size: 17px;
+}
+
+.moon_settings figcaption {
+	margin: 10px 0px 0px 46px;
+	font-size: 17px;
+}
+
+.settings_value {
+	float: right;
+	margin: 1px 0px 0px 22px;
+	line-height: 42px;
+	font-size: 18px;
+}
+
+.day_lenght,
+.sunrise,
+.sunset {
+	display: block;
+}
