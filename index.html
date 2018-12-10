@@ -7,7 +7,7 @@
   <meta name="keywords" content="Izhevsk,weather,today,five days,history weather">
   <title>Прогноз погоды на пять дней</title>
   <link rel="stylesheet" href="styles/five-days.css">
-  <style type="text/css">@import url("styles/all.css");</style>
+  <style type="text/css"> @import url("styles/all.css");</style>
 </head>
 
 <body>
@@ -29,9 +29,9 @@
     </section>
   </header>
   <main class="content">
-    <article>
+    <header>
       <h1>Пятидневный прогноз погоды</h1>
-    </article>
+    </header>
     <section class="container_day_week">
       <span class="day" id="border_right">Пт, 18 мая</span>
       <span class="day" id="border_right">Сб, 19 мая</span>
@@ -40,7 +40,7 @@
       <span class="day">Вт, 22 мая</span>
     </section>
     <section class="container_time_day">
-      <span class="part_day" id="border_right">
+      <section class="part_day" id="border_right">
         <p>
           <span>Ночь</span>
           <span>Утро</span>
@@ -59,8 +59,8 @@
           <span class="orange">+21</span>
           <span class="yellow">+17</span>
         </p>
-      </span>
-      <span class="part_day" id="border_right">
+      </section>
+      <section class="part_day" id="border_right">
         <p>
           <span>Ночь</span>
           <span>Утро</span>
@@ -79,8 +79,8 @@
           <span class="orange">+21</span>
           <span class="yellow">+17</span>
         </p>
-      </span>
-      <span class="part_day" id="border_right">
+      </section>
+      <section class="part_day" id="border_right">
         <p>
           <span>Ночь</span>
           <span>Утро</span>
@@ -99,8 +99,8 @@
           <span class="orange">+21</span>
           <span class="yellow">+17</span>
         </p>
-      </span>
-      <span class="part_day" id="border_right">
+      </section>
+      <section class="part_day" id="border_right">
         <p>
           <span>Ночь</span>
           <span>Утро</span>
@@ -119,8 +119,8 @@
           <span class="orange">+21</span>
           <span class="yellow">+17</span>
         </p>
-      </span>
-      <span class="part_day">
+      </section>
+      <section class="part_day">
         <p>
           <span>Ночь</span>
           <span>Утро</span>
@@ -139,83 +139,82 @@
           <span class="orange">+21</span>
           <span class="yellow">+17</span>
         </p>
-      </span>
+      </section>
     </section>
     <section class="max_wind_speed">
       <span>Максимальная скорость ветра, м/с</span>
     </section>
     <section class="wind_speed_value">
-      <span>
-        <p class="square"><mark>2</mark></p>
-        <p class="square"><mark>3</mark></p>
-        <p class="square"><mark>4</mark></p>
-        <p class="square"><mark>5</mark></p>
-      </span>
-      <span>
-        <p class="square"><mark>2</mark></p>
-        <p class="square"><mark>3</mark></p>
-        <p class="square"><mark>4</mark></p>
-        <p class="square"><mark>5</mark></p>
-      </span>
-      <span>
-        <p class="square"><mark>2</mark></p>
-        <p class="square"><mark>3</mark></p>
-        <p class="square"><mark>4</mark></p>
-        <p class="square"><mark>5</mark></p>
-      </span>
-      <span>
-        <p class="square"><mark>2</mark></p>
-        <p class="square"><mark>3</mark></p>
-        <p class="square"><mark>4</mark></p>
-        <p class="square"><mark>5</mark></p>
-      </span>
-      <span>
-        <p class="square"><mark>2</mark></p>
-        <p class="square"><mark>3</mark></p>
-        <p class="square"><mark>4</mark></p>
-        <p class="square"><mark>5</mark></p>
-      </span>
+      <p>
+        <span class="square"><mark>2</mark></span>
+        <span class="square"><mark>3</mark></span>
+        <span class="square"><mark>4</mark></span>
+        <span class="square"><mark>5</mark></span>
+        <p>
+          <span class="square"><mark>2</mark></span>
+          <span class="square"><mark>3</mark></span>
+          <span class="square"><mark>4</mark></span>
+          <span class="square"><mark>5</mark></span>
+        </p>
+        <p>
+          <span class="square"><mark>2</mark></span>
+          <span class="square"><mark>3</mark></span>
+          <span class="square"><mark>4</mark></span>
+          <span class="square"><mark>5</mark></span>
+        </p>
+        <p>
+          <span class="square"><mark>2</mark></span>
+          <span class="square"><mark>3</mark></span>
+          <span class="square"><mark>4</mark></span>
+          <span class="square"><mark>5</mark></span>
+        </p>
+        <p>
+          <span class="square"><mark>2</mark></span>
+          <span class="square"><mark>3</mark></span>
+          <span class="square"><mark>4</mark></span>
+          <span class="square"><mark>5</mark></span>
+        </p>
     </section>
     <section class="rainfall">
       <span>Осадки, мм</span>
     </section>
     <section class="rainfall_value">
-      <span>
-        <p>0</p>
-        <p>0</p>
-        <p class="chart_small">2.2</p>
-        <p class="chart_big">4.6</p>
-      </span>
-      <span>
-        <p>0</p>
-        <p>0</p>
-        <p class="chart_big">4.5</p>
-        <p class="chart_small">2.2</p>
-      </span>
-      <span>
-        <p>0</p>
-        <p class="chart_big">4.7</p>
-        <p class="chart_small">2.2</p>
-        <p>0</p>
-      </span>
-      <span>
-        <p>0</p>
-        <p>0</p>
-        <p class="chart_small">2.2</p>
-        <p class="chart_big">4.6</p>
-      </span>
-      <span>
-        <p>0</p>
-        <p>0</p>
-        <p class="chart_small">2.2</p>
-        <p class="chart_big">4.6</p>
-      </span>
+      <p>
+        <span>0</span>
+        <span>0</span>
+        <span class="chart_small">2.2</span>
+        <span class="chart_big">4.6</span>
+      </p>
+      <p>
+        <span>0</span>
+        <span>0</span>
+        <span class="chart_big">4.5</span>
+        <span class="chart_small">2.2</span>
+      </p>
+      <p>
+        <span>0</span>
+        <span class="chart_big">4.7</span>
+        <span class="chart_small">2.2</span>
+        <span>0</span>
+      </p>
+      <p>
+        <span>0</span>
+        <span>0</span>
+        <span class="chart_small">2.2</span>
+        <span class="chart_big">4.6</span>
+      </p>
+      <p>
+        <span>0</span>
+        <span>0</span>
+        <span class="chart_small">2.2</span>
+        <span class="chart_big">4.6</span>
+      </p>
     </section>
-    <article class="calendar_sun_moon">
+    <section class="calendar_sun_moon">
       <p class="calendar_day">Пятница, 18 мая, сегодня</p>
       <p class="sun_moon">Солнце и луна</p>
-    </article>
-    <aside class="sun_settings">
+    </section>
+    <section class="sun_settings">
       <figure>
         <img src="assets/Sun.png" alt="Sun">
         <p class="settings_value">
@@ -227,8 +226,8 @@
           Сегодня день на 2 минуты длиннее, чем вчера
         </figcaption>
       </figure>
-    </aside>
-    <aside class="moon_settings">
+    </section>
+    <section class="moon_settings">
       <figure>
         <img src="assets/Moon.png" alt="Moon">
         <p class="settings_value">
@@ -240,7 +239,7 @@
           Полнолуние - 28 июня, через 23 дня
         </figcaption>
       </figure>
-    </aside>
+    </section>
   </main>
   <footer class="footer">
     <span>2018 &copy Copyright</span>

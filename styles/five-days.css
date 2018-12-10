@@ -52,8 +52,7 @@
 .container_day_week {
 	height: 21px;
 	text-align: center;
-	margin: 15px 0px 0px 15px;
-	width: 902px;
+	margin: 15px 1px 0px 15px;
 }
 
 #border_right {
@@ -80,7 +79,7 @@
 	border: 1px solid #9b9b9b;
 	font-size: 12.4px;
 	float: left;
-	padding: 0px 7.8px 0px 2px;
+	padding: 0px 8px 0px 2px;
 	height: 95px;
 }
 
@@ -133,9 +132,7 @@
 }
 
 .wind_speed_value .square {
-	height: 18px;
 	display: inline-block;
-	width: 25px;
 	margin: 12px 7px 0px 7px;
 	width: 27px;
 	height: 15px;
@@ -143,22 +140,21 @@
 	background: #D4D5DA
 }
 
-.wind_speed_value span {
+.wind_speed_value p {
+	margin: 0;
 	border: 1px solid #9b9b9b;
-	font-size: 17px;
-	height: 38px;
-	width: 179.2px;
-	float: left;
-	margin-left: -1px;
-	margin-top: -1px;
+    font-size: 17px;
+    height: 38px;
+	width: 179.1px;
+    float: left;
+    margin-left: -1px;
+    margin-top: -1px;
 }
 
 .wind_speed_value span mark {
 	transform: skew(40deg);
 	display: block;
 	margin: 0;
-	width: -23px;
-	padding: -14px;
 	margin-left: -14px;
 	margin-top: -2px;
 	height: 0;
@@ -181,7 +177,7 @@
 	margin-left: 16px;
 }
 
-.rainfall_value span {
+.rainfall_value p {
 	border: 1px solid #9b9b9b;
 	font-size: 17px;
 	height: 37px;
@@ -192,7 +188,7 @@
 	padding-top: 47px;
 }
 
-.rainfall_value p {
+.rainfall_value span {
 	display: inline-block;
 	margin: 0px 12px 0px 12px;
 }
@@ -226,11 +222,11 @@
 .calendar_day {
 	float: left;
 	font-size: 18px;
-	margin: 8px 0px 0px 8px;
+	margin: 3px 0px 0px 8px;
 }
 
 .sun_moon {
-	margin: 8px 395px 0px 0px;
+	margin: 3px 395px 0px 0px;
 	float: right;
 	font-size: 18px;
 }

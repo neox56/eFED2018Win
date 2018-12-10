@@ -2,7 +2,7 @@ body {
 	margin: 0 auto;
 	width: 1000px;
 	border: 1px solid #9b9b9b;
-	font-family: 'Times New Roman''Roboto', sans-serif;
+	font-family: 'Times New Roman','Roboto', sans-serif;
 }
 
 .header {
