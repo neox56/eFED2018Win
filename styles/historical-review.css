@@ -72,3 +72,24 @@
 #average_fixed {
 	line-height: 19px;
 }
+
+.advertising{
+	float: right;
+    font-size: 12px;
+    width: 250px;
+    margin-top: -291px;
+    margin-right: 36px;;
+}
+
+.advertising figure{
+	margin: 0;
+}
+
+.advertising a{
+	text-decoration: none;
+	color: #c4c4c4;
+	
+}
+.epam_img{
+	width: 250px;
+}
