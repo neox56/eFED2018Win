@@ -7,53 +7,56 @@
     <meta name="keywords" content="Izhevsk,weather,today,five days,history weather">
     <title>Погода в Ижевске</title>
     <link rel="stylesheet" href="styles/main.css">
+    <style type="text/css">@import url("styles/all.css");</style>
 </head>
 
 <body>
-    <div class="header">
-        <div class="menu">
+    <header class="header">
+        <nav class="menu">
             <ul>
-                <li>
-                    <a href="#">Сегодня</a>
-                </li>
-                <li id="five_days"><a href="#">5 дней</a> </li>
-                <li id="weather_history"><a href="#">История погоды</a> </li>
+                <li id="link"><a href="#">Сегодня</a> </li>
+                <li id="link"><a href="index.html">5 дней</a> </li>
+                <li><a href="historical-review.html">История погоды</a> </li>
             </ul>
-        </div>
-        <div class="both"></div>
-        <div class="air_pollution">
-            <p>Загрязнение воздуха:8.168363052618588e-8</p>
-            <form action="#">
-                <input type="search" placeholder="Поиск">
+        </nav>
+        <section class="air_pollution">
+            <span>Загрязнение воздуха: 8.168363052618588e-8</span>
+            <form action="#" method="GET">
+                <input type="search" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]{1,10}" title="Название города должно начинаться c большой буквы и не содержать цифр">
                 <button type="button"></button>
             </form>
-        </div>
-    </div>
-    <div class="content">
-        <div class=left_block>
-            <div class="city_country">
-                <p>Ижевск, Россия</p>
-            </div>
-            <div class="day_week">
-                <p>среда</p>
-            </div>
-            <div class="weather_types">
-                <p>облачно</p>
-            </div>
-            <img src="assets/Sunny Weather.png" alt="Sunny Weather 22&#176C">
-            <span>22&#176C</span>
-        </div>
-        <div class="right_block">
-            <div class="chance_rainfall">
-                <p>Вероятность осадков: 20%</p>
-            </div>
-            <div class="humidity">
-                <p>Влажность: 45%</p>
-            </div>
-            <div class="wind_speed">
-                <p>Ветер: 11 км/ч</p>
-            </div>
-            <div class="weather_parametrs">
+        </section>
+    </header>
+    <main class="content">
+        <header>
+            <h1>Подробный прогноз погоды на день</h1>
+        </header>
+        <section class=left_block>
+            <p class="city_country">
+                Ижевск, Россия
+            </p>
+            <p class="day_weeks">
+                среда
+            </p>
+            <p class="weather_types">
+                облачно
+            </p>
+            <figure class="current_temperature_img">
+                <img src="assets/Sunny Weather.png" alt="Sunny Weather 22&#176C">
+                <figcaption class="current_temperature">22&#176</figcaption>
+            </figure>
+        </section>
+        <section class="right_block">
+            <p class="chance_rainfall">
+                Вероятность осадков: 20%
+            </p>
+            <p class="humidity">
+                Влажность: 45%
+            </p>
+            <p class="wind_speed">
+                Ветер: 11 км/ч
+            </p>
+            <section class="weather_parametrs">
                 <form action="#">
                     <ul>
                         <li id="temperature_button"><button class="weather_button">Температура</button> </li>
@@ -61,78 +64,75 @@
                         <li id="wind_button"><button class="weather_button">Ветер</button> </li>
                     </ul>
                 </form>
-            </div>
-        </div>
-        <div class="both"></div>
-        <div class="bottom_block">
-            <div class="icons_graph">
-                <img class="temperature_graph" src="assets/temperature.jpg" alt="temperature graph">
-                <img class="rainfall_graph" src="assets/rainfall.jpg" alt="rainfall graph ">
+            </section>
+        </section>
+        <section class="bottom_block">
+            <section class="icons_graph">
+                <figure class="figure_fixed">
+                    <img class="temperature_graph" src="assets/temperature.jpg" alt="temperature graph">
+                </figure>
+                <figure class="figure_fixed">
+                    <img class="rainfall_graph" src="assets/rainfall.jpg" alt="rainfall graph ">
+                </figure>
+                </figure class="figure_fixed">
                 <img class="wind_graph" src="assets/wind.jpg" alt=" wind graph ">
-            </div>
-            <div class="weather_week">
-                <div class=day_week_wednesday>
-                    <span id="time_wed">17:00</span>
-                    <span id="wed_cloudy"><img class="border" src="assets/cloudy.jpeg" alt="weather on wednesday"></span>
-                    <span id="name_day_wed">ср</span>
-                    <span id="big_grade_wed">22&#176</span>
-                    <span id="small_grade_wed">13&#176</span>
-                </div>
-                <div class=day_week_thursday>
-                    <span id="time_thu">20:00</span>
-                    <span id="thu_rainy"><img class="border" src="assets/rainy.jpeg" alt="weather on thursday"></span>
-                    <span id="name_day_thu">чт</span>
-                    <span id="big_grade_thu">21&#176</span>
-                    <span id="small_grade_thu"> 11&#176</span>
-                </div>
-                <div class=day_week_friday>
-                    <span id="time_fr">20:00</span>
-                    <span id="fr_sunny"><img class="border" src="assets/sunny.jpeg"  alt="weather on friday"></span>
-                    <span id="name_day_fr">пт</span>
-                    <span id="big_grade_fr">21&#176</span>
-                    <span id="small_grade_fr">12&#176</span>
-                </div>
-                <div class=day_week_saturday>
-                    <span id="time_sa">2:00</span>
-                    <span id="sa_rainy"><img class="border" src="assets/very_rainy.jpeg" alt="weather on saturday"></span>
-                    <span id="name_day_sa">сб</span>
-                    <span id="big_grade_sa">21&#176</span>
-                    <span id="small_grade_sa">13&#176</span>
-                </div>
-                <div class=day_week_sunday>
-                    <span id="time_su">5:00</span>
-                    <span id="su_sunny"><img class="border" src="assets/sunny.jpeg" alt="weather on sunday"></span>
-                    <span id="name_day_su">вс</span>
-                    <span id="big_grade_su">27&#176</span>
-                    <span id="small_grade_su">14&#176</span>
-                </div>
-                <div class=day_week_monday>
-                    <span id="time_mo">8:00</span>
-                    <span id="mo_sunny"><img class="border" src="assets/sunny.jpeg" alt="weather on monday"></span>
-                    <span id="name_day_mo">пн</span>
-                    <span id="big_grade_mo">28&#176</span>
-                    <span id="small_grade_mo">14&#176</span>
-                </div>
-                <div class=day_week_tuesday>
-                    <span id="time_tu">11:00</span>
-                    <span id="tue_rainy"><img class="border" src="assets/very_rainy.jpeg" alt="weather on tuesday"></span>
-                    <span id="name_day_tu">вт</span>
-                    <span id="big_grade_tu">28&#176</span>
-                    <span id="small_grade_tu">14&#176</span>
-                </div>
-                <div class=day_week_wednesday_last>
-                    <span id="time_wed_last">14:00</span>
-                    <span id="wed_last_sunny"><img class="border" src="assets/sunny.jpeg" alt="weather on wednesday"></span>
-                    <span id="name_day_wed_last">ср</span>
-                    <span id="big_grade_wed_last">28&#176</span>
-                    <span id="small_grade_wed_last"> 14&#176</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <p>2018 &copy Copyright</p>
-    </div>
+                </figure>
+            </section>
+            <section class="time">
+                <span class="time_day">17:00</span>
+                <span class="time_day">20:00</span>
+                <span class="time_day">23:00</span>
+                <span class="time_day">2:00</span>
+                <span class="time_day">5:00</span>
+                <span class="time_day">8:00</span>
+                <span class="time_day">11:00</span>
+                <span class="time_day">14:00</span>
+            </section>
+            <section class="day_week border">
+                <p class="name_day">ср</p>
+                <figure class="name_day_img"><img src="assets/cloudy.jpeg" alt="weather on wednesday"></figure>
+                <figcaption class="degrees">22&#176 13&#176</figcaption>
+            </section>
+            <section class="day_week border">
+                <p class="name_day">чт</p>
+                <figure class="name_day_img"><img src="assets/rainy.jpeg" alt="weather on thursday"></figure>
+                <figcaption class="degrees">21&#176 11&#176</figcaption>
+            </section>
+            <section class="day_week border">
+                <p class="name_day">пт</p>
+                <figure class="name_day_img"><img src="assets/sunny.jpeg" alt="weather on friday"></figure>
+                <figcaption class="degrees">24&#176 12&#176</figcaption>
+            </section>
+            <section class="day_week border">
+                <p class="name_day">сб</p>
+                <figure class="name_day_img"><img src="assets/very_rainy.jpeg" alt="weather on saturday"></figure>
+                <figcaption class="degrees">26&#176 13&#176</figcaption>
+            </section>
+            <section class="day_week border">
+                <p class="name_day">вс</p>
+                <figure class="name_day_img"><img src="assets/sunny.jpeg" alt="weather on sunday"></figure>
+                <figcaption class="degrees">27&#176 14&#176</figcaption>
+            </section>
+            <section class="day_week border">
+                <p class="name_day">пн</p>
+                <figure class="name_day_img"><img src="assets/sunny.jpeg" alt="weather on monday"></figure>
+                <figcaption class="degrees">28&#176 14&#176</figcaption>
+            </section>
+            <section class="day_week border">
+                <p class="name_day">вт</p>
+                <figure class="name_day_img"><img src="assets/very_rainy.jpeg" alt="weather on tuesday"></figure>
+                <figcaption class="degrees">28&#176 14&#176</figcaption>
+            </section>
+            <section class="day_week border">
+                <p class="name_day">ср</p>
+                <figure class="name_day_img"><img src="assets/sunny.jpeg" alt="weather on wednesday"></figure>
+                <figcaption class="degrees">28&#176 14&#176</figcaption>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <span>2018 &copy Copyright</span>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,95 @@
+.city_weather {
+	width: 100%;
+	margin-top: 50px;
+	border-top: 1px solid #979797;
+	height: 49px;
+	background-color: #f2f2f2;
+}
+
+.city_weather span {
+	float: left;
+	margin: 13px 0px 0px 25px;
+	font-size: 20px;
+}
+
+.city_weather input[type="search"] {
+	float: right;
+	margin: 8px 26px 0px 0px;
+	height: 34px;
+	padding-left: 27px;
+	border-radius: 7px;
+	border-color: #ccc;
+	background-color: #e4e4e4
+}
+
+.city_weather button:focus {
+	outline: none;
+}
+
+.city_weather input[type="search"]:focus {
+	outline: none;
+}
+
+.city_weather button {
+	float: right;
+	border: none;
+	cursor: pointer;
+	height: 21px;
+	width: 19px;
+	margin-top: 15px;
+	margin-right: -25px;
+	background-image: url(../assets/loupe.png);
+}
+
+.content {
+	margin-top: 36px;
+	height: 598px;
+}
+
+.content h1 {
+	margin: -20px 0px 23px 30px;
+}
+
+.chessboard {
+	height: 46px;
+}
+
+.monthname,
+.average_maximum,
+.record_maximum {
+	text-align: center;
+	line-height: 42px;
+	height: 46px;
+	width: 76.9px;
+	float: left;
+	font-size: 16px;
+}
+
+.grey_square {
+	background-color: #c4c4c4;
+}
+
+#average_fixed {
+	line-height: 19px;
+}
+
+.advertising{
+	float: right;
+    font-size: 12px;
+    width: 250px;
+    margin-top: -291px;
+    margin-right: 36px;;
+}
+
+.advertising figure{
+	margin: 0;
+}
+
+.advertising a{
+	text-decoration: none;
+	color: #c4c4c4;
+	
+}
+.epam_img{
+	width: 250px;
+}

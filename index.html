@@ -1,16 +1,249 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Five-day weather forecast</title>
-    <script type="text/javascript" src="mocks/FullWeatherDetailsMock.js"></script>
-    <script type="text/javascript" src="mocks/HistoricalReviewMock.js"></script>
-    <script type="text/javascript" src="mocks/WeekForecastMock.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-  </head>
-  <body>
-    <h1>Пятидневный прогноз погоды</h1>
-    <div id="mainInfo">
-  </body>
-  
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="Dmitriy Smolin">
+  <meta name="keywords" content="Izhevsk,weather,today,five days,history weather">
+  <title>Прогноз погоды на пять дней</title>
+  <link rel="stylesheet" href="styles/five-days.css">
+  <style type="text/css"> @import url("styles/all.css");</style>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu">
+      <ul>
+        <li id="link"><a href="weather-details.html">Сегодня</a> </li>
+        <li id="link"><a href="#">5 дней</a> </li>
+        <li><a href="historical-review.html">История погоды</a> </li>
+      </ul>
+    </nav>
+    <section class="city_weather">
+      <span><img class="city_weather_img" src="assets/cloudy_space.PNG" alt="Облачно"></span>
+      <span>34&#176 Ижевск, Россия</span>
+      <form action="#" method="GET">
+        <input type="search" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]{1,10}" title="Название города должно начинаться c большой буквы и не содержать цифр">
+        <button type="button"></button>
+      </form>
+    </section>
+  </header>
+  <main class="content">
+    <header>
+      <h1>Пятидневный прогноз погоды</h1>
+    </header>
+    <section class="container_day_week">
+      <span class="day" id="border_right">Пт, 18 мая</span>
+      <span class="day" id="border_right">Сб, 19 мая</span>
+      <span class="day" id="border_right">Вс, 20 мая</span>
+      <span class="day" id="border_right">Пн, 20 мая</span>
+      <span class="day">Вт, 22 мая</span>
+    </section>
+    <section class="container_time_day">
+      <section class="part_day" id="border_right">
+        <p>
+          <span>Ночь</span>
+          <span>Утро</span>
+          <span>День</span>
+          <span>Вечер</span>
+        </p>
+        <figure class="figure_fixed">
+          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
+          <img src="assets/Sunny Weather_2.png" alt="">
+          <img src="assets/Weather2.png" alt="Sunny Weather">
+          <img src="assets/Weather.png" alt="Weather">
+        </figure>
+        <p>
+          <span class="green">+8</span>
+          <span class="yellow">+16</span>
+          <span class="orange">+21</span>
+          <span class="yellow">+17</span>
+        </p>
+      </section>
+      <section class="part_day" id="border_right">
+        <p>
+          <span>Ночь</span>
+          <span>Утро</span>
+          <span>День</span>
+          <span>Вечер</span>
+        </p>
+        <figure class="figure_fixed">
+          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
+          <img src="assets/Sunny Weather_2.png" alt="">
+          <img src="assets/Weather2.png" alt="Sunny Weather">
+          <img src="assets/Weather.png" alt="Weather">
+        </figure>
+        <p>
+          <span class="green">+8</span>
+          <span class="yellow">+16</span>
+          <span class="orange">+21</span>
+          <span class="yellow">+17</span>
+        </p>
+      </section>
+      <section class="part_day" id="border_right">
+        <p>
+          <span>Ночь</span>
+          <span>Утро</span>
+          <span>День</span>
+          <span>Вечер</span>
+        </p>
+        <figure class="figure_fixed">
+          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
+          <img src="assets/Sunny Weather_2.png" alt="">
+          <img src="assets/Weather2.png" alt="Sunny Weather">
+          <img src="assets/Weather.png" alt="Weather">
+        </figure>
+        <p>
+          <span class="green">+8</span>
+          <span class="yellow">+16</span>
+          <span class="orange">+21</span>
+          <span class="yellow">+17</span>
+        </p>
+      </section>
+      <section class="part_day" id="border_right">
+        <p>
+          <span>Ночь</span>
+          <span>Утро</span>
+          <span>День</span>
+          <span>Вечер</span>
+        </p>
+        <figure class="figure_fixed">
+          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
+          <img src="assets/Sunny Weather_2.png" alt="">
+          <img src="assets/Weather2.png" alt="Sunny Weather">
+          <img src="assets/Weather.png" alt="Weather">
+        </figure>
+        <p>
+          <span class="green">+8</span>
+          <span class="yellow">+16</span>
+          <span class="orange">+21</span>
+          <span class="yellow">+17</span>
+        </p>
+      </section>
+      <section class="part_day">
+        <p>
+          <span>Ночь</span>
+          <span>Утро</span>
+          <span>День</span>
+          <span>Вечер</span>
+        </p>
+        <figure class="figure_fixed">
+          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
+          <img src="assets/Sunny Weather_2.png" alt="">
+          <img src="assets/Weather2.png" alt="Sunny Weather">
+          <img src="assets/Weather.png" alt="Weather">
+        </figure>
+        <p>
+          <span class="green">+8</span>
+          <span class="yellow">+16</span>
+          <span class="orange">+21</span>
+          <span class="yellow">+17</span>
+        </p>
+      </section>
+    </section>
+    <section class="max_wind_speed">
+      <span>Максимальная скорость ветра, м/с</span>
+    </section>
+    <section class="wind_speed_value">
+      <p>
+        <span class="square"><mark>2</mark></span>
+        <span class="square"><mark>3</mark></span>
+        <span class="square"><mark>4</mark></span>
+        <span class="square"><mark>5</mark></span>
+        <p>
+          <span class="square"><mark>2</mark></span>
+          <span class="square"><mark>3</mark></span>
+          <span class="square"><mark>4</mark></span>
+          <span class="square"><mark>5</mark></span>
+        </p>
+        <p>
+          <span class="square"><mark>2</mark></span>
+          <span class="square"><mark>3</mark></span>
+          <span class="square"><mark>4</mark></span>
+          <span class="square"><mark>5</mark></span>
+        </p>
+        <p>
+          <span class="square"><mark>2</mark></span>
+          <span class="square"><mark>3</mark></span>
+          <span class="square"><mark>4</mark></span>
+          <span class="square"><mark>5</mark></span>
+        </p>
+        <p>
+          <span class="square"><mark>2</mark></span>
+          <span class="square"><mark>3</mark></span>
+          <span class="square"><mark>4</mark></span>
+          <span class="square"><mark>5</mark></span>
+        </p>
+    </section>
+    <section class="rainfall">
+      <span>Осадки, мм</span>
+    </section>
+    <section class="rainfall_value">
+      <p>
+        <span>0</span>
+        <span>0</span>
+        <span class="chart_small">2.2</span>
+        <span class="chart_big">4.6</span>
+      </p>
+      <p>
+        <span>0</span>
+        <span>0</span>
+        <span class="chart_big">4.5</span>
+        <span class="chart_small">2.2</span>
+      </p>
+      <p>
+        <span>0</span>
+        <span class="chart_big">4.7</span>
+        <span class="chart_small">2.2</span>
+        <span>0</span>
+      </p>
+      <p>
+        <span>0</span>
+        <span>0</span>
+        <span class="chart_small">2.2</span>
+        <span class="chart_big">4.6</span>
+      </p>
+      <p>
+        <span>0</span>
+        <span>0</span>
+        <span class="chart_small">2.2</span>
+        <span class="chart_big">4.6</span>
+      </p>
+    </section>
+    <section class="calendar_sun_moon">
+      <p class="calendar_day">Пятница, 18 мая, сегодня</p>
+      <p class="sun_moon">Солнце и луна</p>
+    </section>
+    <section class="sun_settings">
+      <figure>
+        <img src="assets/Sun.png" alt="Sun">
+        <p class="settings_value">
+          <span class="day_lenght">Долгота дня - 16 ч 43 мин</span>
+          <span class="sunrise">Восход - 4:02</span>
+          <span class="suntset">Заход - 20:45</span>
+        </p>
+        <figcaption>
+          Сегодня день на 2 минуты длиннее, чем вчера
+        </figcaption>
+      </figure>
+    </section>
+    <section class="moon_settings">
+      <figure>
+        <img src="assets/Moon.png" alt="Moon">
+        <p class="settings_value">
+          <span class="day_lenght">Луна растущая - 19%</span>
+          <span class="sunrise">Восход - 7:40</span>
+          <span class="suntset">Заход - 10:58</span>
+        </p>
+        <figcaption class="moon">
+          Полнолуние - 28 июня, через 23 дня
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+  <footer class="footer">
+    <span>2018 &copy Copyright</span>
+  </footer>
+</body>
+
 </html>
