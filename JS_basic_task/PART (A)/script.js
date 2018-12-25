@@ -33,22 +33,14 @@ console.log(deepCompare({ one: 1, two: '2' }, { two: '2', one: 1 }));
 
 //3.Шахматная доска
 function chessBoard(firstsize, secondsize) {
-    var str = '';
+    var str = ' ' ;
     for (var i = 0; i < secondsize; i++) {
         for (var j = 0; j < firstsize; j++) {
             if (i % 2) {
-                if (j % 2) {
-                    str = str + '#';
-                } else {
-                    str = str + ' ';
-                }
+              str=(j%2) ? str + '#': str + ' ';
+               
             } else {
-                if (j % 2) {
-                    str = str + ' ';
-                } else {
-                    str = str + '#';
-
-                }
+              str=(j%2) ? str + ' ':str = str + '#';         
             }
         }
         str = str + '\n';
@@ -61,11 +53,8 @@ console.log(chessBoard(8, 4));
 
 
 //4.Диапазон
-function makeArray(beginValue, endValue, step) {
+function makeArray(beginValue, endValue, step = 1) {
     var arr = [];
-    if (step == undefined) {
-        step = 1
-    }
 
     if (endValue < beginValue) {
         step = -step;
@@ -114,9 +103,9 @@ function mergeArrays(...args) {
     var array = [];
     array = array.concat(...args);
     for (var i = 0; i < array.length; i++) {
-        for (var j = i+1; j < array.length; j++) {
+        for (var j = i + 1; j < array.length; j++) {
             if (array[i] == array[j]) {
-                array.splice(j,1);
+                array.splice(j, 1);
             }
         }
     }
