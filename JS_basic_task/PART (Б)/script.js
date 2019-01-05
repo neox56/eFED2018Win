@@ -56,23 +56,25 @@ console.log(replaceQuotes("I`m the 'hero'"));
 
 
 //11.День и месяц
-(function (transfer) {
+function getNames(transfer) {
     var months = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "Octember", "November", "December"];
-    var name_day = ["Monday", "Tuesday", 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    transfer.name = function (day) {
-        return months[day];
-    };
-    transfer.day = function (name) {
-        return name_day[name];
-    };
-})(this.month = {});
-
-console.log(month.name(0));
-console.log(month.day(2));
+    newMonths = months[transfer.getMonth()];
+    var name_day = ["Monday", "Tuesday", 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    newNameDay = name_day[transfer.getDay()];
+    return newMonths + ' ' + newNameDay;
+}
+console.log(getNames(new Date(1, 0)));
+//console.log(month.name(0));
+//console.log(month.day(2));
 
 
 
 //12.Разница в годах
-
-
+function differenceInYears(dateOne, dateTwo) {
+    var differenceYear = Math.abs(dateOne - dateTwo) / (365 * 24 * 3600) / 1000;
+    var differenceRound = Math.round(differenceYear * 10) * 0.1;
+    return differenceRound;
+}
+console.log(differenceInYears(new Date(2014, 10, 2), new Date(2016, 10, 2)));
+console.log(differenceInYears(new Date(2014, 0), new Date(2014, 6)));
