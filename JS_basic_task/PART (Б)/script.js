@@ -19,33 +19,22 @@ console.log(some([1, 2, 6], Number.isNaN));
 console.log(some([1, 4, NaN, 6], Number.isNaN));
 
 //8. Повтор
-function MultiplicatorUnitFailure(notice) {
-    this.notice = notice;
-}
-function multiplyOrThrow(a, b) {
-    if (Math.random() < 0.5)
-        return a * b;
-    else
-        throw new MultiplicatorUnitFailure('exclusion');
-}
 function reliableMultiply(a, b) {
     try {
-        return multiplyOrThrow(a, b);
+        return multiplyOrThrow(a, b)
     } catch (e) {
-        if (e instanceof MultiplicatorUnitFailure)
-            return e.notice
+        if (e == 'MultiplicatorUnitFailure') {
+            return reliableMultiply(a, b);
+        }
     }
 }
 console.log(reliableMultiply(5, 5));
-
 
 //9.Кавычки в тексте
 function replaceQuotes(text) {
     return text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2');
 }
 console.log(replaceQuotes("I`m the 'hero'"));
-
-
 
 //10.Найти числа
 function findNumbers(arr) {
@@ -56,7 +45,6 @@ function findNumbers(arr) {
     }
     return newArr;
 }
-
 console.log(findNumbers(["1", "-1", "+15", "1.55", ".5", "5.", "1.3e2", "1E-4", "1e+12"]));
 console.log(findNumbers(["1a", "+-1", "1.2.3", "1+1", "1e4.5", ".5.", "1f5", "."]));
 
@@ -71,9 +59,6 @@ function getNames(transfer) {
     return newMonths + ' ' + newNameDay;
 }
 console.log(getNames(new Date(1, 0)));
-//console.log(month.name(0));
-//console.log(month.day(2));
-
 
 
 //12.Разница в годах
