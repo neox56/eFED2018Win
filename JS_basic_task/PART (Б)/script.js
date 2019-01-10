@@ -29,15 +29,11 @@ function multiplyOrThrow(a, b) {
         throw new MultiplicatorUnitFailure('exclusion');
 }
 function reliableMultiply(a, b) {
-    while (true) {
-        try {
-            return multiplyOrThrow(a, b);
-        } catch (e) {
-            if (e instanceof MultiplicatorUnitFailure)
-                console.log(e.notice);
-            else
-                throw e;
-        }
+    try {
+        return multiplyOrThrow(a, b);
+    } catch (e) {
+        if (e instanceof MultiplicatorUnitFailure)
+            return e.notice
     }
 }
 console.log(reliableMultiply(5, 5));
@@ -52,7 +48,17 @@ console.log(replaceQuotes("I`m the 'hero'"));
 
 
 //10.Найти числа
+function findNumbers(arr) {
+    var regEx = /^[+-]?((\d+\.?\d*)|(\.?\d+))(e[+-]?(\d+))?$/i;
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++) {
+        regEx.test(arr[i]) ? newArr.push(arr[i]) : false;
+    }
+    return newArr;
+}
 
+console.log(findNumbers(["1", "-1", "+15", "1.55", ".5", "5.", "1.3e2", "1E-4", "1e+12"]));
+console.log(findNumbers(["1a", "+-1", "1.2.3", "1+1", "1e4.5", ".5.", "1f5", "."]));
 
 
 //11.День и месяц
