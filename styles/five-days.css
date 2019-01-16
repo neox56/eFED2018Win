@@ -1,3 +1,7 @@
+header h1 {
+	margin: 5px 0px 0px 0px;
+}
+
 .city_weather {
 	width: 100%;
 	margin-top: 50px;
@@ -50,9 +54,9 @@
 }
 
 .container_day_week {
-	height: 21px;
+	height: 29px;
 	text-align: center;
-	margin: 15px 1px 0px 15px;
+
 }
 
 #border_right {
@@ -60,44 +64,65 @@
 }
 
 .day {
-	border: 1px solid #9b9b9b;
-	font-size: 17px;
-	float: left;
-	width: 127.2px;
-	padding: 5px 26.8px 0px 25px;
-	border-bottom: none;
+	border-bottom: 2px solid #9b9b9b;
+	background-color: #f1f1f1;
+	font-size: 18px;
+	margin: 0;
+	width: 428px;
 	height: 22px;
 }
 
-.container_time_day {
-	height: 103px;
-	text-align: center;
-	margin-left: 14.5px;
+.slider {
+	height: 144px;
+    text-align: center;
+    position: relative;
+    bottom: -2px;
+    margin: 0px 0px 0px 256px;
 }
 
 .part_day {
-	border: 1px solid #9b9b9b;
-	font-size: 12.4px;
+	border: 2px solid #9b9b9b;
+	font-size: 12px;
 	float: left;
-	padding: 0px 8px 0px 2px;
-	height: 95px;
-}
-
-.part_day p {
-	margin: 0;
+	width: 428px;
+	height: 110px;
+	margin: 5px 0px 0px;
 	text-align: center;
-	margin: 5px 0px 0px 7px;
 }
 
-.part_day p span {
+.times_day {
+	margin: 3px 0px 0px 0px;
+}
+
+.times_day span {
+	padding: 0px 20px;
 	padding-right: 11px;
 	display: inline-block;
-	width: 25px;
+	width: 71px;
 	font-size: 14px;
 }
 
 .figure_fixed {
 	margin: 0;
+}
+
+.figure_fixed img {
+	padding: 0px 27px 0px 33px;
+}
+
+.temperature_container {
+	margin: 0;
+	display: inline-block;
+	font-size: 14px;
+
+}
+
+.temperature_container span {
+	display: inline-block;
+    font-size: 14px;
+    margin: 2px 28px 0px 37px;
+    padding: 0px 5px;
+    width: 23px;
 }
 
 .green {
@@ -115,13 +140,64 @@
 	background-color: orange;
 }
 
-.max_wind_speed {
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	padding: 11px;
+	font-weight: bold;
+	font-size: 18px;
+	bottom: 55px;
+	left: 224px;
+}
+
+.navigation_container {
+	left: -18px;
+	bottom: 13px;
 	text-align: center;
+	position: relative;
+}
+
+.step_container {
+	position: fixed;
+}
+
+.next {
+	left: 688px;
+	bottom: 54px;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: white;
+}
+
+.button_slide{
+	cursor: pointer;
+	height: 23px;
+	width: 30px;
+	margin: 0 2px;
+	border: 1px solid black;
+	display: inline-block;
+}
+
+.active,
+.button_slide:hover {
+	background-color: #9b9b9b;
+}
+
+
+.fade {
+	display: none;
+}
+
+.max_wind_speed {
 	border: 1px solid #9b9b9b;
 	margin-left: 14.6px;
 	width: 899px;
 	padding: 4px 0px 4px 0px;
 	background-color: #d8d8d8;
+	text-align: center;
 }
 
 .wind_speed_value {
@@ -143,12 +219,12 @@
 .wind_speed_value p {
 	margin: 0;
 	border: 1px solid #9b9b9b;
-    font-size: 17px;
-    height: 38px;
+	font-size: 17px;
+	height: 38px;
 	width: 179.1px;
-    float: left;
-    margin-left: -1px;
-    margin-top: -1px;
+	float: left;
+	margin-left: -1px;
+	margin-top: -1px;
 }
 
 .wind_speed_value span mark {
