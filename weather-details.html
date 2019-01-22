@@ -7,7 +7,10 @@
     <meta name="keywords" content="Izhevsk,weather,today,five days,history weather">
     <title>Погода в Ижевске</title>
     <link rel="stylesheet" href="styles/main.css">
-    <style type="text/css">@import url("styles/all.css");</style>
+    
+    <style type="text/css">
+        @import url("styles/all.css");
+    </style>
 </head>
 
 <body>
@@ -59,23 +62,25 @@
             <section class="weather_parametrs">
                 <form action="#">
                     <ul>
-                        <li id="temperature_button"><button class="weather_button">Температура</button> </li>
-                        <li id="rainfall_button"><button class="weather_button_optimize">Вероятность<br>осадков</button></li>
-                        <li id="wind_button"><button class="weather_button">Ветер</button> </li>
+                        <li id="temperature_button"><button class="weather_button" onclick="buttonClick(1)">Температура</button>
+                        </li>
+                        <li id="rainfall_button"><button class="weather_button_optimize" onclick="buttonClick(2)">Вероятность<br>осадков</button></li>
+                        <li id="wind_button"><button class="weather_button" onclick="buttonClick(3)">Ветер</button>
+                        </li>
                     </ul>
                 </form>
             </section>
         </section>
         <section class="bottom_block">
             <section class="icons_graph">
-                <figure class="figure_fixed">
-                    <img class="temperature_graph" src="assets/temperature.jpg" alt="temperature graph">
+                <figure class="figure_fixed ">
+                    <img class="temperature_graph  myButtons" src="assets/temperature.jpg" alt="temperature graph">
                 </figure>
-                <figure class="figure_fixed">
-                    <img class="rainfall_graph" src="assets/rainfall.jpg" alt="rainfall graph ">
+                <figure class="figure_fixed ">
+                    <img class="rainfall_graph fade myButtons" src="assets/rainfall.jpg" alt="rainfall graph ">
                 </figure>
-                </figure class="figure_fixed">
-                <img class="wind_graph" src="assets/wind.jpg" alt=" wind graph ">
+                </figure class="figure_fixed ">
+                <img class="wind_graph fade myButtons" src="assets/wind.jpg" alt="wind graph">
                 </figure>
             </section>
             <section class="time">
@@ -133,6 +138,7 @@
     <footer class="footer">
         <span>2018 &copy Copyright</span>
     </footer>
+    <script src="js/weather-details.js"></script>
 </body>
 
 </html>

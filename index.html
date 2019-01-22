@@ -7,7 +7,10 @@
   <meta name="keywords" content="Izhevsk,weather,today,five days,history weather">
   <title>Прогноз погоды на пять дней</title>
   <link rel="stylesheet" href="styles/five-days.css">
-  <style type="text/css"> @import url("styles/all.css");</style>
+ 
+  <style type="text/css">
+    @import url("styles/all.css");
+  </style>
 </head>
 
 <body>
@@ -32,16 +35,33 @@
     <header>
       <h1>Пятидневный прогноз погоды</h1>
     </header>
-    <section class="container_day_week">
-      <span class="day" id="border_right">Пт, 18 мая</span>
-      <span class="day" id="border_right">Сб, 19 мая</span>
-      <span class="day" id="border_right">Вс, 20 мая</span>
-      <span class="day" id="border_right">Пн, 20 мая</span>
-      <span class="day">Вт, 22 мая</span>
+    <section class="slider">
+      <div class="part_day">
+        <p class="day">Пт, 18 мая</p>
+        <p class="times_day">
+          <span>Ночь</span>
+          <span>Утро</span>
+          <span>День</span>
+          <span>Вечер</span>
+        </p>
+        <figure class="figure_fixed">
+          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
+          <img src="assets/Sunny Weather_2.png" alt="">
+          <img src="assets/Weather2.png" alt="Sunny Weather">
+          <img src="assets/Weather.png" alt="Weather">
+        </figure>
+        <p class="temperature_container">
+          <span class="green">+8</span>
+          <span class="yellow">+16</span>
+          <span class="orange">+21</span>
+          <span class="yellow">+17</span>
+        </p>
+      </div>
     </section>
-    <section class="container_time_day">
-      <section class="part_day" id="border_right">
-        <p>
+    <section class="slider fade">
+      <div class="part_day">
+        <p class="day">Сб, 19 мая</p>
+        <p class="times_day">
           <span>Ночь</span>
           <span>Утро</span>
           <span>День</span>
@@ -53,94 +73,94 @@
           <img src="assets/Weather2.png" alt="Sunny Weather">
           <img src="assets/Weather.png" alt="Weather">
         </figure>
-        <p>
+        <p class="temperature_container">
           <span class="green">+8</span>
           <span class="yellow">+16</span>
           <span class="orange">+21</span>
           <span class="yellow">+17</span>
         </p>
-      </section>
-      <section class="part_day" id="border_right">
-        <p>
-          <span>Ночь</span>
-          <span>Утро</span>
-          <span>День</span>
-          <span>Вечер</span>
-        </p>
-        <figure class="figure_fixed">
-          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
-          <img src="assets/Sunny Weather_2.png" alt="">
-          <img src="assets/Weather2.png" alt="Sunny Weather">
-          <img src="assets/Weather.png" alt="Weather">
-        </figure>
-        <p>
-          <span class="green">+8</span>
-          <span class="yellow">+16</span>
-          <span class="orange">+21</span>
-          <span class="yellow">+17</span>
-        </p>
-      </section>
-      <section class="part_day" id="border_right">
-        <p>
-          <span>Ночь</span>
-          <span>Утро</span>
-          <span>День</span>
-          <span>Вечер</span>
-        </p>
-        <figure class="figure_fixed">
-          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
-          <img src="assets/Sunny Weather_2.png" alt="">
-          <img src="assets/Weather2.png" alt="Sunny Weather">
-          <img src="assets/Weather.png" alt="Weather">
-        </figure>
-        <p>
-          <span class="green">+8</span>
-          <span class="yellow">+16</span>
-          <span class="orange">+21</span>
-          <span class="yellow">+17</span>
-        </p>
-      </section>
-      <section class="part_day" id="border_right">
-        <p>
-          <span>Ночь</span>
-          <span>Утро</span>
-          <span>День</span>
-          <span>Вечер</span>
-        </p>
-        <figure class="figure_fixed">
-          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
-          <img src="assets/Sunny Weather_2.png" alt="">
-          <img src="assets/Weather2.png" alt="Sunny Weather">
-          <img src="assets/Weather.png" alt="Weather">
-        </figure>
-        <p>
-          <span class="green">+8</span>
-          <span class="yellow">+16</span>
-          <span class="orange">+21</span>
-          <span class="yellow">+17</span>
-        </p>
-      </section>
-      <section class="part_day">
-        <p>
-          <span>Ночь</span>
-          <span>Утро</span>
-          <span>День</span>
-          <span>Вечер</span>
-        </p>
-        <figure class="figure_fixed">
-          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
-          <img src="assets/Sunny Weather_2.png" alt="">
-          <img src="assets/Weather2.png" alt="Sunny Weather">
-          <img src="assets/Weather.png" alt="Weather">
-        </figure>
-        <p>
-          <span class="green">+8</span>
-          <span class="yellow">+16</span>
-          <span class="orange">+21</span>
-          <span class="yellow">+17</span>
-        </p>
-      </section>
+      </div>
     </section>
+    <section class="slider fade">
+      <div class="part_day">
+        <p class="day">Вс, 20 мая</p>
+        <p class="times_day">
+          <span>Ночь</span>
+          <span>Утро</span>
+          <span>День</span>
+          <span>Вечер</span>
+        </p>
+        <figure class="figure_fixed">
+          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
+          <img src="assets/Sunny Weather_2.png" alt="">
+          <img src="assets/Weather2.png" alt="Sunny Weather">
+          <img src="assets/Weather.png" alt="Weather">
+        </figure>
+        <p class="temperature_container">
+          <span class="green">+8</span>
+          <span class="yellow">+16</span>
+          <span class="orange">+21</span>
+          <span class="yellow">+17</span>
+        </p>
+      </div>
+    </section>
+    <section class="slider fade">
+      <div class="part_day">
+        <p class="day">Пн, 21 мая</p>
+        <p class="times_day">
+          <span>Ночь</span>
+          <span>Утро</span>
+          <span>День</span>
+          <span>Вечер</span>
+        </p>
+        <figure class="figure_fixed">
+          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
+          <img src="assets/Sunny Weather_2.png" alt="">
+          <img src="assets/Weather2.png" alt="Sunny Weather">
+          <img src="assets/Weather.png" alt="Weather">
+        </figure>
+        <p class="temperature_container">
+          <span class="green">+8</span>
+          <span class="yellow">+16</span>
+          <span class="orange">+21</span>
+          <span class="yellow">+17</span>
+        </p>
+      </div>
+    </section>
+    <section class="slider fade">
+      <div class="part_day">
+        <p class="day">Вт, 22 мая</p>
+        <p class="times_day">
+          <span>Ночь</span>
+          <span>Утро</span>
+          <span>День</span>
+          <span>Вечер</span>
+        </p>
+        <figure class="figure_fixed">
+          <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
+          <img src="assets/Sunny Weather_2.png" alt="">
+          <img src="assets/Weather2.png" alt="Sunny Weather">
+          <img src="assets/Weather.png" alt="Weather">
+        </figure>
+        <p class="temperature_container">
+          <span class="green">+8</span>
+          <span class="yellow">+16</span>
+          <span class="orange">+21</span>
+          <span class="yellow">+17</span>
+        </p>
+      </div>
+    </section>
+    <section class="step_container">
+      <a class="prev" onclick="stepSlides(-1)">&#10094;</a>
+      <a class="next" onclick="stepSlides(1)">&#10095;</a>
+    </section>
+    <div class="navigation_container">
+      <span class="button_slide" onclick="currentSlide(1)">пт</span>
+      <span class="button_slide" onclick="currentSlide(2)">сб</span>
+      <span class="button_slide" onclick="currentSlide(3)">вс</span>
+      <span class="button_slide" onclick="currentSlide(4)">пн</span>
+      <span class="button_slide" onclick="currentSlide(5)">вт</span>
+    </div>
     <section class="max_wind_speed">
       <span>Максимальная скорость ветра, м/с</span>
     </section>
@@ -244,6 +264,7 @@
   <footer class="footer">
     <span>2018 &copy Copyright</span>
   </footer>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

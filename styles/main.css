@@ -157,7 +157,9 @@
 .figure_fixed {
 	margin: 0;
 }
-
+.fade {
+	display: none;
+}
 .temperature_graph {
 	margin-left: 15px;
 	width: 879px;
@@ -167,13 +169,13 @@
 .rainfall_graph {
 	margin: 10px 0px 0px 16px;
 	width: 879px;
-	height: 46px;
+	height: 49px;
 }
 
 .wind_graph {
-	margin: 18px 0px 0px 24px;
-	width: 879px;
-	height: 84px;
+	margin: -13px 0px 0px 24px;
+    width: 879px;
+    height: 72px;
 }
 
 .time {
