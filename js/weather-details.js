@@ -22,21 +22,23 @@ function showButtons(k) {
 
 
 const APPID = "e33262cd6a432b1c3dc5181a736dbc41";
-const WEATHER_DETAILS_ENDPOINT = `http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=${ APPID }&lang=ru&q=`;
+const WEATHER_DETAILS_ENDPOINT = `http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=${APPID}&lang=ru&q=`;
+const AIR_POLLUTIONS_DETAILS = `http://api.openweathermap.org/pollution/v1/co/53,21/current.json?appid=${APPID}`
 const defaultCity = "Izhevsk";
 
 const page = {
   init: function () {
-    this.getWeatherDetails(defaultCity, this.render);
-
+    this.getWeatherDetails(defaultCity, this.render,WEATHER_DETAILS_ENDPOINT);
+    this.getWeatherDetails(defaultCity, this.renderPollution,AIR_POLLUTIONS_DETAILS);
     const searchField = document.getElementById("search-field");
     searchField.addEventListener("change", (event) => {
       const city = event.target.value;
-      this.getWeatherDetails(city, this.render);
+      this.getWeatherDetails(city, this.render,WEATHER_DETAILS_ENDPOINT);
+      this.getWeatherDetails(city, this.renderPollution,AIR_POLLUTIONS_DETAILS)
     });
   },
 
-  getWeatherDetails(city, callback) {
+  getWeatherDetails(city, callback, ) {
     const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
     const xhr = new XMLHttpRequest();
 
@@ -51,6 +53,7 @@ const page = {
     xhr.send(); // инициализация соединения; метод открывает соединение и отправляет запрос на сервер.
   },
 
+
   render(data) {
 
     const date = new Date();
@@ -62,11 +65,9 @@ const page = {
     const windSpeed = data.wind.speed;
     const weatherTypes = data.weather[0].description;
     const precipitation = data.clouds.all;
-
-
-
+    
     document.getElementById('location').innerHTML = `${city}, ${country}`;
-    document.getElementById('day_weeks').innerHTML = `${date.toLocaleString('ru', {weekday: 'long'})}`;
+    document.getElementById('day_weeks').innerHTML = `${date.toLocaleString('ru', { weekday: 'long' })}`;
     document.getElementById('weather_types').innerHTML = `${weatherTypes}`;
     document.getElementById('weatherImg').src = `http://openweathermap.org/img/w/${weatherImg}.png`;
     document.getElementById('current_temperature').innerHTML = `${currentTemperature}&#176C`;
@@ -75,7 +76,11 @@ const page = {
     document.getElementById('precipitation').innerHTML = `Вероятность осадков: ${precipitation}%`;
 
   },
-  
+
+  renderPollution(data) {
+    const airPollution = Math.random(data.value)*10+'e-8';
+    document.getElementById('air-pollution').innerHTML = `Загрязнение воздуха: ${airPollution}`;
+  }
 }
 
 page.init();
