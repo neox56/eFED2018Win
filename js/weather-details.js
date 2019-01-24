@@ -22,7 +22,7 @@ function showButtons(k) {
 
 
 const APPID = "e33262cd6a432b1c3dc5181a736dbc41";
-const WEATHER_DETAILS_ENDPOINT = `http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=${ APPID }&q=`;
+const WEATHER_DETAILS_ENDPOINT = `http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=${ APPID }&lang=ru&q=`;
 const defaultCity = "Izhevsk";
 
 const page = {
@@ -57,24 +57,25 @@ const page = {
     const city = data.name;
     const country = data.sys.country;
     const currentTemperature = Math.round(data.main.temp);
-    const weatherImg = data.weather.icon;
+    const weatherImg = data.weather[0].icon;
     const humidity = data.main.humidity;
     const windSpeed = data.wind.speed;
     const weatherTypes = data.weather[0].description;
-    //const precipitation = Math.round(data.precipitation )/ 1000;
+    const precipitation = data.clouds.all;
 
 
 
     document.getElementById('location').innerHTML = `${city}, ${country}`;
-    document.getElementById('day_weeks').innerHTML = `${date.toLocaleString('en', {weekday: 'long'})}`;
+    document.getElementById('day_weeks').innerHTML = `${date.toLocaleString('ru', {weekday: 'long'})}`;
     document.getElementById('weather_types').innerHTML = `${weatherTypes}`;
-    document.getElementById('weatherImg').src = `http://openweathermap.org/img/w/10d.png`;
+    document.getElementById('weatherImg').src = `http://openweathermap.org/img/w/${weatherImg}.png`;
     document.getElementById('current_temperature').innerHTML = `${currentTemperature}&#176C`;
     document.getElementById('humidity').innerHTML = ` Влажность: ${humidity}%`;
-    document.getElementById('wind').innerHTML = `Ветер: ${windSpeed}м/с`;
-    //document.getElementById('precipitation').innerHTML = `${precipitation}`;
+    document.getElementById('wind').innerHTML = `Ветер: ${windSpeed} м/с`;
+    document.getElementById('precipitation').innerHTML = `Вероятность осадков: ${precipitation}%`;
 
-  }
+  },
+  
 }
 
 page.init();

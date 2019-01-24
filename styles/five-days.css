@@ -159,7 +159,7 @@ header h1 {
 }
 
 .step_container {
-	position: fixed;
+	position: absolute;
 }
 
 .next {
