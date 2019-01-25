@@ -19,7 +19,7 @@
 	padding-left: 27px;
 	border-radius: 7px;
 	border-color: #ccc;
-	background-color: #e4e4e4
+	background-color: #e4e4e4 !important;
 }
 
 .air_pollution input[type="search"]:focus {
@@ -58,7 +58,13 @@
 	display: block;
 	margin: 0;
 }
-
+#icon-desc {
+	font-size: 5rem;
+	padding-top: 2rem;
+}
+#description {
+	font-size: 2rem;
+}
 .current_temperature_img {
 	margin: 7px 0px 0px 0px;
 	height: 91px;
@@ -117,6 +123,19 @@
 	font-size: 17px;
 	padding-top: 5px;
 }
+#weatherImg{
+	width: 100px;
+}
+.visible {
+	display: inline-block;
+}
+
+.chart {
+	margin: auto auto;
+	width: 700px;
+	height: 90px;
+	display: none;
+}
 
 #temperature_button,
 #rainfall_button {
@@ -138,12 +157,15 @@
 }
 
 .weather_button_optimize:focus {
+	background-color: #9b9b9b;
 	outline: none;
 }
 
 .weather_button:focus {
+	background-color: #9b9b9b;
 	outline: none;
 }
+
 
 .bottom_block {
 	margin-left: 25px;
@@ -157,9 +179,9 @@
 .figure_fixed {
 	margin: 0;
 }
-.fade {
-	display: none;
-}
+
+
+
 .temperature_graph {
 	margin-left: 15px;
 	width: 879px;
@@ -174,8 +196,8 @@
 
 .wind_graph {
 	margin: -13px 0px 0px 24px;
-    width: 879px;
-    height: 72px;
+	width: 879px;
+	height: 72px;
 }
 
 .time {
