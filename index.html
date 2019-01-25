@@ -23,10 +23,12 @@
       </ul>
     </nav>
     <section class="city_weather">
-      <span><img class="city_weather_img" src="assets/cloudy_space.PNG" alt="Облачно"></span>
-      <span>34&#176 Ижевск, Россия</span>
+      <span><img class="city_weather_img" id ="weatherImg" src="assets/cloudy_space.PNG" alt="Облачно"></span>
+      <span id="current_temperature">34&#176 </span>
+      <span id="location">Ижевск, Россия</span>
       <form action="#" method="GET">
-        <input type="search" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]{1,10}" title="Название города должно начинаться c большой буквы и не содержать цифр">
+        <input type="search" id="search-field" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]+(?:[\s-][а-яА-Яa-zA-Z]+)*$"
+         title="Название города должно начинаться c большой буквы и не содержать цифр">
         <button type="button"></button>
       </form>
     </section>
@@ -46,7 +48,7 @@
         </p>
         <figure class="figure_fixed">
           <img src="assets/Cloudy Weather.png" alt="Cloudy Weather">
-          <img src="assets/Sunny Weather_2.png" alt="">
+          <img src="assets/Sunny Weather_2.png" alt="Sunny Weather">
           <img src="assets/Weather2.png" alt="Sunny Weather">
           <img src="assets/Weather.png" alt="Weather">
         </figure>
