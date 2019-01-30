@@ -114,7 +114,6 @@ header h1 {
 	margin: 0;
 	display: inline-block;
 	font-size: 14px;
-
 }
 
 .temperature_container span {
@@ -334,3 +333,8 @@ header h1 {
 .sunset {
 	display: block;
 }
+
+.currentSlide{
+	display:block;
+}
+	

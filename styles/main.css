@@ -102,7 +102,9 @@
 	padding: 4px;
 	cursor: pointer;
 }
-
+.activeButton {
+    background-color: #9b9b9b;
+}
 .weather_parametrs ul {
 	margin: 0px 120px;
 }
@@ -175,7 +177,6 @@
 	outline: none;
 }
 
-
 .bottom_block {
 	margin-left: 25px;
 }
@@ -183,13 +184,12 @@
 .icons_graph {
 	display: inline-block;
 	margin-top: 30px;
+	width: 100%;
 }
 
 .figure_fixed {
 	margin: 0;
 }
-
-
 
 .temperature_graph {
 	margin-left: 15px;
@@ -210,14 +210,14 @@
 }
 
 .time {
-	margin: 0px 0px 5px 2px;
+	margin: -12px 0px 5px 25px;
 }
 
 .time_day {
 	color: #ccc;
-	font-size: 20px;
-	font-weight: bold;
-	margin: 0px 54px 0px 19px;
+    font-weight: bold;
+    margin: 0px 47px 0px 34px;
+    font-size: 14px;
 }
 
 .name_day,
@@ -227,7 +227,6 @@
 }
 
 .day_week {
-	
 	display: inline-block;
 }
 
@@ -248,16 +247,117 @@
 }
 .container-days {
 	display: inline-block;
-	padding: 0px 21px 0px 9px;
-	color: #bebebe;
-    
 }
 .container-days section{
-    text-align: center;
+	text-align: center;
+	padding:0px 26px 0px 35px;
 }
 #maxTemp{
 	color: black;
 }
 #minTemp{
 	color: gray;
+}
+
+.iconGraph{
+	display: none;
+  }
+
+  .activeGraph{
+	display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .icon-container{
+	display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+  }
+
+  .temperature-block{
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 1px solid black;
+  }
+
+  .temperature-level{
+	height: 70px;
+	display: flex;
+	flex-direction: column-reverse;
+  }
+  .high-temperature{
+	height: 30px;
+	background-color: #ccc;
+  }
+  .low-temperature{
+	height: 20px;;
+	background-color: #ccc;;
+  }
+  .rainfall-block {
+	display: flex;
+  }
+  .rainfall-level {
+    width: 100%;
+    height: 70px;
+    display: flex;
+	flex-direction: column-reverse;
+  }
+  .empty-rainfall {
+    height: 40px;
+    border-top: 2px solid #1878f0;
+	background-color: #e7f1fd;
+  }
+  .high-rainfall {
+	height: 25px;
+    border-top: 2px solid #1878f0;
+	background-color: #e7f1fd;
+  }
+  .low-rainfall {
+    height: 15px;
+    border-top: 2px solid #1878f0;
+    background-color: #e7f1fd;
+}
+
+.zero-rainfall {
+    height: 3px;
+    border-top: 2px solid #1878f0;
+	background-color: #e7f1fd;
+}
+
+.wind-block {
+    display: flex;
+	justify-content: space-around;
+}
+
+.wind-level {
+    height: 70px;
+    display: flex;
+    flex-direction: column-reverse;
+	align-items: center;
+}
+.wind-rotation-big {
+    margin-top: 0px;
+    transform: rotate(350deg);
+}
+
+.wind-rotation-mid {
+    margin-top: 0px;
+    transform: rotate(310deg);
+}
+
+.wind-rotation-small{
+    margin-top: 0px;
+	transform: rotate(10deg);
+}
+
+.line{
+	border-bottom: 1px solid black;
+    position: absolute;
+    bottom: 135px;
+    left: 123px;
+    width: 871px;
 }

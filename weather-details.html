@@ -7,7 +7,6 @@
     <meta name="keywords" content="Izhevsk,weather,today,five days,history weather">
     <title>Погода в Ижевске</title>
     <link rel="stylesheet" href="styles/main.css">
-
     <style type="text/css">
         @import url("styles/all.css");
     </style>
@@ -17,18 +16,16 @@
     <header class="header">
         <nav class="menu">
             <ul>
-                <li id="link"><a href="#">Сегодня</a> </li>
-                <li id="link"><a href="index.html">5 дней</a> </li>
-                <li><a href="historical-review.html">История погоды</a> </li>
+                <li id="link" class="color-button active"><a href="#">Сегодня</a> </li>
+                <li id="link" class="color-button"><a href="index.html">5 дней</a> </li>
+                <li class="color-button"><a href="historical-review.html">История погоды</a> </li>
             </ul>
         </nav>
         <section class="air_pollution">
             <span id="air-pollution">Загрязнение воздуха: 8.168363052618588e-8</span>
-            <form action="#" method="GET">
-                <input type="search" id="search-field" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]+(?:[\s-][а-яА-Яa-zA-Z]+)*$"
-                    title="Название города должно начинаться c большой буквы и не содержать цифр">
-                <button type="button"></button>
-            </form>
+            <input type="search" id="search-field" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]+(?:[\s-][а-яА-Яa-zA-Z]+)*$"
+                title="Название города должно начинаться c большой буквы и не содержать цифр">
+            <button type="button"></button>
         </section>
     </header>
     <main class="content">
@@ -61,41 +58,222 @@
                 Ветер: 11 км/ч
             </p>
             <section class="weather_parametrs">
-                <form action="#">
-                    <ul>
-                        <li id="temperature_button"><button class="weather_button" onclick="buttonClick(1)">Температура</button>
-                        </li>
-                        <li id="rainfall_button"><button class="weather_button_optimize" onclick="buttonClick(2)">Вероятность<br>осадков</button></li>
-                        <li id="wind_button"><button class="weather_button" onclick="buttonClick(3)">Ветер</button>
-                        </li>
-                    </ul>
-                </form>
+                <ul class="buttons_container" id="buttons_container">
+                    <li id="temperature_button"><button class="clickButton weather_button  activeButton" data-btn="0">Температура</button>
+                    </li>
+                    <li id="rainfall_button"><button class="clickButton weather_button_optimize" data-btn="1">Вероятность<br>осадков</button></li>
+                    <li id="wind_button"><button class="clickButton buttonss  weather_button" data-btn="2">Ветер</button>
+                    </li>
+                </ul>
             </section>
         </section>
         <section class="bottom_block">
             <section class="icons_graph">
-                <figure class="figure_fixed ">
-                    <img class="temperature_graph  myButtons" src="assets/temperature.jpg" alt="temperature graph">
-                </figure>
-                <figure class="figure_fixed ">
-                    <img class="rainfall_graph fade myButtons" src="assets/rainfall.jpg" alt="rainfall graph ">
-                </figure>
-                </figure class="figure_fixed ">
-                <img class="wind_graph fade myButtons" src="assets/wind.jpg" alt="wind graph">
-                </figure>
+                <section class="iconGraph activeGraph">
+                    <div class="icon-container">
+                        <div class="temperature-block">
+                            <div class="temperature-level">
+                                <div class="high-temperature"></div>
+                                <span>14</span>
+                            </div>
+                            <div class="temperature-level">
+                                <div class="high-temperature"></div>
+                                <span>14</span>
+                            </div>
+                            <div class="temperature-level">
+                                <div class="high-temperature"></div>
+                                <span>14</span>
+                            </div>
+                            <div class="temperature-level">
+                                <div class="low-temperature"></div>
+                                <span>12</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <div class="temperature-block">
+                            <div class="temperature-level">
+                                <div class="low-temperature"></div>
+                                <span>11</span>
+                            </div>
+                            <div class="temperature-level">
+                                <div class="low-temperature"></div>
+                                <span>13</span>
+                            </div>
+                            <div class="temperature-level">
+                                <div class="high-temperature"></div>
+                                <span>14</span>
+                            </div>
+                            <div class="temperature-level">
+                                <div class="high-temperature"></div>
+                                <span>14</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="iconGraph">
+                    <section class="icon-container">
+                        <div class="rainfall-block">
+                            <div class="rainfall-level">
+                                <div class="empty-rainfall"></div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="high-rainfall"></div>
+                                <span>24%</spanspan>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="low-rainfall"></div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="high-rainfall"></div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="high-rainfall"></div>
+                                <dspan>30%</span>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="empty-rainfall"></div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="empty-rainfall"></div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="empty-rainfall"></div>
+                                <span>24%</span>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="low-rainfall"></div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="high-rainfall">
+                                </div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="low-rainfall"></div>
+                                <span>8%</span>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="high-rainfall"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="icon-container">
+                        <div class="rainfall-block">
+                            <div class="rainfall-level">
+                                <div class="low-rainfall"></div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="high-rainfall"></div>
+                                <span>4%</span>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="low-rainfall"></div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="high-rainfall">
+                                </div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="low-rainfall"></div>
+                                <span>6%</span>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="high-rainfall"></div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="low-rainfall"></div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="zero-rainfall"></div>
+                                <span>0%</span>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="zero-rainfall"></div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="zero-rainfall">
+                                </div>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="low-rainfall"></div>
+                                <span>1%</span>
+                            </div>
+                            <div class="rainfall-level">
+                                <div class="high-rainfall"></div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="iconGraph">
+                    <div class="icon-container">
+                        <div class="wind-block">
+                            <div class="wind-level">
+                                <div class="wind-rotation-mid">
+                                    <img src="assets/wind.png" alt="wind-icon">
+                                </div>
+                                <span>7 м/с</span>
+                            </div>
+                            <div class="wind-level">
+                                <div class="wind-rotation-mid">
+                                    <img src="assets/wind.png" alt="wind-icon">
+                                </div>
+                                <span>5 м/с</span>
+                            </div>
+                            <div class="wind-level">
+                                <div class="wind-rotation-big">
+                                    <img src="assets/wind.png" alt="wind-icon">
+                                </div>
+                                <span>5 м/с</span>
+                            </div>
+                            <div class="wind-level">
+                                <div class="wind-rotation-small">
+                                    <img src="assets/wind.png" alt="wind-icon">
+                                </div>
+                                <span>5 м/с</span>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="icon-container">
+                        <div class="wind-block">
+                            <div class="wind-level">
+                                <div class="wind-rotation-small">
+                                    <img src="assets/wind.png" alt="wind-icon">
+                                </div>
+                                <span>6 м/с</span>
+                            </div>
+                            <div class="wind-level">
+                                <div class="wind-rotation-small">
+                                    <img src="assets/wind.png" alt="wind-icon">
+                                </div>
+                                <span>6 м/с</span>
+                            </div>
+                            <div class="wind-level">
+                                <div class="wind-rotation-small">
+                                    <img src="assets/wind.png" alt="wind-icon">
+                                </div>
+                                <span>6 м/с</span>
+                            </div>
+                            <div class="wind-level">
+                                <div class="wind-rotation-small">
+                                    <img src="assets/wind.png" alt="wind-icon">
+                                </div>
+                                <span>5 м/с</span>
+                            </div>
+                        </div>
+                    </section>
+                </section>
             </section>
             <section class="time">
                 <span class="time_day timeWeather">17:00</span>
                 <span class="time_day timeWeather">20:00</span>
                 <span class="time_day timeWeather">23:00</span>
-                <span class="time_day timeWeather">2:00</span>
-                <span class="time_day timeWeather">5:00</span>
-                <span class="time_day timeWeather">8:00</span>
+                <span class="time_day timeWeather">02:00</span>
+                <span class="time_day timeWeather">05:00</span>
+                <span class="time_day timeWeather">08:00</span>
                 <span class="time_day timeWeather">11:00</span>
                 <span class="time_day timeWeather">14:00</span>
             </section>
             <section class="container-days">
-
                 <span class="name_day">ср</span>
                 <figure><img src="assets/cloudy.jpeg" alt="weather on wednesday"></figure>
                 <figcaption class="degrees"><span id="maxTemp">22&#176 </span>
@@ -137,11 +315,12 @@
                     <span id="minTemp">14&#176</span>
                 </figcaption>
             </section>
+        </section>
     </main>
     <footer class="footer">
         <span>2019 &copy Copyright</span>
     </footer>
-
+    <script src="js/switch.js"></script>
     <script src="js/weather-details.js"></script>
 </body>
 

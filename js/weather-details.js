@@ -1,26 +1,3 @@
-function buttonClick(k) {
-  showButtons(buttonItem = k);
-}
-
-var buttonItem = 1;
-showButtons(buttonItem);
-
-
-function showButtons(k) {
-  var buttons = document.getElementsByClassName("myButtons");
-  if (k > buttons.length) {
-    buttonItem = 1
-  }
-  if (k < 1) {
-    buttonItem = button.length
-  }
-  for (i = 0; i < buttons.length; i++) {
-    buttons[i].style.display = "none";
-  }
-  buttons[buttonItem - 1].style.display = "block";
-}
-
-
 const APPID = "e33262cd6a432b1c3dc5181a736dbc41";
 const WEATHER_DETAILS_ENDPOINT = `http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=${APPID}&lang=ru&q=`;
 const AIR_POLLUTIONS_DETAILS = `http://api.openweathermap.org/pollution/v1/co/53,21/current.json?appid=${APPID}`;
@@ -79,7 +56,7 @@ const page = {
     const windSpeed = data.wind.speed;
     const weatherTypes = data.weather[0].description;
     const precipitation = data.clouds.all;
-    
+
     document.getElementById('location').innerHTML = `${city}, ${country}`;
     document.getElementById('day_weeks').innerHTML = `${date.toLocaleString('ru', { weekday: 'long' })}`;
     document.getElementById('weather_types').innerHTML = `${weatherTypes}`;
@@ -100,13 +77,13 @@ const page = {
       number = "",
       weekForecast = data.list.filter(item => item.dt_txt.indexOf('18:00:00') > -1);
     for (let i = 0; i < weekForecast.length; i++) {
-      let date = weekForecast[i].dt_txt;
+      let date = new Date(weekForecast[i].dt * 1000).toLocaleString('ru-RU', { weekday: "short" });;
       icon = weekForecast[i].weather[0].icon;
       typeWeather = weekForecast[i].weather[0].description;
       maxTemp = weekForecast[i].main.temp_max;
       minTemp = weekForecast[i].main.temp_min;
       number += `<section class="container-days">
-                        <span>${getDayName(date)}</span>
+                        <span>${date}</span>
                         <figure>
                             <img src="http://openweathermap.org/img/w/${icon}.png">
                         </figure>
@@ -120,27 +97,3 @@ const page = {
   }
 };
 page.init();
-
-
-function getDayName(date) {
-  let dayName = "";
-  date = new Date(date);
-  switch (date.getDay()) {
-    case 1:
-      dayName = "Пн";
-      break;
-    case 2:
-      dayName = "Вт";
-      break;
-    case 3:
-      dayName = "Ср";
-      break;
-    case 4:
-      dayName = "Чт";
-      break;
-    case 5:
-      dayName = "Пт";
-      break;
-  }
-  return dayName;
-}

@@ -1,40 +1,5 @@
-function stepSlides(k) {
-  showSlides(slideItem += k);
-}
-
-var slideItem = 1;
-showSlides(slideItem);
-
-
-function currentSlide(k) {
-  showSlides(slideItem = k);
-}
-
-function showSlides(k) {
-  var slides = document.getElementsByClassName("slider");
-  var button_slide = document.getElementsByClassName("button_slide");
-  if (k > slides.length) {
-    slideItem = 1;
-  }
-  if (k < 1) {
-    slideItem = slides.length
-  }
-
-
-  for (i = 0; i < slides.length; i++) {
-    if (slides[i].style.display === 'block') {
-      slides[i].style.display = "none";
-    }
-    button_slide[i].classList.remove('active');
-  }
-
-  slides[slideItem - 1].style.display = "block";
-  button_slide[slideItem - 1].classList.add('active');
-}
-
-
 const APPID = "e33262cd6a432b1c3dc5181a736dbc41";
-const WEATHER_DETAILS_ENDPOINT = `http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=${ APPID }&q=`;
+const WEATHER_DETAILS_ENDPOINT = `http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=${APPID}&q=`;
 const defaultCity = "Izhevsk";
 
 const fiveDays = {
@@ -78,7 +43,7 @@ const fiveDays = {
 
 
     document.getElementById('location').innerHTML = `${city}, ${country}`;
-  
+
     //document.getElementById('weather_types').innerHTML = `${weatherTypes}`;
     document.getElementById('weatherImg').src = `http://openweathermap.org/img/w/${weatherImg}.png`;
     document.getElementById('current_temperature').innerHTML = `${currentTemperature}&#176C`;
