@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 var sliderContain = document.querySelector('#sliderContainer');
 var buttonSlide = document.getElementsByClassName('button_slide');
 var elements = document.getElementsByClassName('slider');
@@ -13,13 +14,13 @@ sliderContain.addEventListener('click', function (event) {
         index = parseInt(event.target.dataset.sld);
         currentDay(index);
     }
-})
+});
 
 function currentDay() {
-    for (var i = 0; i < elements.length; i++) {
+    for (let i = 0; i < elements.length; i++) {
         elements[i].classList.remove('currentSlide');
     }
-    for (var i = 0; i < buttonSlide.length; i++) {
+    for (let i = 0; i < buttonSlide.length; i++) {
         buttonSlide[i].classList.remove('active');
     }
     buttonSlide[index].classList.add('active');
@@ -27,7 +28,7 @@ function currentDay() {
 }
 
 function showNext() {
-    for (var i = 0; i < elements.length; i++) {
+    for (let i = 0; i < elements.length; i++) {
         if (elements[i].classList.contains('currentSlide')) {
             elements[i].classList.remove('currentSlide');
             buttonSlide[i].classList.remove('active');
@@ -44,7 +45,7 @@ function showNext() {
 }
 
 function showPrev() {
-    for (var i = 0; i < elements.length; i++) {
+    for (let i = 0; i < elements.length; i++) {
         if (elements[i].classList.contains('currentSlide')) {
             elements[i].classList.remove('currentSlide');
             buttonSlide[i].classList.remove('active');
