@@ -25,11 +25,9 @@
       <span><img class="city_weather_img" id="weatherImg" src="assets/cloudy_space.PNG" alt="Облачно"></span>
       <span id="current_temperature">34&#176 </span>
       <span id="location">Ижевск, Россия</span>
-      <form action="#" method="GET">
         <input type="search" id="search-field" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]+(?:[\s-][а-яА-Яa-zA-Z]+)*$"
           title="Название города должно начинаться c большой буквы и не содержать цифр">
         <button type="button"></button>
-      </form>
     </section>
   </header>
   <main class="content">
@@ -241,9 +239,9 @@
       <figure>
         <img src="assets/Sun.png" alt="Sun">
         <p class="settings_value">
-          <span class="day_lenght">Долгота дня - 16 ч 43 мин</span>
-          <span class="sunrise">Восход - 4:02</span>
-          <span class="suntset">Заход - 20:45</span>
+          <span class="day_length">Долгота дня - 16 ч 43 мин</span>
+          <span class="sunrise"  id = "sunrise">Восход - 4:02</span>
+          <span class="sunset"  id = "sunset">Заход - 20:45</span>
         </p>
         <figcaption>
           Сегодня день на 2 минуты длиннее, чем вчера
@@ -255,8 +253,8 @@
         <img src="assets/Moon.png" alt="Moon">
         <p class="settings_value">
           <span class="day_lenght">Луна растущая - 19%</span>
-          <span class="sunrise">Восход - 7:40</span>
-          <span class="suntset">Заход - 10:58</span>
+          <span class="sunriseMoon">Восход - 7:40</span>
+          <span class="sunsetMoon">Заход - 10:58</span>
         </p>
         <figcaption class="moon">
           Полнолуние - 28 июня, через 23 дня

@@ -27,6 +27,7 @@ const page = {
     getWeatherDetails(city, callback, WEATHER_DETAILS_ENDPOINT) {
         const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
         const xhr = new XMLHttpRequest();
+        
 
         xhr.onload = function () {
             if (this.readyState === 4 && this.status === 200) {
@@ -78,7 +79,6 @@ const page = {
     },
       
     renderGrahps(data) {
-        
         dayTemp = document.getElementsByClassName('temperature-block')[0],
         dayPrecipitation = document.getElementsByClassName('rainfall-block')[0],
         dayWind = document.getElementsByClassName('wind-block')[0],
@@ -86,28 +86,23 @@ const page = {
         precipitationData = '';
         windData ='';
         Grahps = data.list.slice(0, 8);
-     
         for (let i = 0; i < Grahps.length; i++) {
             temperature = Grahps[i].main.temp;
             precipitation = Grahps[i].clouds.all;
             wind = Grahps[i].wind.speed;
-            tempData +=  ` 
-            <div class="temperature-level">
-                <div class="low-temperature"></div>
-                <span>${temperature.toFixed()}</span>
-                </div> `;
-            precipitationData += `
-            <div class="rainfall-level">
-            <div class="high-rainfall"></div>
-            <span>${precipitation}%</span>
-                </div>`;
-            windData += `
-                <div class="wind-level">
-                <div class="wind-rotation-mid">
-                <img src="assets/wind.png" alt="wind-icon">
-                </div>
-                <span>${wind.toFixed()} м/с</span>
-                    </div>`;  
+            tempData +=  ` <div class="temperature-level">
+                           <div class="low-temperature"></div>
+                           <span>${temperature.toFixed()}</span>
+                           </div> `;
+            precipitationData += `<div class="rainfall-level">
+                                  <div class="high-rainfall"></div>
+                                  <span>${precipitation}%</span>
+                                  </div>`;
+            windData += `<div class="wind-level">
+                         <div class="wind-rotation-mid">
+                         <img src="assets/wind.png" alt="wind-icon"></div>
+                         <span>${wind.toFixed()} м/с</span>
+                         </div>`;  
         }
         dayTemp.innerHTML = tempData;
         dayPrecipitation.innerHTML = precipitationData;
@@ -140,4 +135,5 @@ const page = {
     }
 };
 page.init();
+
 

@@ -1,340 +1,339 @@
 header h1 {
-	margin: 5px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
 }
 
 .city_weather {
-	width: 100%;
-	margin-top: 50px;
-	border-top: 1px solid #979797;
-	height: 49px;
-	background-color: #f2f2f2
+  width: 100%;
+  margin-top: 50px;
+  border-top: 1px solid #979797;
+  height: 49px;
+  background-color: #f2f2f2;
 }
 
 .city_weather span {
-	float: left;
-	margin: 13px 0px 0px 16px;
-	font-size: 20px;
+  float: left;
+  margin: 13px 0px 0px 16px;
+  font-size: 20px;
 }
 
 .city_weather input[type="search"] {
-	float: right;
-	margin: 8px 26px 0px 0px;
-	height: 34px;
-	padding-left: 27px;
-	border-radius: 7px;
-	border-color: #ccc;
-	background-color: #e4e4e4
+  float: right;
+  margin: 8px 26px 0px 0px;
+  height: 34px;
+  padding-left: 27px;
+  border-radius: 7px;
+  border-color: #ccc;
+  background-color: #e4e4e4;
 }
 
 .city_weather button:focus {
-	outline: none;
+  outline: none;
 }
 
 .city_weather input[type="search"]:focus {
-	outline: none;
+  outline: none;
 }
 
 .city_weather button {
-	float: right;
-	border: none;
-	cursor: pointer;
-	height: 21px;
-	width: 19px;
-	margin-top: 15px;
-	margin-right: -25px;
-	background-image: url(../assets/loupe.png);
+  float: right;
+  border: none;
+  cursor: pointer;
+  height: 21px;
+  width: 19px;
+  margin-top: 15px;
+  margin-right: -25px;
+  background-image: url(../assets/loupe.png);
 }
 
 .city_weather_img {
-	margin-top: -13px;
+  margin-top: -13px;
 }
 
 .content {
-	margin-left: 34px;
+  margin-left: 34px;
 }
 
 .container_day_week {
-	height: 29px;
-	text-align: center;
-
+  height: 29px;
+  text-align: center;
 }
 
 #border_right {
-	border-right: none;
+  border-right: none;
 }
 
 .day {
-	border-bottom: 2px solid #9b9b9b;
-	background-color: #f1f1f1;
-	font-size: 18px;
-	margin: 0;
-	width: 428px;
-	height: 22px;
+  border-bottom: 2px solid #9b9b9b;
+  background-color: #f1f1f1;
+  font-size: 18px;
+  margin: 0;
+  width: 428px;
+  height: 22px;
 }
 
 .slider {
-	height: 144px;
-    text-align: center;
-    position: relative;
-    bottom: -2px;
-    margin: 0px 0px 0px 256px;
+  height: 144px;
+  text-align: center;
+  position: relative;
+  bottom: -2px;
+  margin: 0px 0px 0px 256px;
 }
 
 .part_day {
-	border: 2px solid #9b9b9b;
-	font-size: 12px;
-	float: left;
-	width: 428px;
-	height: 110px;
-	margin: 5px 0px 0px;
-	text-align: center;
+  border: 2px solid #9b9b9b;
+  font-size: 12px;
+  float: left;
+  width: 428px;
+  height: 110px;
+  margin: 5px 0px 0px;
+  text-align: center;
 }
 
 .times_day {
-	margin: 3px 0px 0px 0px;
+  margin: 3px 0px 0px 0px;
 }
 
 .times_day span {
-	padding: 0px 20px;
-	padding-right: 11px;
-	display: inline-block;
-	width: 71px;
-	font-size: 14px;
+  padding: 0px 20px;
+  padding-right: 11px;
+  display: inline-block;
+  width: 71px;
+  font-size: 14px;
 }
 
 .figure_fixed {
-	margin: 0;
+  margin: 0;
 }
 
 .figure_fixed img {
-	padding: 0px 27px 0px 33px;
+  padding: 0px 27px 0px 33px;
 }
 
 .temperature_container {
-	margin: 0;
-	display: inline-block;
-	font-size: 14px;
+  margin: 0;
+  display: inline-block;
+  font-size: 14px;
 }
 
 .temperature_container span {
-	display: inline-block;
-    font-size: 14px;
-    margin: 2px 28px 0px 37px;
-    padding: 0px 5px;
-    width: 23px;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 28px 0px 37px;
+  padding: 0px 5px;
+  width: 23px;
 }
 
 .green {
-	border: 1px solid #9b9b9b;
-	background-color: greenyellow;
+  border: 1px solid #9b9b9b;
+  background-color: greenyellow;
 }
 
 .yellow {
-	border: 1px solid #9b9b9b;
-	background-color: yellow;
+  border: 1px solid #9b9b9b;
+  background-color: yellow;
 }
 
 .orange {
-	border: 1px solid #9b9b9b;
-	background-color: orange;
+  border: 1px solid #9b9b9b;
+  background-color: orange;
 }
 
 .prev,
 .next {
-	cursor: pointer;
-	position: absolute;
-	padding: 11px;
-	font-weight: bold;
-	font-size: 18px;
-	bottom: 55px;
-	left: 224px;
+  cursor: pointer;
+  position: absolute;
+  padding: 11px;
+  font-weight: bold;
+  font-size: 18px;
+  bottom: 55px;
+  left: 224px;
 }
 
 .navigation_container {
-	left: -18px;
-	bottom: 13px;
-	text-align: center;
-	position: relative;
+  left: -18px;
+  bottom: 13px;
+  text-align: center;
+  position: relative;
 }
 
 .step_container {
-	position: absolute;
+  position: absolute;
 }
 
 .next {
-	left: 688px;
-	bottom: 54px;
+  left: 688px;
+  bottom: 54px;
 }
 
 .prev:hover,
 .next:hover {
-	background-color: white;
+  background-color: white;
 }
 
-.button_slide{
-	cursor: pointer;
-	height: 23px;
-	width: 30px;
-	margin: 0 2px;
-	border: 1px solid black;
-	display: inline-block;
+.button_slide {
+  cursor: pointer;
+  height: 23px;
+  width: 30px;
+  margin: 0 2px;
+  border: 1px solid black;
+  display: inline-block;
 }
 
 .active,
 .button_slide:hover {
-	background-color: #9b9b9b;
+  background-color: #9b9b9b;
 }
 
-
 .fade {
-	display: none;
+  display: none;
 }
 
 .max_wind_speed {
-	border: 1px solid #9b9b9b;
-	margin-left: 14.6px;
-	width: 899px;
-	padding: 4px 0px 4px 0px;
-	background-color: #d8d8d8;
-	text-align: center;
+  border: 1px solid #9b9b9b;
+  margin-left: 14.6px;
+  width: 899px;
+  padding: 4px 0px 4px 0px;
+  background-color: #d8d8d8;
+  text-align: center;
 }
 
 .wind_speed_value {
-	height: 39px;
-	width: 901px;
-	text-align: center;
-	margin-left: 15.5px;
+  height: 39px;
+  width: 901px;
+  text-align: center;
+  margin-left: 15.5px;
 }
 
 .wind_speed_value .square {
-	display: inline-block;
-	margin: 12px 7px 0px 7px;
-	width: 27px;
-	height: 15px;
-	transform: skew(-40deg);
-	background: #D4D5DA
+  display: inline-block;
+  margin: 12px 7px 0px 7px;
+  width: 27px;
+  height: 15px;
+  transform: skew(-40deg);
+  background: #d4d5da;
 }
 
 .wind_speed_value p {
-	margin: 0;
-	border: 1px solid #9b9b9b;
-	font-size: 17px;
-	height: 38px;
-	width: 179.1px;
-	float: left;
-	margin-left: -1px;
-	margin-top: -1px;
+  margin: 0;
+  border: 1px solid #9b9b9b;
+  font-size: 17px;
+  height: 38px;
+  width: 179.1px;
+  float: left;
+  margin-left: -1px;
+  margin-top: -1px;
 }
 
 .wind_speed_value span mark {
-	transform: skew(40deg);
-	display: block;
-	margin: 0;
-	margin-left: -14px;
-	margin-top: -2px;
-	height: 0;
-	background-color: #D4D5DA;
+  transform: skew(40deg);
+  display: block;
+  margin: 0;
+  margin-left: -14px;
+  margin-top: -2px;
+  height: 0;
+  background-color: #d4d5da;
 }
 
 .rainfall {
-	text-align: center;
-	border: 1px solid #9b9b9b;
-	margin-left: 15px;
-	width: 899px;
-	margin-top: -1px;
-	padding: 4px 0px 4px 0px;
-	background-color: #d8d8d8;
+  text-align: center;
+  border: 1px solid #9b9b9b;
+  margin-left: 15px;
+  width: 899px;
+  margin-top: -1px;
+  padding: 4px 0px 4px 0px;
+  background-color: #d8d8d8;
 }
 
 .rainfall_value {
-	width: 901px;
-	height: 84px;
-	margin-left: 16px;
+  width: 901px;
+  height: 84px;
+  margin-left: 16px;
 }
 
 .rainfall_value p {
-	border: 1px solid #9b9b9b;
-	font-size: 17px;
-	height: 37px;
-	width: 179.1px;
-	float: left;
-	margin-left: -1px;
-	margin-top: -1px;
-	padding-top: 47px;
+  border: 1px solid #9b9b9b;
+  font-size: 17px;
+  height: 37px;
+  width: 179.1px;
+  float: left;
+  margin-left: -1px;
+  margin-top: -1px;
+  padding-top: 47px;
 }
 
 .rainfall_value span {
-	display: inline-block;
-	margin: 0px 12px 0px 12px;
+  display: inline-block;
+  margin: 0px 5px 0px 12px;
 }
 
 .chart_small {
-	background-image: url(../assets/Group.png);
-	margin: 12px 7px 0px 7px;
-	height: 18px;
-	display: inline-block;
-	width: 27px;
+  background-image: url(../assets/Group.png);
+  margin: 12px 7px 0px 7px;
+  height: 18px;
+  display: inline-block;
+  width: 27px;
 }
 
 .chart_big {
-	background-image: url(../assets/Group_2.png);
-	margin: 12px 7px 0px 7px;
-	height: 18px;
-	display: inline-block;
-	width: 26px;
-	height: 38px;
-	line-height: 57px;
+  background-image: url(../assets/Group_2.png);
+  margin: 12px 7px 0px 7px;
+  height: 18px;
+  display: inline-block;
+  width: 26px;
+  height: 38px;
+  line-height: 57px;
 }
 
 .calendar_sun_moon {
-	border: 1px solid #9b9b9b;
-	width: 899px;
-	margin: 12px 0px 0px 15px;
-	height: 36px;
-	background-color: #f1f1f1;
+  border: 1px solid #9b9b9b;
+  width: 899px;
+  margin: 12px 0px 0px 15px;
+  height: 36px;
+  background-color: #f1f1f1;
 }
 
 .calendar_day {
-	float: left;
-	font-size: 18px;
-	margin: 3px 0px 0px 8px;
+  float: left;
+  font-size: 18px;
+  margin: 3px 0px 0px 8px;
 }
 
 .sun_moon {
-	margin: 3px 395px 0px 0px;
-	float: right;
-	font-size: 18px;
+  margin: 3px 395px 0px 0px;
+  float: right;
+  font-size: 18px;
 }
 
 .sun_settings,
 .moon_settings {
-	display: inline-block;
+  display: inline-block;
 }
 
 .sun_settings figcaption {
-	margin: 10px 0px 0px 26px;
-	font-size: 17px;
+  margin: 10px 0px 0px 26px;
+  font-size: 17px;
 }
 
 .moon_settings figcaption {
-	margin: 10px 0px 0px 46px;
-	font-size: 17px;
+  margin: 10px 0px 0px 46px;
+  font-size: 17px;
 }
 
 .settings_value {
-	float: right;
-	margin: 1px 0px 0px 22px;
-	line-height: 42px;
-	font-size: 18px;
+  float: right;
+  margin: 1px 0px 0px 22px;
+  line-height: 42px;
+  font-size: 18px;
 }
 
-.day_lenght,
+.day_length,
 .sunrise,
-.sunset {
-	display: block;
+.sunset,
+.sunsetMoon,
+.sunriseMoon {
+  display: block;
 }
 
-.currentSlide{
-	display:block;
+.currentSlide {
+  display: block;
 }
-	
