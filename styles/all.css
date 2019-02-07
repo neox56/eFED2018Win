@@ -17,7 +17,7 @@ body {
 	text-decoration: none;
 }
 
-.header .menu ul li {
+.color-button {
 	margin-left: 15px;
 	height: 26px;
 	width: 165px;
@@ -29,7 +29,9 @@ body {
 	text-align: center;
 	font-size: 20px;
 }
-
+.active{
+	background-color: #9b9b9b;
+}
 .header .menu ul li a {
 	text-decoration: none;
 	color: black;

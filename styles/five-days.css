@@ -46,7 +46,7 @@ header h1 {
 }
 
 .city_weather_img {
-	margin-top: -5px;
+	margin-top: -13px;
 }
 
 .content {
@@ -114,7 +114,6 @@ header h1 {
 	margin: 0;
 	display: inline-block;
 	font-size: 14px;
-
 }
 
 .temperature_container span {
@@ -159,7 +158,7 @@ header h1 {
 }
 
 .step_container {
-	position: fixed;
+	position: absolute;
 }
 
 .next {
@@ -334,3 +333,8 @@ header h1 {
 .sunset {
 	display: block;
 }
+
+.currentSlide{
+	display:block;
+}
+	
