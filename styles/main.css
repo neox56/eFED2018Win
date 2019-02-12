@@ -289,11 +289,11 @@
 	display: flex;
 	flex-direction: column-reverse;
   }
-  .high-temperature{
+  .high-temperature {
 	height: 30px;
 	background-color: #ccc;
   }
-  .low-temperature{
+  .low-temperature {
 	height: 20px;;
 	background-color: #ccc;;
   }

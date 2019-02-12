@@ -20,18 +20,18 @@
       </ul>
     </nav>
     <section class="city_weather">
-      <span>Ижевск, Россия</span>
-      <form action="#" method="GET">
-        <input type="search" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]{1,10}" title="Название города должно начинаться c большой буквы и не содержать цифр">
-        <button type="button"></button>
-      </form>
+      <span id="location">Ижевск, Россия</span>
+     
+      <input type="search" id="search-field" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]+(?:[\s-][а-яА-Яa-zA-Z]+)*$"
+      title="Название города должно начинаться c большой буквы и не содержать цифр">
+    <button type="button"></button>
     </section>
   </header>
   <main class="content">
     <header>
       <h1>Историческая справка о погоде на текущий день</h1>
     </header>
-    <section class="chessboard">
+    <section class="chessboardMonths">
       <span class="monthname grey_square"></span>
       <span class="monthname">Январь</span>
       <span class="monthname grey_square">Февраль</span>
@@ -46,8 +46,8 @@
       <span class="monthname">Ноябрь</span>
       <span class="monthname grey_square">Декабрь</span>
     </section>
-    <section class="chessboard">
-      <span class="average_maximum" id="average_fixed">Средний максимум</span>
+    <span class="average_maximum" id="average_fixed">Средний максимум</span>
+    <section class="chessboard-mid-max">
       <span class="average_maximum grey_square">-9&deg</span>
       <span class="average_maximum">-8&deg</span>
       <span class="average_maximum grey_square">-1&deg</span>
@@ -61,23 +61,23 @@
       <span class="average_maximum grey_square">-2&deg</span>
       <span class="average_maximum">-7&deg</span>
     </section>
-    <section class="chessboard">
-      <span class="average_maximum grey_square" id="average_fixed">Средний максимум</span>
-      <span class="average_maximum ">-16&deg</span>
-      <span class="average_maximum grey_square">-15&deg</span>
-      <span class="average_maximum ">-9&deg</span>
-      <span class="average_maximum grey_square">-1&deg</span>
-      <span class="average_maximum ">7&deg</span>
-      <span class="average_maximum grey_square">12&deg</span>
-      <span class="average_maximum ">14&deg</span>
-      <span class="average_maximum grey_square">12&deg</span>
-      <span class="average_maximum ">7&deg</span>
-      <span class="average_maximum grey_square">0&deg</span>
-      <span class="average_maximum ">-7&deg</span>
-      <span class="average_maximum grey_square">-13&deg</span>
+    <span class="average_maximum grey_square" id="average_fixed">Средний минимум</span>
+    <section class="chessboard-mid-min">
+      <span class="average_minimum ">-16&deg</span>
+      <span class="average_minimum grey_square">-15&deg</span>
+      <span class="average_minimum ">-9&deg</span>
+      <span class="average_minimum grey_square">-1&deg</span>
+      <span class="average_minimum">7&deg</span>
+      <span class="average_minimum grey_square">12&deg</span>
+      <span class="average_minimum ">14&deg</span>
+      <span class="average_minimum grey_square">12&deg</span>
+      <span class="average_minimum ">7&deg</span>
+      <span class="average_minimum grey_square">0&deg</span>
+      <span class="average_minimum ">-7&deg</span>
+      <span class="average_minimum grey_square">-13&deg</span>
     </section>
-    <section class="chessboard">
-      <span class="record_maximum" id="average_fixed">Рекордный максимум</span>
+    <span class="record_maximum" id="average_fixed">Рекордный максимум</span>
+    <section class="chessboard-record-max">
       <span class="record_maximum grey_square">3&deg</span>
       <span class="record_maximum">3&deg</span>
       <span class="record_maximum grey_square">9&deg</span>
@@ -91,20 +91,20 @@
       <span class="record_maximum grey_square">12&deg</span>
       <span class="record_maximum">4&deg</span>
     </section>
-    <section class="chessboard">
-      <span class="record_maximum grey_square" id="average_fixed">Рекордный максимум</span>
-      <span class="record_maximum ">-39&deg</span>
-      <span class="record_maximum grey_square">-39&deg</span>
-      <span class="record_maximum ">-30&deg</span>
-      <span class="record_maximum grey_square">-22&deg</span>
-      <span class="record_maximum ">-7&deg</span>
-      <span class="record_maximum grey_square">0&deg</span>
-      <span class="record_maximum ">4&deg</span>
-      <span class="record_maximum grey_square">1&deg</span>
-      <span class="record_maximum ">-4&deg</span>
-      <span class="record_maximum grey_square">-21&deg</span>
-      <span class="record_maximum ">-29&deg</span>
-      <span class="record_maximum grey_square">-40&deg</span>
+    <span class="record_minimum grey_square" id="average_fixed">Рекордный минимум</span>
+    <section class="chessboard-record-min">
+      <span class="record_minimum ">-39&deg</span>
+      <span class="record_minimum grey_square">-39&deg</span>
+      <span class="record_minimum ">-30&deg</span>
+      <span class="record_minimum grey_square">-22&deg</span>
+      <span class="record_minimum ">-7&deg</span>
+      <span class="record_minimum grey_square">0&deg</span>
+      <span class="record_minimum ">4&deg</span>
+      <span class="record_minimum grey_square">1&deg</span>
+      <span class="record_minimum ">-4&deg</span>
+      <span class="record_minimum grey_square">-21&deg</span>
+      <span class="record_minimum ">-29&deg</span>
+      <span class="record_minimum grey_square">-40&deg</span>
     </section>
   </main>
   <aside class="advertising">
@@ -116,6 +116,7 @@
   <footer class="footer">
     <span>2019 &copy Copyright</span>
   </footer>
+  <script src="js/historical-review.js"></script>
 </body>
 
 </html>
