@@ -2,117 +2,206 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="Author" content="Dmitriy Smolin">
-  <meta name="keywords" content="Izhevsk,weather,today,five days,history weather">
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Dmitriy Smolin" />
+  <meta name="keywords" content="Izhevsk,weather,today,five days,history weather" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Историческая справка о погоде на текущий день</title>
-  <link rel="stylesheet" href="styles/historical-review.css">
-  <style type="text/css">@import url("styles/all.css");</style>
+  <link rel="stylesheet" href="styles/historical-review.css" />
 </head>
 
 <body>
   <header class="header">
     <nav class="menu">
       <ul>
-          <li id="link" class="color-button "><a href="weather-details.html">Сегодня</a> </li>
-          <li id="link" class="color-button" ><a href="index.html">5 дней</a> </li>
-          <li class="color-button active"><a href="#">История погоды</a> </li>
+        <li id="link" class="color-button">
+          <a href="weather-details.html">Сегодня</a>
+        </li>
+        <li id="link" class="color-button">
+          <a href="index.html">5 дней</a>
+        </li>
+        <li class="color-button active"><a href="#">История погоды</a></li>
       </ul>
     </nav>
     <section class="city_weather">
       <span id="location">Ижевск, Россия</span>
-     
       <input type="search" id="search-field" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]+(?:[\s-][а-яА-Яa-zA-Z]+)*$"
-      title="Название города должно начинаться c большой буквы и не содержать цифр">
-    <button type="button"></button>
+        title="Название города должно начинаться c большой буквы и не содержать цифр" />
+      <button type="button"></button>
     </section>
   </header>
   <main class="content">
-    <header>
-      <h1>Историческая справка о погоде на текущий день</h1>
-    </header>
-    <section class="chessboardMonths">
-      <span class="monthname grey_square"></span>
-      <span class="monthname">Январь</span>
-      <span class="monthname grey_square">Февраль</span>
-      <span class="monthname">Март</span>
-      <span class="monthname grey_square">Апрель</span>
-      <span class="monthname">Май</span>
-      <span class="monthname grey_square">Июнь</span>
-      <span class="monthname">Июль</span>
-      <span class="monthname grey_square">Август</span>
-      <span class="monthname">Сентябрь</span>
-      <span class="monthname grey_square">Октябрь</span>
-      <span class="monthname">Ноябрь</span>
-      <span class="monthname grey_square">Декабрь</span>
-    </section>
-    <span class="average_maximum" id="average_fixed">Средний максимум</span>
-    <section class="chessboard-mid-max">
-      <span class="average_maximum grey_square">-9&deg</span>
-      <span class="average_maximum">-8&deg</span>
-      <span class="average_maximum grey_square">-1&deg</span>
-      <span class="average_maximum">7&deg</span>
-      <span class="average_maximum grey_square">18&deg</span>
-      <span class="average_maximum">23&deg</span>
-      <span class="average_maximum grey_square">25&deg</span>
-      <span class="average_maximum">22&deg</span>
-      <span class="average_maximum  grey_square">15&deg</span>
-      <span class="average_maximum">7&deg</span>
-      <span class="average_maximum grey_square">-2&deg</span>
-      <span class="average_maximum">-7&deg</span>
-    </section>
-    <span class="average_maximum grey_square" id="average_fixed">Средний минимум</span>
-    <section class="chessboard-mid-min">
-      <span class="average_minimum ">-16&deg</span>
-      <span class="average_minimum grey_square">-15&deg</span>
-      <span class="average_minimum ">-9&deg</span>
-      <span class="average_minimum grey_square">-1&deg</span>
-      <span class="average_minimum">7&deg</span>
-      <span class="average_minimum grey_square">12&deg</span>
-      <span class="average_minimum ">14&deg</span>
-      <span class="average_minimum grey_square">12&deg</span>
-      <span class="average_minimum ">7&deg</span>
-      <span class="average_minimum grey_square">0&deg</span>
-      <span class="average_minimum ">-7&deg</span>
-      <span class="average_minimum grey_square">-13&deg</span>
-    </section>
-    <span class="record_maximum" id="average_fixed">Рекордный максимум</span>
-    <section class="chessboard-record-max">
-      <span class="record_maximum grey_square">3&deg</span>
-      <span class="record_maximum">3&deg</span>
-      <span class="record_maximum grey_square">9&deg</span>
-      <span class="record_maximum">24&deg</span>
-      <span class="record_maximum grey_square">30&deg</span>
-      <span class="record_maximum">36&deg</span>
-      <span class="record_maximum grey_square">38&deg</span>
-      <span class="record_maximum">37&deg</span>
-      <span class="record_maximum grey_square">30&deg</span>
-      <span class="record_maximum">22&deg</span>
-      <span class="record_maximum grey_square">12&deg</span>
-      <span class="record_maximum">4&deg</span>
-    </section>
-    <span class="record_minimum grey_square" id="average_fixed">Рекордный минимум</span>
-    <section class="chessboard-record-min">
-      <span class="record_minimum ">-39&deg</span>
-      <span class="record_minimum grey_square">-39&deg</span>
-      <span class="record_minimum ">-30&deg</span>
-      <span class="record_minimum grey_square">-22&deg</span>
-      <span class="record_minimum ">-7&deg</span>
-      <span class="record_minimum grey_square">0&deg</span>
-      <span class="record_minimum ">4&deg</span>
-      <span class="record_minimum grey_square">1&deg</span>
-      <span class="record_minimum ">-4&deg</span>
-      <span class="record_minimum grey_square">-21&deg</span>
-      <span class="record_minimum ">-29&deg</span>
-      <span class="record_minimum grey_square">-40&deg</span>
+    <div class="table-block">
+      <section class="chessboardMonths">
+        <span class="monthname grey_square"></span>
+        <span class="monthname">Январь</span>
+        <span class="monthname grey_square">Февраль</span>
+        <span class="monthname">Март</span>
+        <span class="monthname grey_square">Апрель</span>
+        <span class="monthname">Май</span>
+        <span class="monthname grey_square">Июнь</span>
+        <span class="monthname">Июль</span>
+        <span class="monthname grey_square">Август</span>
+        <span class="monthname">Сентябрь</span>
+        <span class="monthname grey_square">Октябрь</span>
+        <span class="monthname">Ноябрь</span>
+        <span class="monthname grey_square">Декабрь</span>
+      </section>
+      <span class="average_maximum" id="average_fixed">Средний максимум</span>
+      <section class="chessboard-mid-max">
+        <span class="average_maximum grey_square">-9&deg</span>
+        <span class="average_maximum">-8&deg</span>
+        <span class="average_maximum grey_square">-1&deg</span>
+        <span class="average_maximum">7&deg</span>
+        <span class="average_maximum grey_square">18&deg</span>
+        <span class="average_maximum">23&deg</span>
+        <span class="average_maximum grey_square">25&deg</span>
+        <span class="average_maximum">22&deg</span>
+        <span class="average_maximum  grey_square">15&deg</span>
+        <span class="average_maximum">7&deg</span>
+        <span class="average_maximum grey_square">-2&deg</span>
+        <span class="average_maximum">-7&deg</span>
+      </section>
+      <span class="average_maximum grey_square" id="average_fixed">Средний минимум</span>
+      <section class="chessboard-mid-min">
+        <span class="average_minimum">-16&deg</span>
+        <span class="average_minimum grey_square">-15&deg</span>
+        <span class="average_minimum">-9&deg</span>
+        <span class="average_minimum grey_square">-1&deg</span>
+        <span class="average_minimum">7&deg</span>
+        <span class="average_minimum grey_square">12&deg</span>
+        <span class="average_minimum">14&deg</span>
+        <span class="average_minimum grey_square">12&deg</span>
+        <span class="average_minimum">7&deg</span>
+        <span class="average_minimum grey_square">0&deg</span>
+        <span class="average_minimum">-7&deg</span>
+        <span class="average_minimum grey_square">-13&deg</span>
+      </section>
+      <span class="record_maximum" id="average_fixed">Рекордный максимум</span>
+      <section class="chessboard-record-max">
+        <span class="record_maximum grey_square">3&deg</span>
+        <span class="record_maximum">3&deg</span>
+        <span class="record_maximum grey_square">9&deg</span>
+        <span class="record_maximum">24&deg</span>
+        <span class="record_maximum grey_square">30&deg</span>
+        <span class="record_maximum">36&deg</span>
+        <span class="record_maximum grey_square">38&deg</span>
+        <span class="record_maximum">37&deg</span>
+        <span class="record_maximum grey_square">30&deg</span>
+        <span class="record_maximum">22&deg</span>
+        <span class="record_maximum grey_square">12&deg</span>
+        <span class="record_maximum">4&deg</span>
+      </section>
+      <span class="record_minimum grey_square" id="average_fixed">Рекордный минимум</span>
+      <section class="chessboard-record-min">
+        <span class="record_minimum">-39&deg</span>
+        <span class="record_minimum grey_square">-39&deg</span>
+        <span class="record_minimum">-30&deg</span>
+        <span class="record_minimum grey_square">-22&deg</span>
+        <span class="record_minimum">-7&deg</span>
+        <span class="record_minimum grey_square">0&deg</span>
+        <span class="record_minimum">4&deg</span>
+        <span class="record_minimum grey_square">1&deg</span>
+        <span class="record_minimum">-4&deg</span>
+        <span class="record_minimum grey_square">-21&deg</span>
+        <span class="record_minimum">-29&deg</span>
+        <span class="record_minimum grey_square">-40&deg</span>
+      </section>
+    </div>
+    <section class="vertical-block">
+      <section class="items-container">
+        <span class="item grey_square"></span>
+        <span section class="item">Средний максимум</span>
+        <span class="item grey_square">Средний минимум</span>
+        <span class="item">Рекордный максимум</span>
+        <span class="item grey_square">Рекордный минимум</span>
+      </section>
+      <section class="items-container">
+        <span class="item">Январь</span>
+        <span class="item grey_square">-9&deg</span>
+        <span class="item">-16&deg</span>
+        <span class="item grey_square">3&deg</span>
+        <span class="item">-39&deg</span>
+      </section>
+      <section class="items-container">
+        <span class="item grey_square">Февраль</span>
+        <span class="item">-8&deg</span>
+        <span class="item grey_square">-15&deg</span>
+        <span class="item">3&deg</span>
+        <span class="item grey_square">-39&deg</span>
+      </section>
+      <section class="items-container">
+        <span class="item">Март</span>
+        <span class="item grey_square">-1&deg</span>
+        <span class="item">-9&deg</span>
+        <span class="item grey_square">9&deg</span>
+        <span class="item">-30&deg</span>
+      </section>
+      <section class="items-container">
+        <span class="item grey_square">Апрель</span>
+        <span class="item">7&deg</span>
+        <span class="item grey_square">-1&deg</span>
+        <span class="item">24&deg</span>
+        <span class="item grey_square">-22&deg</span>
+      </section>
+      <section class="items-container">
+        <span class="item">Май</span>
+        <span class="item grey_square">18&deg</span>
+        <span class="item">7&deg</span>
+        <span class="item grey_square">30&deg</span>
+        <span class="item">-7&deg</span>
+      </section>
+      <section class="items-container">
+        <span class="item grey_square">Июнь</span>
+        <span class="item">23&deg</span>
+        <span class="item grey_square">12&deg</span>
+        <span class="item">36&deg</span>
+        <span class="item grey_square">0&deg</span>
+      </section>
+      <section class="items-container">
+        <span class="item">Июль</span>
+        <span class="item grey_square">25&deg</span>
+        <span class="item">14&deg</span>
+        <span class="item grey_square">38&deg</span>
+        <span class="item">4&deg</span>
+      </section>
+      <section class="items-container">
+        <span class="item grey_square">Август</span>
+        <span class="item">22&deg</span>
+        <span class="item grey_square">12&deg</span>
+        <span class="item">37&deg</span>
+        <span class="item grey_square">1&deg</span>
+      </section>
+      <section class="items-container">
+        <span class="item">Сентябрь</span>
+        <span class="item grey_square">15&deg</span>
+        <span class="item">7&deg</span>
+        <span class="item grey_square">30&deg</span>
+        <span class="item">-4&deg</span>
+      </section>
+      <section class="items-container">
+        <span class="item grey_square">Октябрь</span>
+        <span class="item">7&deg</span>
+        <span class="item grey_square">0&deg</span>
+        <span class="item">22&deg</span>
+        <span class="item grey_square">-21&deg</span>
+      </section>
+      <section class="items-container">
+        <span class="item">Ноябрь</span>
+        <span class="item grey_square">-2&deg</span>
+        <span class="item">-7&deg</span>
+        <span class="item grey_square">12&deg</span>
+        <span class="item">-29&deg</span>
+      </section>
+      <section class="items-container">
+        <span class="item grey_square">Декабрь</span>
+        <span class="item">-7&deg</span>
+        <span class="item grey_square">-12&deg</span>
+        <span class="item">4&deg</span>
+        <span class="item grey_square">-40&deg</span>
+      </section>
     </section>
   </main>
-  <aside class="advertising">
-    <figure>
-    <a href="https://training.by/Training/Details/1884"><img class="epam_img"src="assets/epam.jpg" alt="Epam Izhevsk"></a>
-    <figcaption><a href="https://training.by/Training/Details/1884"> JAVASCRIPT (FRONT-END) DEVELOPMENT EXTERNAL TRAINING AUTUMN 2018</a> </figcaption>
-    </figure>
-  </aside>
   <footer class="footer">
     <span>2019 &copy Copyright</span>
   </footer>

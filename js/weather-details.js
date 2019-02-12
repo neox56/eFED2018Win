@@ -120,7 +120,7 @@ const page = {
             typeWeather = weekForecast[i].weather[0].description;
             maxTemp = weekForecast[i].main.temp_max;
             minTemp = weekForecast[i].main.temp_min;
-            number += `<section class="container-days">
+            number += `<section class=" border container-days">
                         <span>${date}</span>
                         <figure>
                             <img src="http://openweathermap.org/img/w/${icon}.png">
