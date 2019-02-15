@@ -110,7 +110,7 @@ body {
   padding-left: 30px;
   position: relative;
   top: 30px;
-  right: 16px;
+  right: -19px;
 }
 
 .city_country,
@@ -442,7 +442,8 @@ body {
 
 @media (min-width: 320px) and (max-width: 767px) {
   body {
-    width: 318px;
+    width: 100%;
+    margin: 0;
   }
 
   #link {
@@ -465,6 +466,7 @@ body {
     width: 152px;
     margin-top: -1px;
     margin-right: 77px;
+    float: right;
   }
 
   .air_pollution button {
@@ -527,6 +529,7 @@ body {
   .container-days {
     flex-flow: column;
     align-items: center;
+    margin-left: 11px;
   }
 
   .container-days section {
@@ -540,9 +543,36 @@ body {
   }
 }
 
+@media (min-width: 533px) {
+  .air_pollution input[type="search"] {
+    height: 30px;
+    width: 152px;
+    margin-top: 14px;
+    margin-right: 77px;
+  }
+
+  .air_pollution button {
+    margin-top: 18px;
+  }
+
+  #temperature_button,
+  #rainfall_button,
+  #wind_button {
+    margin: 5px;
+    width: 50%;
+  }
+
+  .air_pollution span {
+    float: left;
+    font-size: 13px;
+    margin: 24px 0px 0px 50px;
+  }
+}
+
 @media (min-width: 768px) {
   body {
-    width: 764px;
+    width: 100%;
+    margin: 0;
   }
 
   .time_day {
@@ -550,12 +580,49 @@ body {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
   body {
-    width: 1000px;
+    margin: 0 auto;
+    width: 1024px;
+  }
+
+  .air_pollution input[type="search"] {
+    margin: 8px 26px 0px 0px;
+    width: 201px;
+    height: 34px;
+  }
+  .air_pollution button {
+    margin-top: 15px;
+}
+.air_pollution span {
+  float: left;
+   font-size: 18px; 
+  margin: 16px 0px 0px 25px;
+}
+#temperature_button, #rainfall_button, #wind_button {
+  margin: 5px;
+  width: 18%;
+}
+  .time_day {
+    margin: 0px 51px 0px 34px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .time_day {
+    margin: 0px 29px 0px 55px;
+  }
+}
+
+
+
+@media (min-width: 1440px) {
+  body {
+    width: 100%;
+    margin: 0;
   }
 
   .time_day {
-    margin: 0px 51px 0px 34px;
+    margin: 0px 85px 0px 55px;
   }
 }

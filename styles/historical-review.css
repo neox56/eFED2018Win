@@ -156,7 +156,7 @@ body {
 
 @media (min-width: 320px) and (max-width: 767px) {
   body {
-    width: 318px;
+    width: 100%;
   }
 
   .content {
@@ -179,42 +179,58 @@ body {
 
   .city_weather input[type="search"] {
     width: 152px;
-    margin-top: -1px;
-    margin-right: 77px;
+    margin-top: 17px;
+    margin-left: -103px;
     height: 30px;
+    float: none;
   }
+}
 
-  .city_weather button {
-    margin-top: 3px;
-  }
+.city_weather button {
+  float: none;
+  position: relative;
+  top: 5px;
+  right: 177px;
+}
 
+#location {
+  float: left;
+  font-size: 13px;
+  margin: 2px 0px 0px 129px;
+}
+
+.footer {
+  font-size: 13px;
+}
+
+.table-block {
+  display: none;
+}
+
+.vertical-block {
+  display: block;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin: 5px 0px 5px
+}
+
+@media(min-width:375px) {
   #location {
-    float: left;
-    font-size: 13px;
-    margin: 2px 0px 0px 129px;
+    margin: 2px 0px 0px 152px;
   }
+}
 
-  .footer {
-    font-size: 13px;
-  }
-
-  .table-block {
-    display: none;
-  }
-
-  .vertical-block {
-    display: block;
-    font-size: 13px;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin: 5px 0px 5px
+@media(min-width:425px) {
+  #location {
+    margin: 2px 0px 0px 175px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 999px) {
   body {
-    width: 764px;
+    width: 100%;
   }
 
   .table-block {
@@ -228,10 +244,76 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
   }
+
+  .city_weather button {
+    float: right;
+    border: none;
+    cursor: pointer;
+    height: 21px;
+    width: 19px;
+    margin-top: 15px;
+    margin-right: -25px;
+  }
+
+  #location {
+    font-size: 18px;
+    margin: 13px 0px 0px 34px;
+  }
+
+  .city_weather button {
+    top: 0;
+    left: 0;
+  }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
   body {
-    width: 1000px;
+    width: 1024px;
+  }
+
+  .city_weather button {
+    float: right;
+    border: none;
+    cursor: pointer;
+    height: 21px;
+    width: 19px;
+    margin-top: 15px;
+    margin-right: -25px;
+    top: 0;
+    left: 0;
+  }
+
+  #location {
+    font-size: 18px;
+    margin: 13px 0px 0px 34px;
+  }
+
+  .vertical-block {
+    display: none;
+  }
+
+  .table-block {
+    display: block;
+  }
+  .monthname,
+  .average_maximum,
+  .average_minimum,
+  .record_maximum,
+  .record_minimum {
+    width: 78.7px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    width: 100%;
+  }
+
+  .monthname,
+  .average_maximum,
+  .average_minimum,
+  .record_maximum,
+  .record_minimum {
+    width: 108.9px;
   }
 }

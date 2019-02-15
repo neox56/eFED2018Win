@@ -205,7 +205,7 @@ body {
 }
 
 .navigation_container {
-  left: -18px;
+  margin-left: -26px;
   bottom: 13px;
   text-align: center;
   position: relative;
@@ -390,7 +390,8 @@ body {
 
 @media (min-width: 320px) and (max-width: 767px) {
   body {
-    width: 318px;
+    width: 100%;
+    margin: 0;
   }
 
   .footer {
@@ -398,7 +399,7 @@ body {
   }
 
   .content {
-    margin-left: 41px;
+    margin-left: 39px;
   }
 
   #link {
@@ -417,13 +418,17 @@ body {
 
   .city_weather input[type="search"] {
     width: 152px;
-    margin-top: -1px;
-    margin-right: 77px;
+    margin-top: 17px;
+    margin-left: -103px;
     height: 30px;
+    float: none;
   }
 
   .city_weather button {
-    margin-top: 3px;
+    float: none;
+    position: relative;
+    top: 5px;
+    right: 177px;
   }
 
   .left_block,
@@ -455,6 +460,7 @@ body {
   .part_day {
     font-size: 13px;
     width: 237px;
+    position: absolute;
   }
 
   .day {
@@ -490,6 +496,16 @@ body {
     width: 23px;
   }
 
+  .navigation_container {
+    bottom: 18px;
+    position: relative;
+    margin-left: 27px;
+  }
+
+  .static {
+    position: absolute;
+  }
+
   .step_container {
     display: flex;
     position: relative;
@@ -506,11 +522,11 @@ body {
 
   .next {
     left: 262px;
-    bottom: -48px;
+    bottom: -49px;
   }
 
   .max_wind_speed {
-    width: 91%;
+    width: 252px;
   }
 
   .wind_speed_value {
@@ -537,7 +553,7 @@ body {
   .rainfall {
     display: flex;
     justify-content: center;
-    width: 91%;
+    width: 252px;
     margin-left: 15px;
   }
 
@@ -565,7 +581,7 @@ body {
   }
 
   .calendar_sun_moon {
-    width: 91%;
+    width: 253px;
     margin: 11px 0px 0px -7px;
     height: 68px;
   }
@@ -586,6 +602,7 @@ body {
     position: relative;
     right: 21px;
     top: -8px;
+    margin-top: 20px;
   }
 
   .sun_settings {
@@ -660,17 +677,82 @@ body {
   .moon_settings figcaption {
     font-size: 16px;
     width: 247px;
-    margin: 3px 0px 9px -15px;
+    margin: 3px 0px 9px -18px;
+    ;
   }
 }
 
+
+@media (min-width: 375px) {
+  .content {
+    margin-left: 61px;
+  }
+
+  #location {
+    float: left;
+    font-size: 13px;
+    margin: 2px 0px 0px 77px
+  }
+}
+
+@media (min-width: 425px) {
+  .content {
+    margin-left: 89px;
+  }
+
+  #location {
+    float: left;
+    font-size: 13px;
+    margin: 2px 0px 0px 77px;
+    position: relative;
+    left: 33px;
+  }
+
+  .city_weather input[type="search"] {
+    margin-left: -76px;
+  }
+}
+
+@media(min-width:533px) {
+  body {
+    width: 100%;
+  }
+
+  .content {
+    margin-left: 141px;
+  }
+
+  #location {
+    float: left;
+    font-size: 13px;
+    margin: 2px 0px 0px 77px;
+    position: relative;
+    left: 87px;
+  }
+
+  .city_weather input[type="search"] {
+    margin-left: -20px;
+  }
+}
+
+
 @media (min-width: 768px) {
   body {
-    width: 764px;
+    width: 100%;
+  }
+
+  #location {
+    margin: 13px 0px 0px 16px;
+    font-size: 20px;
+    left: 0;
+  }
+
+  .city_weather button {
+    margin-right: -6px;
   }
 
   .block-container {
-    margin-left: -22px;
+    margin-left: -127px;
   }
 
   .sun_settings,
@@ -680,17 +762,21 @@ body {
   }
 
   .slider {
-    margin: 0px 0px 0px 143px;
+    margin: 0px 0px 0px 36px;
+  }
+
+  .navigation_container {
+    margin-left: -118px;
   }
 
   .next {
-    left: 575px;
+    left: 467px;
     bottom: 54px;
   }
 
   .prev {
-    left: 111px;
-    top: -106px;
+    left: 4px;
+    top: -103px;
   }
 
   .max_wind_speed {
@@ -731,21 +817,55 @@ body {
 
   .calendar_sun_moon {
     width: 714px;
-    margin-left: -7px;
+    margin-left: -112px;
   }
 
   .sun_moon {
     margin: 3px 273px 0px 0px;
   }
+
+  .sun-block {
+    margin-left: -66px;
+  }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
   body {
-    width: 1000px;
+    margin: 0 auto;
+    width: 1024px;
+  }
+
+  .content {
+    margin-left: 39px
+  }
+
+  #location {
+    margin: 13px 0px 0px 16px;
+    font-size: 20px;
+    left: 0;
+  }
+
+  .city_weather button {
+    margin-right: -25px;
+  }
+
+  .city_weather input[type="search"] {
+    margin-left: 0px;
   }
 
   .slider {
     margin: 0px 0px 0px 256px;
+  }
+
+  .block-container {
+    margin-left: 7px;
+  }
+
+  .navigation_container {
+    margin-left: -26px;
+    bottom: 13px;
+    text-align: center;
+    position: relative;
   }
 
   .prev,
@@ -761,7 +881,7 @@ body {
   .sun_settings,
   .moon_settings {
     display: inline-block;
-    margin-left: 0;
+    margin-left: 55px;
   }
 
   .max_wind_speed {
@@ -800,5 +920,41 @@ body {
 
   .calendar_sun_moon {
     width: 899px;
+    margin-left: 22px;
+  }
+
+  .sun-block {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    width: 100%;
+  }
+
+  .slider {
+    margin: 0px 0px 0px 480px;
+  }
+
+  .prev,
+  .next {
+    left: 448px;
+  }
+
+  .next {
+    left: 911px;
+  }
+
+  .block-container {
+    margin-left: 247px;
+  }
+
+  .calendar_sun_moon {
+    margin-left: 262px;
+  }
+
+  .sun-block {
+    margin-left: 263px;
   }
 }
