@@ -5,11 +5,9 @@
   <meta charset="UTF-8">
   <meta name="Author" content="Dmitriy Smolin">
   <meta name="keywords" content="Izhevsk,weather,today,five days,history weather">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Прогноз погоды на пять дней</title>
   <link rel="stylesheet" href="styles/five-days.css">
-  <style type="text/css">
-    @import url("styles/all.css");
-  </style>
 </head>
 
 <body>
@@ -25,15 +23,12 @@
       <span><img class="city_weather_img" id="weatherImg" src="assets/cloudy_space.PNG" alt="Облачно"></span>
       <span id="current_temperature">34&#176 </span>
       <span id="location">Ижевск, Россия</span>
-        <input type="search" id="search-field" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]+(?:[\s-][а-яА-Яa-zA-Z]+)*$"
-          title="Название города должно начинаться c большой буквы и не содержать цифр">
-        <button type="button"></button>
+      <input type="search" id="search-field" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]+(?:[\s-][а-яА-Яa-zA-Z]+)*$"
+        title="Название города должно начинаться c большой буквы и не содержать цифр">
+      <button type="button"></button>
     </section>
   </header>
   <main class="content">
-    <header>
-      <h1>Пятидневный прогноз погоды</h1>
-    </header>
     <section class="sliderContainer" id="sliderContainer">
       <section class="slider fade currentSlide">
         <div class="part_day">
@@ -155,93 +150,97 @@
         <a class="next">&#10095;</a>
       </section>
       <section class="navigation_container">
-        <span class="button_slide active" data-sld="0">пт</span>
-        <span class="button_slide" data-sld="1">сб</span>
-        <span class="button_slide" data-sld="2">вс</span>
-        <span class="button_slide" data-sld="3">пн</span>
-        <span class="button_slide" data-sld="4">вт</span>
+        <div class="static">
+          <span class="button_slide active" data-sld="0">пт</span>
+          <span class="button_slide" data-sld="1">сб</span>
+          <span class="button_slide" data-sld="2">вс</span>
+          <span class="button_slide" data-sld="3">пн</span>
+          <span class="button_slide" data-sld="4">вт</span>
+        </div>
       </section>
     </section>
-    <section class="max_wind_speed">
-      <span>Максимальная скорость ветра, м/с</span>
-    </section>
-    <section class="wind_speed_value">
-      <p>
-        <span class="square"><mark>2</mark></span>
-        <span class="square"><mark>3</mark></span>
-        <span class="square"><mark>4</mark></span>
-        <span class="square"><mark>5</mark></span>
+    <div class="block-container">
+      <section class="max_wind_speed">
+        <span>Максимальная скорость ветра, м/с</span>
+      </section>
+      <section class="wind_speed_value">
         <p>
           <span class="square"><mark>2</mark></span>
           <span class="square"><mark>3</mark></span>
           <span class="square"><mark>4</mark></span>
           <span class="square"><mark>5</mark></span>
+          <p>
+            <span class="square"><mark>2</mark></span>
+            <span class="square"><mark>3</mark></span>
+            <span class="square"><mark>4</mark></span>
+            <span class="square"><mark>5</mark></span>
+          </p>
+          <p>
+            <span class="square"><mark>2</mark></span>
+            <span class="square"><mark>3</mark></span>
+            <span class="square"><mark>4</mark></span>
+            <span class="square"><mark>5</mark></span>
+          </p>
+          <p>
+            <span class="square"><mark>2</mark></span>
+            <span class="square"><mark>3</mark></span>
+            <span class="square"><mark>4</mark></span>
+            <span class="square"><mark>5</mark></span>
+          </p>
+          <p>
+            <span class="square"><mark>2</mark></span>
+            <span class="square"><mark>3</mark></span>
+            <span class="square"><mark>4</mark></span>
+            <span class="square"><mark>5</mark></span>
+          </p>
+      </section>
+      <section class="rainfall">
+        <span>Осадки, мм</span>
+      </section>
+      <section class="rainfall_value">
+        <p>
+          <span>0</span>
+          <span>0</span>
+          <span class="chart_small">2.2</span>
+          <span class="chart_big">4.6</span>
         </p>
         <p>
-          <span class="square"><mark>2</mark></span>
-          <span class="square"><mark>3</mark></span>
-          <span class="square"><mark>4</mark></span>
-          <span class="square"><mark>5</mark></span>
+          <span>0</span>
+          <span>0</span>
+          <span class="chart_big">4.5</span>
+          <span class="chart_small">2.2</span>
         </p>
         <p>
-          <span class="square"><mark>2</mark></span>
-          <span class="square"><mark>3</mark></span>
-          <span class="square"><mark>4</mark></span>
-          <span class="square"><mark>5</mark></span>
+          <span>0</span>
+          <span class="chart_big">4.7</span>
+          <span class="chart_small">2.2</span>
+          <span>0</span>
         </p>
         <p>
-          <span class="square"><mark>2</mark></span>
-          <span class="square"><mark>3</mark></span>
-          <span class="square"><mark>4</mark></span>
-          <span class="square"><mark>5</mark></span>
+          <span>0</span>
+          <span>0</span>
+          <span class="chart_small">2.2</span>
+          <span class="chart_big">4.6</span>
         </p>
-    </section>
-    <section class="rainfall">
-      <span>Осадки, мм</span>
-    </section>
-    <section class="rainfall_value">
-      <p>
-        <span>0</span>
-        <span>0</span>
-        <span class="chart_small">2.2</span>
-        <span class="chart_big">4.6</span>
-      </p>
-      <p>
-        <span>0</span>
-        <span>0</span>
-        <span class="chart_big">4.5</span>
-        <span class="chart_small">2.2</span>
-      </p>
-      <p>
-        <span>0</span>
-        <span class="chart_big">4.7</span>
-        <span class="chart_small">2.2</span>
-        <span>0</span>
-      </p>
-      <p>
-        <span>0</span>
-        <span>0</span>
-        <span class="chart_small">2.2</span>
-        <span class="chart_big">4.6</span>
-      </p>
-      <p>
-        <span>0</span>
-        <span>0</span>
-        <span class="chart_small">2.2</span>
-        <span class="chart_big">4.6</span>
-      </p>
-    </section>
+        <p>
+          <span>0</span>
+          <span>0</span>
+          <span class="chart_small">2.2</span>
+          <span class="chart_big">4.6</span>
+        </p>
+      </section>
+    </div>
     <section class="calendar_sun_moon">
       <p class="calendar_day">Пятница, 18 мая, сегодня</p>
       <p class="sun_moon">Солнце и луна</p>
     </section>
     <section class="sun_settings">
-      <figure>
+      <figure class="sun-block">
         <img src="assets/Sun.png" alt="Sun">
         <p class="settings_value">
           <span class="day_length">Долгота дня - 16 ч 43 мин</span>
-          <span class="sunrise"  id = "sunrise">Восход - 4:02</span>
-          <span class="sunset"  id = "sunset">Заход - 20:45</span>
+          <span class="sunrise" id="sunrise">Восход - 4:02</span>
+          <span class="sunset" id="sunset">Заход - 20:45</span>
         </p>
         <figcaption>
           Сегодня день на 2 минуты длиннее, чем вчера
@@ -249,10 +248,10 @@
       </figure>
     </section>
     <section class="moon_settings">
-      <figure>
+      <figure class="moon-block">
         <img src="assets/Moon.png" alt="Moon">
         <p class="settings_value">
-          <span class="day_lenght">Луна растущая - 19%</span>
+          <span class="moon-rising">Луна растущая - 19%</span>
           <span class="sunriseMoon">Восход - 7:40</span>
           <span class="sunsetMoon">Заход - 10:58</span>
         </p>

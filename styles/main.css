@@ -1,363 +1,628 @@
+body {
+  margin: 0 auto;
+  width: 1000px;
+  border: 1px solid #9b9b9b;
+  font-family: "Times New Roman", "Roboto", "sans-serif";
+}
+
+.header {
+  border: 1px solid #9b9b9b;
+  margin: -1px -1px;
+  background-color: #d8d8d8;
+}
+
+.header .menu ul {
+  margin-bottom: -10px;
+  margin-left: -32px;
+  text-decoration: none;
+  display: flex;
+  margin-top: 5px;
+}
+
+.color-button {
+  margin-left: 15px;
+  height: 26px;
+  width: 165px;
+  line-height: 27px;
+  border: 1px solid #9b9b9b;
+  background-color: #f7f7f7;
+  list-style-type: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+.active {
+  background-color: #9b9b9b;
+}
+
+.header .menu ul li a {
+  text-decoration: none;
+  color: black;
+  height: 101%;
+  display: block;
+}
+
+.header .menu ul li a:hover {
+  background-color: #9b9b9b;
+}
+
+#link {
+  width: 95px;
+}
+
+.footer {
+  border: 1px solid #9b9b9b;
+  text-align: center;
+  padding: 11px;
+  background: #d8d8d8;
+}
+
 .air_pollution {
-	width: 100%;
-	margin-top: 50px;
-	border-top: 1px solid #979797;
-	background-color: #f2f2f2;
-	height: 49px;
+  width: 100%;
+  margin-top: 16px;
+  border-top: 1px solid #979797;
+  background-color: #f2f2f2;
+  height: 49px;
 }
 
 .air_pollution span {
-	float: left;
-	font-size: 18px;
-	margin: 16px 0px 0px 25px;
+  float: left;
+  font-size: 18px;
+  margin: 16px 0px 0px 25px;
 }
 
 .air_pollution input[type="search"] {
-	float: right;
-	margin: 8px 26px 0px 0px;
-	height: 34px;
-	padding-left: 27px;
-	border-radius: 7px;
-	border-color: #ccc;
-	background-color: #e4e4e4 !important;
+  float: right;
+  margin: 8px 26px 0px 0px;
+  height: 34px;
+  padding-left: 27px;
+  border-radius: 7px;
+  border-color: #ccc;
+  background-color: #e4e4e4;
 }
 
 .air_pollution input[type="search"]:focus {
-	outline: none;
+  outline: none;
 }
 
 .air_pollution button {
-	float: right;
-	border: none;
-	cursor: pointer;
-	height: 21px;
-	width: 19px;
-	margin-top: 15px;
-	margin-right: -25px;
-	background-image: url(../assets/loupe.png);
+  float: right;
+  border: none;
+  cursor: pointer;
+  height: 21px;
+  width: 19px;
+  margin-top: 15px;
+  margin-right: -25px;
+  background-image: url(../assets/loupe.png);
 }
 
 .air_pollution button:focus {
-	outline: none;
+  outline: none;
 }
 
 .content h1 {
-	margin: 27px 0px 0px 30px;
+  margin: 27px 0px 0px 30px;
 }
 
 .left_block {
-	margin: 26px 0px 0px 50px;
-	float: left;
+  width: 45%;
+  font-size: 25px;
+  padding-left: 30px;
+  position: relative;
+  top: 30px;
+  right: -19px;
 }
 
 .city_country,
 .day_weeks,
 .weather_types,
 .show_weather {
-	font-size: 26px;
-	display: block;
-	margin: 0;
+  margin: 0;
 }
+
 #icon-desc {
-	font-size: 5rem;
-	padding-top: 2rem;
+  font-size: 5rem;
+  padding-top: 2rem;
 }
+
 #description {
-	font-size: 2rem;
+  font-size: 2rem;
 }
+
 .current_temperature_img {
-	margin: 7px 0px 0px 0px;
-	height: 91px;
-	float: left;
-	margin-top: 7px;
+  margin: 7px 0px 0px -10px;
+  display: flex;
 }
 
 .current_temperature {
-	font-size: 26px;
-	width: 25px;
-	float: right;
-	margin: 24px 0px 0px 22px;
+  position: relative;
+  top: 15px;
+  left: 15px;
 }
 
 .right_block {
-	float: right;
-	margin-top: 27px;
-}
-
-.chance_rainfall,
-.humidity,
-.wind_speed {
-	font-size: 26px;
-	margin: 0px 163px;
+  width: 55%;
+  font-size: 25px;
+  position: relative;
+  top: 28px;
+  right: 5px;
 }
 
 .weather_button {
-	width: 101%;
-	padding: 11.7px;
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .weather_button_optimize {
-	width: 101%;
-	padding: 4px;
-	cursor: pointer;
+  padding: 4px;
+  cursor: pointer;
 }
+
 .activeButton {
-    background-color: #9b9b9b;
+  background-color: #9b9b9b;
 }
+
 .weather_parametrs ul {
-	margin: 0px 120px;
+  margin: 0px 120px;
 }
 
 .weather_parametrs ul li {
-	text-align: center;
-	margin: 25px 0px 0px 20px;
-	float: left;
-	list-style-type: none;
-	border: 1px solid #ccc;
+  text-align: center;
+  margin: 25px 0px 0px 20px;
+  float: left;
+  list-style-type: none;
+  border: 1px solid #ccc;
 }
 
 .weather_parametrs ul li a {
-	display: block;
-	text-decoration: none;
-	color: black;
-	height: 100%;
-	font-size: 17px;
-	padding-top: 5px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  height: 100%;
+  font-size: 17px;
+  padding-top: 5px;
 }
-#weatherImg{
-	width: 100px;
+
+#weatherImg {
+  height: 100px;
 }
+
 .containerTemp {
-	display: inline-block;
-	width: 100%;
+  display: inline-block;
+  width: 100%;
 }
+
 .containerTemp section {
-    display:inline-block;
-    text-align: center;
-    color: #bebebe;
+  display: inline-block;
+  text-align: center;
+  color: #bebebe;
 }
+
 .visible {
-	display: inline-block;
+  display: inline-block;
 }
 
 .chart {
-	margin: auto auto;
-	width: 700px;
-	height: 90px;
-	display: none;
+  margin: auto auto;
+  width: 700px;
+  height: 90px;
+  display: none;
 }
 
 #temperature_button,
-#rainfall_button {
-	width: 130px;
-	margin: 26px 4px;
-}
-
+#rainfall_button,
 #wind_button {
-	width: 108px;
-	margin: 26px 4px;
+  padding: 10px 15px 10px 15px;
+  margin-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .weather_button:hover {
-	background-color: #9b9b9b;
+  background-color: #9b9b9b;
 }
 
 .weather_button_optimize:hover {
-	background-color: #9b9b9b;
+  background-color: #9b9b9b;
 }
 
 .weather_button_optimize:focus {
-	background-color: #9b9b9b;
-	outline: none;
+  background-color: #9b9b9b;
+  outline: none;
 }
 
 .weather_button:focus {
-	background-color: #9b9b9b;
-	outline: none;
-}
-
-.bottom_block {
-	margin-left: 25px;
-}
-
-.icons_graph {
-	display: inline-block;
-	margin-top: 30px;
-	width: 100%;
+  background-color: #9b9b9b;
+  outline: none;
 }
 
 .figure_fixed {
-	margin: 0;
+  margin: 0;
 }
 
 .temperature_graph {
-	margin-left: 15px;
-	width: 879px;
-	height: 59px;
+  margin-left: 15px;
+  width: 879px;
+  height: 59px;
 }
 
 .rainfall_graph {
-	margin: 10px 0px 0px 16px;
-	width: 879px;
-	height: 49px;
+  margin: 10px 0px 0px 16px;
+  width: 879px;
+  height: 49px;
 }
 
 .wind_graph {
-	margin: -13px 0px 0px 24px;
-	width: 879px;
-	height: 72px;
+  margin: -13px 0px 0px 24px;
+  width: 879px;
+  height: 72px;
 }
 
 .time {
-	margin: -12px 0px 5px 25px;
+  margin: -12px 0px 5px 25px;
 }
 
 .time_day {
-	color: #ccc;
-    font-weight: bold;
-    margin: 0px 47px 0px 34px;
-    font-size: 14px;
+  color: #ccc;
+  font-weight: bold;
+  margin: 0px 51px 0px 34px;
+  font-size: 14px;
 }
 
 .name_day,
 .name_day_img,
 .degrees {
-	margin: 0;
+  margin: 0;
 }
 
 .day_week {
-	display: inline-block;
+  display: inline-block;
 }
 
 .name_day {
-	font-size: 20px;
-	color: #ccc;
-	font-weight: bold;
+  font-size: 20px;
+  color: #ccc;
+  font-weight: bold;
 }
 
 .degrees {
-	font-size: 20px;
-	color: #ccc;
-	font-weight: bold;
+  font-size: 20px;
+  color: #ccc;
+  font-weight: bold;
 }
 
 .border:hover {
-	outline: 3px solid #ccc;
+  outline: 3px solid #ccc;
 }
+
 .container-days {
-	display: inline-block;
-}
-.container-days section{
-	text-align: center;
-	padding:0px 26px 0px 35px;
-}
-#maxTemp{
-	color: black;
-}
-#minTemp{
-	color: gray;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 5px;
 }
 
-.iconGraph{
-	display: none;
-  }
+.container-days section {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+  width: 12.5%;
+  margin-top: 15px;
+  padding: 0px;
+}
 
-  .activeGraph{
-	display: flex;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-top: 15px;
-    padding-bottom: 15px;
-  }
+#maxTemp {
+  color: black;
+}
 
-  .icon-container{
-	display: flex;
-    flex-flow: column;
-    flex-grow: 1;
-  }
+#minTemp {
+  color: gray;
+}
 
-  .temperature-block{
-	display: flex;
-	justify-content: space-around;
-	border-bottom: 1px solid black;
-  }
+.iconGraph {
+  display: none;
+}
 
-  .temperature-level{
-	height: 70px;
-	display: flex;
-	flex-direction: column-reverse;
-  }
-  .high-temperature {
-	height: 30px;
-	background-color: #ccc;
-  }
-  .low-temperature {
-	height: 20px;;
-	background-color: #ccc;;
-  }
-  .rainfall-block {
-	display: flex;
-  }
-  .rainfall-level {
-    width: 100%;
-    height: 70px;
-    display: flex;
-	flex-direction: column-reverse;
-  }
-  .empty-rainfall {
-    height: 40px;
-    border-top: 2px solid #1878f0;
-	background-color: #e7f1fd;
-  }
-  .high-rainfall {
-	height: 25px;
-    border-top: 2px solid #1878f0;
-	background-color: #e7f1fd;
-  }
-  .low-rainfall {
-    height: 15px;
-    border-top: 2px solid #1878f0;
-    background-color: #e7f1fd;
+.activeGraph {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 36px;
+  padding-bottom: 15px;
+}
+
+.icon-container {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+}
+
+.temperature-block {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+}
+
+.temperature-level {
+  height: 69px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.high-temperature {
+  height: 30px;
+  background-color: #ccc;
+}
+
+.low-temperature {
+  height: 20px;
+  background-color: #ccc;
+}
+
+.rainfall-block {
+  display: flex;
+}
+
+.rainfall-level {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.empty-rainfall {
+  height: 40px;
+  border-top: 2px solid #1878f0;
+  background-color: #e7f1fd;
+}
+
+.high-rainfall {
+  height: 25px;
+  border-top: 2px solid #1878f0;
+  background-color: #e7f1fd;
+}
+
+.low-rainfall {
+  height: 15px;
+  border-top: 2px solid #1878f0;
+  background-color: #e7f1fd;
 }
 
 .zero-rainfall {
-    height: 3px;
-    border-top: 2px solid #1878f0;
-	background-color: #e7f1fd;
+  height: 3px;
+  border-top: 2px solid #1878f0;
+  background-color: #e7f1fd;
 }
 
 .wind-block {
-    display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .wind-level {
-    height: 70px;
-    display: flex;
-    flex-direction: column-reverse;
-	align-items: center;
+  height: 70px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
+
 .wind-rotation-big {
-    margin-top: 0px;
-    transform: rotate(350deg);
+  margin-top: 0px;
+  transform: rotate(350deg);
 }
 
 .wind-rotation-mid {
-    margin-top: 0px;
-    transform: rotate(310deg);
+  margin-top: 0px;
+  transform: rotate(310deg);
 }
 
-.wind-rotation-small{
-    margin-top: 0px;
-	transform: rotate(10deg);
+.wind-rotation-small {
+  margin-top: 0px;
+  transform: rotate(10deg);
 }
 
-.line{
-	border-bottom: 1px solid black;
-    position: absolute;
-    bottom: 135px;
-    left: 123px;
-    width: 871px;
+.line {
+  border-bottom: 1px solid black;
+  position: absolute;
+  bottom: 135px;
+  left: 123px;
+  width: 871px;
+}
+
+.buttons_container {
+  display: flex;
+  margin: 35px 5px 5px 0px;
+}
+
+.left-right {
+  display: flex;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  body {
+    width: 100%;
+    margin: 0;
+  }
+
+  #link {
+    width: 50px;
+  }
+
+  .color-button {
+    width: 114px;
+    font-size: 13px;
+  }
+
+  .air_pollution span {
+    float: left;
+    font-size: 13px;
+    margin: 2px 0px 0px 50px;
+  }
+
+  .air_pollution input[type="search"] {
+    height: 30px;
+    width: 152px;
+    margin-top: -1px;
+    margin-right: 77px;
+    float: right;
+  }
+
+  .air_pollution button {
+    margin-top: 3px;
+  }
+
+  .left_block {
+    font-size: 13px;
+  }
+
+  .right_block {
+    font-size: 13px;
+  }
+
+  #weatherImg {
+    height: 80px;
+  }
+
+  .current_temperature {
+    top: 0px;
+    left: 0px;
+  }
+
+  .buttons_container {
+    flex-direction: column;
+    margin: 5px 5px 5px -5px;
+  }
+
+  #temperature_button,
+  #rainfall_button,
+  #wind_button {
+    margin: 5px;
+  }
+
+  .time {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 8px;
+    margin: 0;
+  }
+
+  .time_day {
+    margin: 0;
+  }
+
+  .icon-container {
+    margin-left: -3px;
+  }
+
+  .temperature-block,
+  .wind-block,
+  .rainfall-block {
+    font-size: 14px;
+  }
+
+  .wind-block img {
+    width: 36px;
+  }
+
+  .container-days {
+    flex-flow: column;
+    align-items: center;
+    margin-left: 11px;
+  }
+
+  .container-days section {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 65%;
+  }
+
+  .footer {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 533px) {
+  .air_pollution input[type="search"] {
+    height: 30px;
+    width: 152px;
+    margin-top: 14px;
+    margin-right: 77px;
+  }
+
+  .air_pollution button {
+    margin-top: 18px;
+  }
+
+  #temperature_button,
+  #rainfall_button,
+  #wind_button {
+    margin: 5px;
+    width: 50%;
+  }
+
+  .air_pollution span {
+    float: left;
+    font-size: 13px;
+    margin: 24px 0px 0px 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+    margin: 0;
+  }
+
+  .time_day {
+    margin: 0px 31px 0px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+    width: 1024px;
+  }
+
+  .air_pollution input[type="search"] {
+    margin: 8px 26px 0px 0px;
+    width: 201px;
+    height: 34px;
+  }
+  .air_pollution button {
+    margin-top: 15px;
+}
+.air_pollution span {
+  float: left;
+   font-size: 18px; 
+  margin: 16px 0px 0px 25px;
+}
+#temperature_button, #rainfall_button, #wind_button {
+  margin: 5px;
+  width: 18%;
+}
+  .time_day {
+    margin: 0px 51px 0px 34px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .time_day {
+    margin: 0px 29px 0px 55px;
+  }
+}
+
+
+
+@media (min-width: 1440px) {
+  body {
+    width: 100%;
+    margin: 0;
+  }
+
+  .time_day {
+    margin: 0px 85px 0px 55px;
+  }
 }
