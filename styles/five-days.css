@@ -719,7 +719,7 @@ body {
   }
 
   .content {
-    margin-left: 141px;
+    margin-left: 144px;
   }
 
   #location {
@@ -735,10 +735,50 @@ body {
   }
 }
 
+@media (min-width:644px) {
+  .content {
+    margin-left: 185px;
+  }
+}
+
+@media(min-width:679px) {
+  .content {
+    margin-left: 185px;
+  }
+}
+
+@media (min-width: 664px) {
+  .wind_speed_value {
+    height: 115px;
+  }
+}
+
+@media(min-width:685px) {
+  .content {
+    margin-left: 228px;
+  }
+
+  #location {
+    left: 173px;
+  }
+
+  .city_weather input[type="search"] {
+    margin-left: 60px;
+  }
+}
+@media(min-width:728px){
+  .content {
+    margin-left: 276px;
+}
+}
 
 @media (min-width: 768px) {
   body {
     width: 100%;
+  }
+
+  .content {
+    margin-left: 141px;
   }
 
   #location {
@@ -748,7 +788,7 @@ body {
   }
 
   .city_weather button {
-    margin-right: -6px;
+    margin-right: -86px;
   }
 
   .block-container {
@@ -786,6 +826,7 @@ body {
   .wind_speed_value {
     width: 715px;
     margin-left: 15.5px;
+    height: 39px;
   }
 
   .wind_speed_value p {
