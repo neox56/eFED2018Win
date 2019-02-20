@@ -247,8 +247,11 @@ body {
     width: 100%;
   }
   .header{
-    position: sticky;
-    top: 0;
+    position: initial;
+  }
+  .footer{
+    position: initial;
+    font-size: 16px;
   }
   .table-block {
     display: none;
@@ -288,11 +291,20 @@ body {
     right: 213px;
     top: 56px;
   }
+  .footer{
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1024px) {
   body {
     width: 1024px;
+  }
+  .header{
+    position: initial;
+  }
+  .footer{
+    position: initial;
   }
 
   .city_weather::before {

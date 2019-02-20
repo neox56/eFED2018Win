@@ -96,10 +96,11 @@ body {
 
 .city_weather::before {
   content: url(../assets/loupe.png);
-  position: absolute;
-  right: 203px;
-  bottom: 16px;
+  position: relative;
+  right: 220px;
+  bottom: -15px;
   cursor: pointer;
+  float: right;
 }
 
 .city_weather_img {
@@ -394,6 +395,7 @@ body {
   .header {
     top: 0;
   }
+
   body {
     width: 100%;
     margin: 0;
@@ -430,8 +432,8 @@ body {
   }
 
   .city_weather::before {
-    right: 197px;
-    bottom: 9px;
+    right: 198px;
+    bottom: -21px;
   }
 
   .left_block,
@@ -791,9 +793,13 @@ body {
   body {
     width: 100%;
   }
-  .header{
-    position: sticky;
-    top: 0;
+
+  .header {
+    position: initial;
+  }
+
+  .footer {
+    position: initial;
   }
 
   .content {
@@ -807,8 +813,8 @@ body {
   }
 
   .city_weather::before {
-    bottom: 16px;
-    right: 202px;
+    bottom: -15px;
+    right: 220px;
   }
 
   .block-container {
@@ -906,8 +912,9 @@ body {
     left: 0;
   }
 
-  .city_weather button {
-    margin-right: -25px;
+  .city_weather::before {
+    right: 220px;
+    bottom: -15px;
   }
 
   .city_weather input[type="search"] {
