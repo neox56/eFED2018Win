@@ -9,6 +9,8 @@ body {
   border: 1px solid #9b9b9b;
   margin: -1px -1px;
   background-color: #d8d8d8;
+  position: sticky;
+  top: 0;
 }
 
 .header .menu ul {
@@ -55,6 +57,8 @@ body {
   text-align: center;
   padding: 11px;
   background: #d8d8d8;
+  position: sticky;
+  bottom: 0;
 }
 
 .city_weather {
@@ -89,15 +93,13 @@ body {
   outline: none;
 }
 
-.city_weather button {
-  float: right;
-  border: none;
+.city_weather::before {
+  content: url(../assets/loupe.png);
+  position: absolute;
+  right: 294px;
   cursor: pointer;
-  height: 21px;
-  width: 19px;
-  margin-top: 15px;
-  margin-right: -25px;
-  background-image: url(../assets/loupe.png);
+  top: 56px;
+
 }
 
 .content {
@@ -186,11 +188,9 @@ body {
   }
 }
 
-.city_weather button {
-  float: none;
-  position: relative;
-  top: 5px;
-  right: 177px;
+.city_weather::before {
+  right: 205px;
+  top: 62px;
 }
 
 #location {
@@ -220,11 +220,25 @@ body {
   #location {
     margin: 2px 0px 0px 152px;
   }
+
+  .city_weather::before {
+    right: 235px;
+  }
 }
 
 @media(min-width:425px) {
   #location {
     margin: 2px 0px 0px 175px;
+  }
+
+  .city_weather::before {
+    right: 262px;
+  }
+}
+
+@media(min-width:533px) {
+  .city_weather::before {
+    right: 371px;
   }
 }
 
@@ -232,7 +246,10 @@ body {
   body {
     width: 100%;
   }
-
+  .header{
+    position: sticky;
+    top: 0;
+  }
   .table-block {
     display: none;
   }
@@ -260,9 +277,16 @@ body {
     margin: 13px 0px 0px 34px;
   }
 
-  .city_weather button {
-    top: 0;
-    left: 0;
+  .city_weather::before {
+    right: 201px;
+    top: 56px;
+  }
+}
+
+@media(min-width:1000px) {
+  .city_weather::before {
+    right: 213px;
+    top: 56px;
   }
 }
 
@@ -271,16 +295,11 @@ body {
     width: 1024px;
   }
 
-  .city_weather button {
+  .city_weather::before {
+    right: 194px;
+    top: 15px;
+    position: relative;
     float: right;
-    border: none;
-    cursor: pointer;
-    height: 21px;
-    width: 19px;
-    margin-top: 15px;
-    margin-right: -25px;
-    top: 0;
-    left: 0;
   }
 
   #location {
@@ -295,6 +314,7 @@ body {
   .table-block {
     display: block;
   }
+
   .monthname,
   .average_maximum,
   .average_minimum,
@@ -304,16 +324,63 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
-  body {
-    width: 100%;
+
+#spinner {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25x;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#spinner:before,
+#spinner:after {
+  content: "";
+  position: relative;
+  display: block;
+}
+
+#spinner:before {
+  animation: spinner 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  width: 5em;
+  height: 5em;
+  background-color: whitesmoke;
+}
+
+#spinner:after {
+  animation: shadow 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  bottom: -.5em;
+  height: .25em;
+  border-radius: 50%;
+  background-color: rgba(#000, 0.2);
+}
+
+@keyframes spinner {
+  50% {
+    border-radius: 50%;
+    transform: scale(0.5) rotate(360deg);
   }
 
-  .monthname,
-  .average_maximum,
-  .average_minimum,
-  .record_maximum,
-  .record_minimum {
-    width: 108.9px;
+  100% {
+    transform: scale(1) rotate(720deg);
   }
+}
+
+@keyframes shadow {
+  50% {
+    transform: scale(0.5);
+    background-color: rgba(#000, 0.1);
+  }
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000a0;
 }

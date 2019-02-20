@@ -12,7 +12,7 @@
 
 <body>
   <header class="header">
-    <nav class="menu">
+    <nav class="header-menu ">
       <ul>
         <li id="link" class="color-button"><a href="weather-details.html">Сегодня</a> </li>
         <li id="link" class="color-button active"><a href="#">5 дней</a> </li>
@@ -25,7 +25,6 @@
       <span id="location">Ижевск, Россия</span>
       <input type="search" id="search-field" placeholder="Поиск" pattern="[А-ЯA-Z][а-яa-z]+(?:[\s-][а-яА-Яa-zA-Z]+)*$"
         title="Название города должно начинаться c большой буквы и не содержать цифр">
-      <button type="button"></button>
     </section>
   </header>
   <main class="content">
@@ -264,6 +263,9 @@
   <footer class="footer">
     <span>2019 &copy Copyright</span>
   </footer>
+  <div id="overlay">
+      <div id="spinner">Loading...</div>
+  </div>
   <script src="js/slider.js"></script>
   <script src="js/index.js"></script>
 </body>
