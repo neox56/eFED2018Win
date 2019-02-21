@@ -604,7 +604,8 @@ body {
   }
 
   .footer {
-    position: initial;
+    position: sticky;
+    bottom: 0;
   }
 }
 
