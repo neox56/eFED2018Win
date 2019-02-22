@@ -4,14 +4,13 @@ body {
   border: 1px solid #9b9b9b;
   font-family: "Times New Roman", "Roboto", "sans-serif";
   box-sizing: border-box;
-  
+
 }
 
 .header {
   border: 1px solid #9b9b9b;
   margin: -1px -1px;
   background-color: #d8d8d8;
-  display: inline-block;
   width: 100%;
   position: sticky;
   z-index: 1;
@@ -69,7 +68,7 @@ body {
   width: 100%;
   margin-top: 16px;
   border-top: 1px solid #979797;
-  height: 56px;
+  height: 49px;
   background-color: #f2f2f2;
 }
 
@@ -397,6 +396,7 @@ body {
   .header {
     top: 0;
   }
+
   body {
     width: 100%;
     margin: 0;
@@ -433,8 +433,8 @@ body {
   }
 
   .city_weather::before {
-    right: 197px;
-    bottom: 9px;
+    right: 206px;
+    bottom: 3px;
   }
 
   .left_block,
@@ -694,7 +694,7 @@ body {
   }
 
   .city_weather::before {
-    right: 230px;
+    right: 240px;
   }
 
   #location {
@@ -710,7 +710,7 @@ body {
   }
 
   .city_weather::before {
-    right: 253px;
+    right: 263px;
   }
 
   #location {
@@ -794,7 +794,8 @@ body {
   body {
     width: 100%;
   }
-  .header{
+
+  .header {
     position: sticky;
     top: 0;
   }
@@ -810,7 +811,7 @@ body {
   }
 
   .city_weather::before {
-    bottom: 16px;
+    bottom: 9px;
     right: 202px;
   }
 

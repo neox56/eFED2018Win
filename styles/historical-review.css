@@ -285,7 +285,7 @@ body {
 
 @media(min-width:1000px) {
   .city_weather::before {
-    right: 213px;
+    right: 201px;
     top: 56px;
   }
 }
@@ -294,16 +294,19 @@ body {
   body {
     width: 1024px;
   }
+  .city_weather input[type="search"]{
+    width: 201px;
+  }
 
   .city_weather::before {
-    right: 194px;
-    top: 15px;
+    right: 220px;
+    top: 16px;
     position: relative;
     float: right;
   }
 
   #location {
-    font-size: 18px;
+    font-size: 20px;
     margin: 13px 0px 0px 34px;
   }
 
@@ -321,6 +324,9 @@ body {
   .record_maximum,
   .record_minimum {
     width: 78.7px;
+  }
+  .footer{
+    font-size: 16px;
   }
 }
 
