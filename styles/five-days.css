@@ -3,6 +3,8 @@ body {
   width: 1000px;
   border: 1px solid #9b9b9b;
   font-family: "Times New Roman", "Roboto", "sans-serif";
+  box-sizing: border-box;
+  
 }
 
 .header {
@@ -12,6 +14,7 @@ body {
   display: inline-block;
   width: 100%;
   position: sticky;
+  z-index: 1;
 }
 
 .header .header-menu ul {
@@ -1071,6 +1074,7 @@ body {
 }
 
 #overlay {
+  z-index: 2;
   display: none;
   position: fixed;
   top: 0;
