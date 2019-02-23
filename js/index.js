@@ -4,7 +4,24 @@ const APPID = 'e33262cd6a432b1c3dc5181a736dbc41';
 const WEATHER_DETAILS_ENDPOINT = `http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=${APPID}&lang=ru&q=`;
 const WEATHER_DETAILS_FIVE_DAYS = `http://api.openweathermap.org/data/2.5/forecast?&units=metric&appid=${APPID}&lang=ru&q=`;
 const defaultCity = 'Izhevsk';
+const spinner = document.getElementById('spinner');
+const overlay = document.getElementById('overlay');
+const content = document.querySelector('.content');
 
+
+function showSpinner() {
+    spinner.setAttribute("style", "display: block;");
+    overlay.setAttribute("style", "display: block;");
+    content.setAttribute("style", "display: none;");  
+}
+function hideSpinner() {
+        setTimeout(() => {
+            spinner.setAttribute("style", "display: none;"); 
+            overlay.setAttribute("style", "display: none;");
+            content.setAttribute("style", "display: block;");  
+        }, 2000); 
+           
+}
 const fiveDays = {
     init: function () {
         this.getWeatherDetails(defaultCity, this.render);
@@ -20,6 +37,7 @@ const fiveDays = {
     },
     
     getWeatherDetails(city, callback,) {
+        showSpinner();
         const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
         const xhr = new XMLHttpRequest();
 
@@ -28,6 +46,7 @@ const fiveDays = {
                 console.log(JSON.parse(xhr.responseText));
                 callback(JSON.parse(xhr.responseText));
             }
+            hideSpinner();
         };
 
         xhr.open('GET', url, true); 

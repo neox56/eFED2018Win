@@ -6,8 +6,24 @@ const WEATHER_DETAILS_ENDPOINT = `http://api.openweathermap.org/data/2.5/weather
 const AIR_POLLUTIONS_DETAILS = `http://api.openweathermap.org/pollution/v1/co/53,21/current.json?appid=${APPID}`;
 const WEATHER_DETAILS_FIVE_DAYS = `http://api.openweathermap.org/data/2.5/forecast?&units=metric&appid=${APPID}&lang=ru&q=`;
 const defaultCity = 'Izhevsk';
+const spinner = document.getElementById('spinner');
+const overlay = document.getElementById('overlay');
+const content = document.querySelector('.content');
 
 
+function showSpinner() {
+    spinner.setAttribute("style", "display: block;");
+    overlay.setAttribute("style", "display: block;");
+    content.setAttribute("style", "display: none;");  
+}
+function hideSpinner() {
+        setTimeout(() => {
+            spinner.setAttribute("style", "display: none;"); 
+            overlay.setAttribute("style", "display: none;");
+            content.setAttribute("style", "display: block;");  
+        }, 2000); 
+           
+}
 const page = {
     init: function () {
         this.getWeatherDetails(defaultCity, this.render, WEATHER_DETAILS_ENDPOINT);
@@ -25,6 +41,7 @@ const page = {
     },
 
     getWeatherDetails(city, callback, WEATHER_DETAILS_ENDPOINT) {
+        showSpinner();
         const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
         const xhr = new XMLHttpRequest();
         
@@ -34,6 +51,7 @@ const page = {
                 console.log(JSON.parse(xhr.responseText));
                 callback(JSON.parse(xhr.responseText));
             }
+            hideSpinner();
         };
 
         xhr.open('GET', url, true); //настройка запроса
@@ -135,5 +153,3 @@ const page = {
     }
 };
 page.init();
-
-

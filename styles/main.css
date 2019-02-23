@@ -3,15 +3,20 @@ body {
   width: 1000px;
   border: 1px solid #9b9b9b;
   font-family: "Times New Roman", "Roboto", "sans-serif";
+  height: 100%;
 }
 
 .header {
   border: 1px solid #9b9b9b;
   margin: -1px -1px;
   background-color: #d8d8d8;
+  display: inline-block;
+  width: 100%;
+  position: sticky;
+  top: 0;
 }
 
-.header .menu ul {
+.header .header-menu ul {
   margin-bottom: -10px;
   margin-left: -32px;
   text-decoration: none;
@@ -21,7 +26,6 @@ body {
 
 .color-button {
   margin-left: 15px;
-  height: 26px;
   width: 165px;
   line-height: 27px;
   border: 1px solid #9b9b9b;
@@ -35,14 +39,14 @@ body {
   background-color: #9b9b9b;
 }
 
-.header .menu ul li a {
+.header .header-menu ul li a {
   text-decoration: none;
   color: black;
   height: 101%;
   display: block;
 }
 
-.header .menu ul li a:hover {
+.header .header-menu ul li a:hover {
   background-color: #9b9b9b;
 }
 
@@ -55,6 +59,8 @@ body {
   text-align: center;
   padding: 11px;
   background: #d8d8d8;
+  position: sticky;
+  bottom: 0;
 }
 
 .air_pollution {
@@ -85,24 +91,18 @@ body {
   outline: none;
 }
 
-.air_pollution button {
-  float: right;
-  border: none;
+.air_pollution ::before {
+  content: url(../assets/loupe.png);
+  position: absolute;
+  right: 203px;
+  bottom: 9px;
   cursor: pointer;
-  height: 21px;
-  width: 19px;
-  margin-top: 15px;
-  margin-right: -25px;
-  background-image: url(../assets/loupe.png);
 }
 
 .air_pollution button:focus {
   outline: none;
 }
 
-.content h1 {
-  margin: 27px 0px 0px 30px;
-}
 
 .left_block {
   width: 45%;
@@ -211,7 +211,7 @@ body {
 #temperature_button,
 #rainfall_button,
 #wind_button {
-  padding: 10px 15px 10px 15px;
+  padding: 10px 15px 10px 10px;
   margin-right: 10px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -455,6 +455,10 @@ body {
     font-size: 13px;
   }
 
+  .current_temperature {
+    position: initial;
+  }
+
   .air_pollution span {
     float: left;
     font-size: 13px;
@@ -469,16 +473,22 @@ body {
     float: right;
   }
 
-  .air_pollution button {
-    margin-top: 3px;
+  .air_pollution ::before {
+    bottom: 3px;
+  }
+
+  .left-right {
+    margin-top: 13px;
   }
 
   .left_block {
     font-size: 13px;
+    position: initial;
   }
 
   .right_block {
     font-size: 13px;
+    position: initial;
   }
 
   #weatherImg {
@@ -539,7 +549,7 @@ body {
   }
 
   .footer {
-    font-size: 13px;
+    font-size: 13px
   }
 }
 
@@ -551,8 +561,8 @@ body {
     margin-right: 77px;
   }
 
-  .air_pollution button {
-    margin-top: 18px;
+  .air_pollution ::before {
+    bottom: 0px;
   }
 
   #temperature_button,
@@ -564,8 +574,8 @@ body {
 
   .air_pollution span {
     float: left;
-    font-size: 13px;
-    margin: 24px 0px 0px 50px;
+    font-size: 18px;
+    margin: 18px 0px 0px 50px;
   }
 }
 
@@ -575,8 +585,27 @@ body {
     margin: 0;
   }
 
+  .air_pollution ::before {
+    bottom: 4px;
+  }
+
+  .left-right {
+    display: flex;
+    margin-top: 24px;
+  }
+
+  .right_block,
+  .left_block {
+    position: initial;
+  }
+
   .time_day {
     margin: 0px 31px 0px 24px;
+  }
+
+  .footer {
+    position: sticky;
+    bottom: 0;
   }
 }
 
@@ -586,23 +615,33 @@ body {
     width: 1024px;
   }
 
+  .air_pollution ::before {
+    bottom: 9px;
+  }
+
   .air_pollution input[type="search"] {
     margin: 8px 26px 0px 0px;
     width: 201px;
     height: 34px;
   }
+
   .air_pollution button {
     margin-top: 15px;
-}
-.air_pollution span {
-  float: left;
-   font-size: 18px; 
-  margin: 16px 0px 0px 25px;
-}
-#temperature_button, #rainfall_button, #wind_button {
-  margin: 5px;
-  width: 18%;
-}
+  }
+
+  .air_pollution span {
+    float: left;
+    font-size: 18px;
+    margin: 16px 0px 0px 25px;
+  }
+
+  #temperature_button,
+  #rainfall_button,
+  #wind_button {
+    margin: 5px;
+    width: 18%;
+  }
+
   .time_day {
     margin: 0px 51px 0px 34px;
   }
@@ -625,4 +664,66 @@ body {
   .time_day {
     margin: 0px 85px 0px 55px;
   }
+}
+
+
+
+#spinner {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25x;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#spinner:before,
+#spinner:after {
+  content: "";
+  position: relative;
+  display: block;
+}
+
+#spinner:before {
+  animation: spinner 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  width: 5em;
+  height: 5em;
+  background-color: whitesmoke;
+}
+
+#spinner:after {
+  animation: shadow 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  bottom: -.5em;
+  height: .25em;
+  border-radius: 50%;
+  background-color: rgba(#000, 0.2);
+}
+
+@keyframes spinner {
+  50% {
+    border-radius: 50%;
+    transform: scale(0.5) rotate(360deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(720deg);
+  }
+}
+
+@keyframes shadow {
+  50% {
+    transform: scale(0.5);
+    background-color: rgba(#000, 0.1);
+  }
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000a0;
 }
