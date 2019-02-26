@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-undef */
 /* eslint-disable no-console */
 const APPID = 'e33262cd6a432b1c3dc5181a736dbc41';
@@ -10,16 +11,16 @@ const content = document.querySelector('.content');
 
 
 function showSpinner() {
-    spinner.setAttribute("style", "display: block;");
-    overlay.setAttribute("style", "display: block;");
-    content.setAttribute("style", "display: none;");
+    spinner.setAttribute('style', 'display: block;');
+    overlay.setAttribute('style', 'display: block;');
+    content.setAttribute('style', 'display: none;');
 }
 
 function hideSpinner() {
     setTimeout(() => {
-        spinner.setAttribute("style", "display: none;");
-        overlay.setAttribute("style", "display: none;");
-        content.setAttribute("style", "display: block;");
+        spinner.setAttribute('style', 'display: none;');
+        overlay.setAttribute('style', 'display: none;');
+        content.setAttribute('style', 'display: block;');
     }, 2000);
 
 }
@@ -39,7 +40,8 @@ const historicalReview = {
         const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
         fetch(url)
             .then(function (response) {
-                return Promise.all([response.status, response.json()])
+                hideSpinner();
+                return Promise.all([response.status, response.json()]);
             })
             .then(function (result) {
                 if (result[0] != 200) {
@@ -49,8 +51,8 @@ const historicalReview = {
                 }
             }).catch(function (error) {
                 console.log(error);
-            })
-        hideSpinner();
+            });
+       
     },
     render(data) {
         const city = data.name;

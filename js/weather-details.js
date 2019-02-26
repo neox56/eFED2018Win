@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-console */
@@ -12,16 +13,16 @@ const content = document.querySelector('.content');
 
 
 function showSpinner() {
-    spinner.setAttribute("style", "display: block;");
-    overlay.setAttribute("style", "display: block;");
-    content.setAttribute("style", "display: none;");
+    spinner.setAttribute('style', 'display: block;');
+    overlay.setAttribute('style', 'display: block;');
+    content.setAttribute('style', 'display: none;');
 }
 
 function hideSpinner() {
     setTimeout(() => {
-        spinner.setAttribute("style", "display: none;");
-        overlay.setAttribute("style", "display: none;");
-        content.setAttribute("style", "display: block;");
+        spinner.setAttribute('style', 'display: none;');
+        overlay.setAttribute('style', 'display: none;');
+        content.setAttribute('style', 'display: block;');
     }, 2000);
 
 }
@@ -46,7 +47,8 @@ const page = {
         const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
         fetch(url)
             .then(function (response) {
-                return Promise.all([response.status, response.json()])
+                hideSpinner();
+                return Promise.all([response.status, response.json()]);
             })
             .then(function (result) {
                 if (result[0] != 200) {
@@ -56,14 +58,14 @@ const page = {
                 }
             }).catch(function (error) {
                 console.log(error);
-            })
-        hideSpinner();
+            });
+       
     },
     getPollution(callback, AIR_POLLUTIONS_DETAILS) {
         const url = `${AIR_POLLUTIONS_DETAILS}`;
         fetch(url)
             .then(function (response) {
-                return Promise.all([response.status, response.json()])
+                return Promise.all([response.status, response.json()]);
             })
             .then(function (result) {
                 if (result[0] != 200) {
@@ -73,7 +75,7 @@ const page = {
                 }
             }).catch(function (error) {
                 console.log(error);
-            })
+            });
     },
 
     render(data) {
@@ -104,10 +106,10 @@ const page = {
 
     renderGrahps(data) {
         dayTemp = document.getElementsByClassName('temperature-block')[0],
-            dayPrecipitation = document.getElementsByClassName('rainfall-block')[0],
-            dayWind = document.getElementsByClassName('wind-block')[0],
-            tempData = '',
-            precipitationData = '';
+        dayPrecipitation = document.getElementsByClassName('rainfall-block')[0],
+        dayWind = document.getElementsByClassName('wind-block')[0],
+        tempData = '',
+        precipitationData = '';
         windData = '';
         Grahps = data.list.slice(0, 8);
         for (let i = 0; i < Grahps.length; i++) {

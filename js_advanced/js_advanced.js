@@ -1,8 +1,11 @@
-//2.Промисификация: 
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-redeclare */
+/* eslint-disable no-console */
+//2.Промисификация:
 function compare(value1, value2) {
     return new Promise(function (resolve, reject) {
         let diff;
-        if (typeof (value1) !== 'number' || typeof (value2) === 'number') {
+        if (typeof value1 !== 'number' || typeof value2 === 'number') {
             if (value1 < value2) diff = -1;
             else if (value1 > value2) diff = 1;
             else diff = 0;
@@ -28,8 +31,8 @@ function random(sumWith) {
         var timeout = Math.random() * 3000;
         setTimeout(function () {
             resolve(Math.random() * 3 + sumWith);
-        }, timeout)
-    })
+        }, timeout);
+    });
 }
 random(3)
     .then(function (res) {
@@ -42,8 +45,7 @@ random(3)
     })
     .then(function (res) {
         console.log(res);
-    })
-
+    });
 
 //Цепочка промисов для задания 'b':
 function random() {
@@ -51,52 +53,50 @@ function random() {
         var timeout = Math.random() * 3000;
         setTimeout(function () {
             resolve(Math.random() * 3);
-        }, timeout)
-    })
+        }, timeout);
+    });
 }
-
-Promise.all([random(), random(), random(), random(), random(), random(), random()])
+Promise.all([random(),random(),random(),random(),random(),random(),random()])
     .then(function (array) {
         console.log(array);
     });
 
 //4.Замыкания:
-let counter = {
-    next: function () {
-        let currentCount = 1;
-        return function () {
-            return currentCount++;
-        };
-    },
-    prev: function () {
-        let currentCount = 5;
-        return function () {
-            return currentCount--;
-        };
-    },
-}
-let next = counter.next();
-let prev = counter.prev();
-console.log(next());
-console.log(next());
-console.log(next());
-console.log(next());
-console.log(next());
-console.log(prev());
-console.log(prev());
-console.log(prev());
-console.log(prev());
-console.log(prev());
+let counter = (function () {
+    let count = 0;
+    return {
+        next: function () {
+            count++;
+            return count;
+        },
+        prev: function () {
+            count--;
+            return count;
+        },
+    };
+})();
+
+console.log(counter.next());
+console.log(counter.next());
+console.log(counter.next());
+console.log(counter.next());
+console.log(counter.next());
+console.log(counter.prev());
+console.log(counter.prev());
+console.log(counter.prev());
+console.log(counter.prev());
+console.log(counter.prev());
 
 //5.Контекст вызова и карринг:
 function sumWith(number) {
-    return this.currentValue += number;
+    return (this.currentValue += number);
 }
 
 var number = 2;
-alert(sumWith.bind({
+var value = {
     currentValue: 3
-})(number));
+};
+console.log(sumWith.call(value, number));
 
 //6.setInterval:.
 let count = 0;
@@ -105,6 +105,6 @@ let currentCount = setInterval(function () {
     console.log('Начало');
     if (count >= 5) {
         clearInterval(currentCount);
-        console.log("Конец");
+        console.log('Конец');
     }
 }, 2000);
