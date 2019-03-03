@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-undef */
 /* eslint-disable no-console */
 const APPID = 'e33262cd6a432b1c3dc5181a736dbc41';
@@ -10,17 +11,18 @@ const content = document.querySelector('.content');
 
 
 function showSpinner() {
-    spinner.setAttribute("style", "display: block;");
-    overlay.setAttribute("style", "display: block;");
-    content.setAttribute("style", "display: none;");  
+    spinner.setAttribute('style', 'display: block;');
+    overlay.setAttribute('style', 'display: block;');
+    content.setAttribute('style', 'display: none;');
 }
+
 function hideSpinner() {
-        setTimeout(() => {
-            spinner.setAttribute("style", "display: none;"); 
-            overlay.setAttribute("style", "display: none;");
-            content.setAttribute("style", "display: block;");  
-        }, 2000); 
-           
+    setTimeout(() => {
+        spinner.setAttribute('style', 'display: none;');
+        overlay.setAttribute('style', 'display: none;');
+        content.setAttribute('style', 'display: block;');
+    }, 2000);
+
 }
 const fiveDays = {
     init: function () {
@@ -35,36 +37,41 @@ const fiveDays = {
             this.getfiveDaysForecast(city, this.renderWindPrecipitation);
         });
     },
-    
-    getWeatherDetails(city, callback,) {
+
+    getWeatherDetails(city, callback, ) {
         showSpinner();
         const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
-        const xhr = new XMLHttpRequest();
-
-        xhr.onload = function () {
-            if (this.readyState === 4 && this.status === 200) {
-                console.log(JSON.parse(xhr.responseText));
-                callback(JSON.parse(xhr.responseText));
-            }
-            hideSpinner();
-        };
-
-        xhr.open('GET', url, true); 
-        xhr.send(); 
+        fetch(url)
+            .then(function (response) {
+                hideSpinner();
+                return Promise.all([response.status, response.json()]);
+            })
+            .then(function (result) {
+                if (result[0] != 200) {
+                    console.log('Ошибка');
+                } else {
+                    callback(result[1]);
+                }
+            }).catch(function (error) {
+                console.log(error);
+            });
+       
     },
-    getfiveDaysForecast(city, callback,) {
+    getfiveDaysForecast(city, callback, ) {
         const url = `${WEATHER_DETAILS_FIVE_DAYS}${city}`;
-        const xhr = new XMLHttpRequest();
-
-        xhr.onload = function () {
-            if (this.readyState === 4 && this.status === 200) {
-                console.log(JSON.parse(xhr.responseText));
-                callback(JSON.parse(xhr.responseText));
-            }
-        };
-
-        xhr.open('GET', url, true); 
-        xhr.send(); 
+        fetch(url)
+            .then(function (response) {
+                return Promise.all([response.status, response.json()]);
+            })
+            .then(function (result) {
+                if (result[0] != 200) {
+                    console.log('Ошибка');
+                } else {
+                    callback(result[1]);
+                }
+            }).catch(function (error) {
+                console.log(error);
+            });
     },
     render(data) {
         const city = data.name;
@@ -76,10 +83,14 @@ const fiveDays = {
         document.getElementById('current_temperature').innerHTML = `${currentTemperature}&#176C`;
     },
 
-    renderSunMoon(data){
+    renderSunMoon(data) {
         const sunrise = new Date(data.sys.sunrise * 1000);
         const sunset = new Date(data.sys.sunset * 1000);
-        const currentDay = new Date(data.dt * 1000).toLocaleString('RU', {weekday: 'long', day:'numeric', month: 'long'});
+        const currentDay = new Date(data.dt * 1000).toLocaleString('RU', {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long'
+        });
         const timestr = sunrise.toLocaleTimeString();
         const timeSun = sunset.toLocaleTimeString();
         const lengthHours = Math.floor((sunset - sunrise) / (3600 * 1000));
@@ -88,19 +99,19 @@ const fiveDays = {
         document.querySelector('.sunrise').textContent = 'Восход - ' + timestr;
         document.querySelector('.sunset').textContent = 'Заход - ' + timeSun;
         document.querySelector('.sunriseMoon').textContent = 'Восход - ' + timeSun;
-        document.querySelector('.sunsetMoon').textContent = 'Заход - ' +  timestr ;
+        document.querySelector('.sunsetMoon').textContent = 'Заход - ' + timestr;
         document.querySelector('.calendar_day').textContent = currentDay + ',сегодня ';
     },
 
-    renderWindPrecipitation(data){
+    renderWindPrecipitation(data) {
         let dayWindSpeed = document.querySelector('.wind_speed_value'),
             dayPrecipitation = document.querySelector('.rainfall_value'),
             windValue = '',
-            precipitationValue= '',
-            weekForecast = data.list.slice(0,5);
+            precipitationValue = '',
+            weekForecast = data.list.slice(0, 5);
         for (let i = 0; i < weekForecast.length; i++) {
             windSpeed = weekForecast[i].wind.speed;
-            precipitationData = weekForecast[i].clouds.all/10;
+            precipitationData = weekForecast[i].clouds.all / 10;
             windValue += `<p>
               <span class="square"><mark>${windSpeed.toFixed()}</mark></span>
               <span class="square"><mark>${windSpeed.toFixed()}</mark></span>
@@ -116,10 +127,7 @@ const fiveDays = {
         }
         dayWindSpeed.innerHTML = windValue;
         dayPrecipitation.innerHTML = precipitationValue;
-    }  
+    }
 };
 
 fiveDays.init();
-
-
-
