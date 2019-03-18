@@ -92,7 +92,7 @@ const page = {
         document.getElementById('location').innerHTML = `${city}, ${country}`;
         document.getElementById('day_weeks').innerHTML = `${date.toLocaleString('ru', { weekday: 'long' })}`;
         document.getElementById('weather_types').innerHTML = `${weatherTypes}`;
-        document.getElementById('weatherImg').src = `http://openweathermap.org/img/w/${weatherImg}.png`;
+        document.getElementById('weatherImg').src = `https://openweathermap.org/img/w/${weatherImg}.png`;
         document.getElementById('current_temperature').innerHTML = `${currentTemperature}&#176C`;
         document.getElementById('humidity').innerHTML = ` Влажность: ${humidity}%`;
         document.getElementById('wind').innerHTML = `Ветер: ${windSpeed.toFixed()} м/с`;
@@ -151,7 +151,7 @@ const page = {
             number += `<section class=" border container-days">
                         <span>${date}</span>
                         <figure>
-                            <img src="http://openweathermap.org/img/w/${icon}.png">
+                            <img src="https://openweathermap.org/img/w/${icon}.png">
                         </figure>
                         <figcaption>
                             <span id="maxTemp">${maxTemp.toFixed()}°</span>

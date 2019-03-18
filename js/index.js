@@ -79,7 +79,7 @@ const fiveDays = {
         const currentTemperature = Math.round(data.main.temp);
         const weatherImg = data.weather[0].icon;
         document.getElementById('location').innerHTML = `${city}, ${country}`;
-        document.getElementById('weatherImg').src = `http://openweathermap.org/img/w/${weatherImg}.png`;
+        document.getElementById('weatherImg').src = `https://openweathermap.org/img/w/${weatherImg}.png`;
         document.getElementById('current_temperature').innerHTML = `${currentTemperature}&#176C`;
     },
 
