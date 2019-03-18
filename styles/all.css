@@ -2,7 +2,7 @@ body {
 	margin: 0 auto;
 	width: 1000px;
 	border: 1px solid #9b9b9b;
-	font-family: 'Times New Roman','Roboto', sans-serif;
+	font-family: "Times New Roman", "Roboto", "sans-serif";
 }
 
 .header {
@@ -15,6 +15,8 @@ body {
 	margin-bottom: -10px;
 	margin-left: -32px;
 	text-decoration: none;
+	display: flex;
+	margin-top: 5px;
 }
 
 .color-button {
@@ -25,13 +27,14 @@ body {
 	border: 1px solid #9b9b9b;
 	background-color: #f7f7f7;
 	list-style-type: none;
-	float: left;
 	text-align: center;
 	font-size: 20px;
 }
-.active{
+
+.active {
 	background-color: #9b9b9b;
 }
+
 .header .menu ul li a {
 	text-decoration: none;
 	color: black;

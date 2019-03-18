@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-console */
@@ -6,8 +7,25 @@ const WEATHER_DETAILS_ENDPOINT = `http://api.openweathermap.org/data/2.5/weather
 const AIR_POLLUTIONS_DETAILS = `http://api.openweathermap.org/pollution/v1/co/53,21/current.json?appid=${APPID}`;
 const WEATHER_DETAILS_FIVE_DAYS = `http://api.openweathermap.org/data/2.5/forecast?&units=metric&appid=${APPID}&lang=ru&q=`;
 const defaultCity = 'Izhevsk';
+const spinner = document.getElementById('spinner');
+const overlay = document.getElementById('overlay');
+const content = document.querySelector('.content');
 
 
+function showSpinner() {
+    spinner.setAttribute('style', 'display: block;');
+    overlay.setAttribute('style', 'display: block;');
+    content.setAttribute('style', 'display: none;');
+}
+
+function hideSpinner() {
+    setTimeout(() => {
+        spinner.setAttribute('style', 'display: none;');
+        overlay.setAttribute('style', 'display: none;');
+        content.setAttribute('style', 'display: block;');
+    }, 2000);
+
+}
 const page = {
     init: function () {
         this.getWeatherDetails(defaultCity, this.render, WEATHER_DETAILS_ENDPOINT);
@@ -25,31 +43,39 @@ const page = {
     },
 
     getWeatherDetails(city, callback, WEATHER_DETAILS_ENDPOINT) {
+        showSpinner();
         const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
-        const xhr = new XMLHttpRequest();
-        
-
-        xhr.onload = function () {
-            if (this.readyState === 4 && this.status === 200) {
-                console.log(JSON.parse(xhr.responseText));
-                callback(JSON.parse(xhr.responseText));
-            }
-        };
-
-        xhr.open('GET', url, true); //настройка запроса
-        xhr.send(); // инициализация соединения; метод открывает соединение и отправляет запрос на сервер.
+        fetch(url)
+            .then(function (response) {
+                hideSpinner();
+                return Promise.all([response.status, response.json()]);
+            })
+            .then(function (result) {
+                if (result[0] != 200) {
+                    console.log('Ошибка');
+                } else {
+                    callback(result[1]);
+                }
+            }).catch(function (error) {
+                console.log(error);
+            });
+       
     },
     getPollution(callback, AIR_POLLUTIONS_DETAILS) {
         const url = `${AIR_POLLUTIONS_DETAILS}`;
-        const xhr = new XMLHttpRequest();
-        xhr.onload = function () {
-            if (this.readyState === 4 && this.status === 200) {
-                console.log(JSON.parse(xhr.responseText));
-                callback(JSON.parse(xhr.responseText));
-            }
-        };
-        xhr.open('GET', url, true);
-        xhr.send();
+        fetch(url)
+            .then(function (response) {
+                return Promise.all([response.status, response.json()]);
+            })
+            .then(function (result) {
+                if (result[0] != 200) {
+                    console.log('Ошибка');
+                } else {
+                    callback(result[1]);
+                }
+            }).catch(function (error) {
+                console.log(error);
+            });
     },
 
     render(data) {
@@ -77,20 +103,20 @@ const page = {
         const airPollution = Math.random(data.value) * 10 + 'e-8';
         document.getElementById('air-pollution').innerHTML = `Загрязнение воздуха: ${airPollution}`;
     },
-      
+
     renderGrahps(data) {
         dayTemp = document.getElementsByClassName('temperature-block')[0],
         dayPrecipitation = document.getElementsByClassName('rainfall-block')[0],
         dayWind = document.getElementsByClassName('wind-block')[0],
         tempData = '',
         precipitationData = '';
-        windData ='';
+        windData = '';
         Grahps = data.list.slice(0, 8);
         for (let i = 0; i < Grahps.length; i++) {
             temperature = Grahps[i].main.temp;
             precipitation = Grahps[i].clouds.all;
             wind = Grahps[i].wind.speed;
-            tempData +=  ` <div class="temperature-level">
+            tempData += ` <div class="temperature-level">
                            <div class="low-temperature"></div>
                            <span>${temperature.toFixed()}</span>
                            </div> `;
@@ -102,20 +128,22 @@ const page = {
                          <div class="wind-rotation-mid">
                          <img src="assets/wind.png" alt="wind-icon"></div>
                          <span>${wind.toFixed()} м/с</span>
-                         </div>`;  
+                         </div>`;
         }
         dayTemp.innerHTML = tempData;
         dayPrecipitation.innerHTML = precipitationData;
         dayWind.innerHTML = windData;
     },
- 
+
 
     renderfiveDays(data) {
         let dayWeek = document.querySelector('.container-days'),
             number = '',
             weekForecast = data.list.filter(item => item.dt_txt.indexOf('18:00:00') > -1);
         for (let i = 0; i < weekForecast.length; i++) {
-            let date = new Date(weekForecast[i].dt * 1000).toLocaleString('ru-RU', { weekday: 'short' });
+            let date = new Date(weekForecast[i].dt * 1000).toLocaleString('ru-RU', {
+                weekday: 'short'
+            });
             icon = weekForecast[i].weather[0].icon;
             typeWeather = weekForecast[i].weather[0].description;
             maxTemp = weekForecast[i].main.temp_max;
@@ -135,5 +163,3 @@ const page = {
     }
 };
 page.init();
-
-

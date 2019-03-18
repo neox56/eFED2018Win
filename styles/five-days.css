@@ -1,10 +1,72 @@
-header h1 {
-  margin: 5px 0px 0px 0px;
+body {
+  margin: 0 auto;
+  width: 1000px;
+  border: 1px solid #9b9b9b;
+  font-family: "Times New Roman", "Roboto", "sans-serif";
+  box-sizing: border-box;
+
+}
+
+.header {
+  border: 1px solid #9b9b9b;
+  margin: -1px -1px;
+  background-color: #d8d8d8;
+  width: 100%;
+  position: sticky;
+  z-index: 1;
+}
+
+.header .header-menu ul {
+  margin-bottom: -10px;
+  margin-left: -32px;
+  text-decoration: none;
+  display: flex;
+  margin-top: 5px;
+}
+
+.color-button {
+  margin-left: 15px;
+  height: 26px;
+  width: 165px;
+  line-height: 27px;
+  border: 1px solid #9b9b9b;
+  background-color: #f7f7f7;
+  list-style-type: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+.active {
+  background-color: #9b9b9b;
+}
+
+.header .header-menu ul li a {
+  text-decoration: none;
+  color: black;
+  height: 101%;
+  display: block;
+}
+
+.header .header-menu ul li a:hover {
+  background-color: #9b9b9b;
+}
+
+#link {
+  width: 95px;
+}
+
+.footer {
+  border: 1px solid #9b9b9b;
+  text-align: center;
+  padding: 11px;
+  background: #d8d8d8;
+  position: sticky;
+  bottom: 0;
 }
 
 .city_weather {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 16px;
   border-top: 1px solid #979797;
   height: 49px;
   background-color: #f2f2f2;
@@ -34,15 +96,12 @@ header h1 {
   outline: none;
 }
 
-.city_weather button {
-  float: right;
-  border: none;
+.city_weather::before {
+  content: url(../assets/loupe.png);
+  position: absolute;
+  right: 203px;
+  bottom: 16px;
   cursor: pointer;
-  height: 21px;
-  width: 19px;
-  margin-top: 15px;
-  margin-right: -25px;
-  background-image: url(../assets/loupe.png);
 }
 
 .city_weather_img {
@@ -150,7 +209,7 @@ header h1 {
 }
 
 .navigation_container {
-  left: -18px;
+  margin-left: -26px;
   bottom: 13px;
   text-align: center;
   position: relative;
@@ -163,11 +222,6 @@ header h1 {
 .next {
   left: 688px;
   bottom: 54px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: white;
 }
 
 .button_slide {
@@ -327,7 +381,7 @@ header h1 {
 }
 
 .day_length,
-.sunrise,
+.moon-rising .sunrise,
 .sunset,
 .sunsetMoon,
 .sunriseMoon {
@@ -336,4 +390,697 @@ header h1 {
 
 .currentSlide {
   display: block;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .header {
+    top: 0;
+  }
+
+  body {
+    width: 100%;
+    margin: 0;
+  }
+
+  .footer {
+    font-size: 13px;
+  }
+
+  .content {
+    margin-left: 39px;
+  }
+
+  #link {
+    width: 50px;
+  }
+
+  .color-button {
+    width: 114px;
+    font-size: 13px;
+  }
+
+  .city_weather span {
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .city_weather input[type="search"] {
+    width: 152px;
+    margin-top: 17px;
+    margin-left: -103px;
+    height: 30px;
+    float: none;
+  }
+
+  .city_weather::before {
+    right: 195px;
+    bottom: 3px;
+  }
+
+  .left_block,
+  .right_block {
+    font-size: 13px;
+  }
+
+  .city_weather_img {
+    position: relative;
+    top: 18px;
+  }
+
+  #current_temperature {
+    position: relative;
+    top: 10px;
+    left: -5px;
+  }
+
+  #location {
+    float: left;
+    font-size: 13px;
+    margin: 2px 0px 0px 56px;
+  }
+
+  .slider {
+    margin: 0;
+    position: initial;
+  }
+
+  .part_day {
+    font-size: 13px;
+    width: 237px;
+    position: initial;
+  }
+
+  .day {
+    width: 238px;
+  }
+
+  .times_day {
+    margin: 3px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .figure_fixed {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .figure_fixed img {
+    padding: 0px 0px 5px 20px;
+  }
+
+  .temperature_container {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+  }
+
+  .temperature_container span {
+    margin: 0;
+    padding: 0px 5px;
+    width: 23px;
+  }
+
+  .navigation_container {
+    bottom: 18px;
+    position: relative;
+    margin-left: 27px;
+  }
+
+  .static {
+    position: absolute;
+  }
+
+  .step_container {
+    display: flex;
+    position: relative;
+    bottom: 100px;
+    justify-content: space-between;
+  }
+
+  .prev,
+  .next {
+    margin-left: -26px;
+    bottom: -47px;
+    left: -1px;
+  }
+
+  .next {
+    left: 262px;
+    bottom: -49px;
+  }
+
+  .max_wind_speed {
+    width: 252px;
+  }
+
+  .wind_speed_value {
+    width: 100%;
+    margin-left: 15.5px;
+  }
+
+  .wind_speed_value p {
+    height: 114px;
+    width: 49.7px;
+    margin: -1px 0px -1px -1px;
+  }
+
+  .wind_speed_value .square {
+    margin: 12px 7px 0px 11px;
+    display: flex;
+  }
+
+  .wind_speed_value span mark {
+    margin: -2px 0px 0px 3px;
+    font-size: 16px;
+  }
+
+  .rainfall {
+    display: flex;
+    justify-content: center;
+    width: 252px;
+    margin-left: 15px;
+  }
+
+  .rainfall_value {
+    width: 100%;
+    margin-left: 16px;
+  }
+
+  .rainfall_value p {
+    width: 49.7px;
+    padding-top: 15px;
+    line-height: 32px;
+    height: 74px;
+  }
+
+  .rainfall_value span {
+    display: inline-block;
+    margin: -12px 5px 0px 12px;
+    display: flex;
+  }
+
+  .chart_small,
+  .chart_big {
+    background-image: none;
+  }
+
+  .calendar_sun_moon {
+    width: 253px;
+    margin: 11px 0px 0px -7px;
+    height: 68px;
+  }
+
+  .calendar_day {
+    float: none;
+    font-size: 16px;
+    margin: 3px -10px 0px 8px;
+  }
+
+  .sun_moon {
+    margin: -2px 0px 0px 6px;
+    float: none;
+    font-size: 16px;
+  }
+
+  .block-container {
+    position: relative;
+    right: 21px;
+    top: -8px;
+    margin-top: 20px;
+  }
+
+  .sun_settings {
+    position: relative;
+    top: 4px;
+    right: -11px;
+  }
+
+  .sun-block {
+    margin: 0;
+    width: 79%;
+  }
+
+  .sun-block img {
+    float: left;
+    position: relative;
+    top: 8px;
+    left: -9px;
+    width: 40%;
+  }
+
+  .settings_value {
+    float: none;
+    margin: 0;
+    line-height: 0;
+    font-size: 16px;
+  }
+
+  .day_length,
+  .sunrise,
+  .sunset {
+    display: block;
+    line-height: 28px;
+    width: 212px;
+    font-size: 16px;
+  }
+
+  .sun_settings figcaption {
+    margin: 0px -41px 8px -7px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .moon-block {
+    margin: 0;
+    width: 92%;
+  }
+
+  .moon_settings {
+    position: relative;
+    top: -3px;
+    left: 29px;
+  }
+
+  .moon-block img {
+    float: left;
+    position: relative;
+    top: 4px;
+    left: -20px;
+    width: 30%;
+  }
+
+  .sunsetMoon,
+  .sunriseMoon,
+  .moon-rising {
+    position: relative;
+    line-height: 28px;
+    width: 212px;
+    font-size: 16px;
+  }
+
+  .moon_settings figcaption {
+    font-size: 16px;
+    width: 247px;
+    margin: 3px 0px 9px -18px;
+  }
+}
+
+@media (min-width: 375px) {
+  .content {
+    margin-left: 61px;
+  }
+
+  .city_weather::before {
+    right: 227px;
+  }
+
+  #location {
+    float: left;
+    font-size: 13px;
+    margin: 2px 0px 0px 77px;
+  }
+}
+
+@media (min-width: 425px) {
+  .content {
+    margin-left: 89px;
+  }
+
+  .city_weather::before {
+    right: 251px;
+  }
+
+  #location {
+    float: left;
+    font-size: 13px;
+    margin: 2px 0px 0px 77px;
+    position: relative;
+    left: 33px;
+  }
+
+  .city_weather input[type="search"] {
+    margin-left: -76px;
+  }
+}
+
+@media (min-width: 533px) {
+  body {
+    width: 100%;
+  }
+
+  .city_weather::before {
+    right: 305px;
+  }
+
+  .content {
+    margin-left: 144px;
+  }
+
+  #location {
+    float: left;
+    font-size: 13px;
+    margin: 2px 0px 0px 77px;
+    position: relative;
+    left: 87px;
+  }
+
+  .city_weather input[type="search"] {
+    margin-left: -20px;
+  }
+}
+
+@media (min-width: 644px) {
+  .content {
+    margin-left: 185px;
+  }
+}
+
+@media (min-width: 679px) {
+  .content {
+    margin-left: 185px;
+  }
+}
+
+@media (min-width: 664px) {
+  .wind_speed_value {
+    height: 115px;
+  }
+}
+
+@media (min-width: 685px) {
+  .content {
+    margin-left: 228px;
+  }
+
+  #location {
+    left: 173px;
+  }
+
+  .city_weather input[type="search"] {
+    margin-left: 60px;
+  }
+}
+
+@media (min-width: 728px) {
+  .content {
+    margin-left: 276px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+  }
+
+  .content {
+    margin-left: 141px;
+  }
+
+  #location {
+    margin: 13px 0px 0px 16px;
+    font-size: 20px;
+    left: 0;
+  }
+
+  .city_weather::before {
+    bottom: 10px;
+    right: 202px;
+  }
+
+  .block-container {
+    margin-left: -127px;
+  }
+
+  .sun_settings,
+  .moon_settings {
+    display: inline-block;
+    margin-left: -52px;
+  }
+
+  .slider {
+    margin: 0px 0px 0px 36px;
+  }
+
+  .navigation_container {
+    margin-left: -118px;
+  }
+
+  .next {
+    left: 467px;
+    bottom: 54px;
+  }
+
+  .prev {
+    left: 4px;
+    top: -103px;
+  }
+
+  .max_wind_speed {
+    width: 714px;
+  }
+
+  .wind_speed_value {
+    width: 715px;
+    margin-left: 15.5px;
+    height: 39px;
+  }
+
+  .wind_speed_value p {
+    width: 142px;
+  }
+
+  .wind_speed_value .square {
+    margin: 12px 7px 0px 7px;
+    width: 18.5px;
+  }
+
+  .rainfall {
+    width: 714px;
+  }
+
+  .rainfall_value {
+    width: 714px;
+    height: 84px;
+    margin-left: 16px;
+  }
+
+  .rainfall_value p {
+    width: 141.8px;
+  }
+
+  .rainfall_value span {
+    margin: 0px 5px 0px 3px;
+  }
+
+  .calendar_sun_moon {
+    width: 714px;
+    margin-left: -112px;
+  }
+
+  .sun_moon {
+    margin: 3px 273px 0px 0px;
+  }
+
+  .sun-block {
+    margin-left: -68px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+    width: 1024px;
+  }
+
+  .content {
+    margin-left: 39px;
+  }
+
+  #location {
+    margin: 13px 0px 0px 16px;
+    font-size: 20px;
+    left: 0;
+  }
+
+  .city_weather button {
+    margin-right: -25px;
+  }
+
+  .city_weather input[type="search"] {
+    margin-left: 0px;
+  }
+
+  .slider {
+    margin: 0px 0px 0px 256px;
+  }
+
+  .block-container {
+    margin-left: 7px;
+  }
+
+  .navigation_container {
+    margin-left: -26px;
+    bottom: 13px;
+    text-align: center;
+    position: relative;
+  }
+
+  .prev,
+  .next {
+    left: 224px;
+  }
+
+  .next {
+    left: 688px;
+    bottom: 54px;
+  }
+
+  .sun_settings,
+  .moon_settings {
+    display: inline-block;
+    margin-left: 55px;
+  }
+
+  .max_wind_speed {
+    width: 899px;
+  }
+
+  .wind_speed_value {
+    width: 901px;
+  }
+
+  .wind_speed_value .square {
+    margin: 12px 7px 0px 7px;
+    width: 27px;
+  }
+
+  .wind_speed_value p {
+    width: 179.1px;
+  }
+
+  .rainfall {
+    width: 899px;
+  }
+
+  .rainfall_value {
+    width: 901px;
+  }
+
+  .rainfall_value p {
+    height: 37px;
+    width: 179.1px;
+  }
+
+  .rainfall_value span {
+    margin: 0px 5px 0px 12px;
+  }
+
+  .calendar_sun_moon {
+    width: 899px;
+    margin-left: 22px;
+  }
+
+  .sun-block {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    width: 100%;
+  }
+
+  .slider {
+    margin: 0px 0px 0px 480px;
+  }
+
+  .prev,
+  .next {
+    left: 448px;
+  }
+
+  .next {
+    left: 911px;
+  }
+
+  .block-container {
+    margin-left: 247px;
+  }
+
+  .calendar_sun_moon {
+    margin-left: 262px;
+  }
+
+  .sun-block {
+    margin-left: 263px;
+  }
+}
+
+#spinner {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25x;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#spinner:before,
+#spinner:after {
+  content: "";
+  position: relative;
+  display: block;
+}
+
+#spinner:before {
+  animation: spinner 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  width: 5em;
+  height: 5em;
+  background-color: whitesmoke;
+}
+
+#spinner:after {
+  animation: shadow 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  bottom: -0.5em;
+  height: 0.25em;
+  border-radius: 50%;
+  background-color: rgba(#000, 0.2);
+}
+
+@keyframes spinner {
+  50% {
+    border-radius: 50%;
+    transform: scale(0.5) rotate(360deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(720deg);
+  }
+}
+
+@keyframes shadow {
+  50% {
+    transform: scale(0.5);
+    background-color: rgba(#000, 0.1);
+  }
+}
+
+#overlay {
+  z-index: 2;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000a0;
 }
