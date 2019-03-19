@@ -464,19 +464,17 @@ body {
     font-size: 13px;
     margin: 2px 0px 0px 50px;
   }
-
+  .air_pollution ::before {
+    bottom: 3px;
+    left: 88px;
+  }
   .air_pollution input[type="search"] {
     height: 30px;
     width: 152px;
     margin-top: -1px;
-    margin-right: 77px;
-    float: right;
+    margin-left: 82px;
+    float: none;
   }
-
-  .air_pollution ::before {
-    bottom: 3px;
-  }
-
   .left-right {
     margin-top: 13px;
   }
@@ -552,7 +550,26 @@ body {
     font-size: 13px
   }
 }
-
+@media(min-width:375px){
+  .air_pollution ::before {
+    bottom: 3px;
+    margin-left: 23px;
+  }
+  .air_pollution input[type="search"] {
+    margin-left: 106px;
+}
+}
+@media(min-width:425px){
+  .air_pollution span {
+    margin: 2px 0px 0px 76px;
+}
+.air_pollution input[type="search"] {
+  margin-left: 124px;
+}
+.air_pollution ::before {
+  margin-left: 41px;
+}
+}
 @media (min-width: 533px) {
   .air_pollution input[type="search"] {
     height: 30px;
@@ -727,3 +744,4 @@ body {
   bottom: 0;
   background: #000000a0;
 }
+

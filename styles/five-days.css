@@ -433,7 +433,7 @@ body {
   }
 
   .city_weather::before {
-    right: 195px;
+    right: 207px;
     bottom: 3px;
   }
 
@@ -694,7 +694,7 @@ body {
   }
 
   .city_weather::before {
-    right: 227px;
+    right: 241px;
   }
 
   #location {
@@ -710,7 +710,7 @@ body {
   }
 
   .city_weather::before {
-    right: 251px;
+    right: 264px;
   }
 
   #location {
@@ -732,7 +732,7 @@ body {
   }
 
   .city_weather::before {
-    right: 305px;
+    right: 316px;
   }
 
   .content {
@@ -811,7 +811,7 @@ body {
   }
 
   .city_weather::before {
-    bottom: 10px;
+    bottom: 9px;
     right: 202px;
   }
 

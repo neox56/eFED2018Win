@@ -300,7 +300,7 @@ body {
 
   .city_weather::before {
     right: 220px;
-    top: 16px;
+    top: 15px;
     position: relative;
     float: right;
   }
