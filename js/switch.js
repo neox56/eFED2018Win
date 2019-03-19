@@ -1,8 +1,9 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-redeclare */
 /* eslint-disable no-undef */
-var iconArr = document.getElementsByClassName('iconGraph');
-var buttonArr = document.getElementsByClassName('clickButton');
-var buttonContainer = document.getElementById('buttons_container');
+const iconArr = document.getElementsByClassName('iconGraph');
+const buttonArr = document.getElementsByClassName('clickButton');
+const buttonContainer = document.getElementById('buttons_container');
 
 buttonContainer.addEventListener('click', function(event){
     if(event.target.classList.contains('clickButton')){
