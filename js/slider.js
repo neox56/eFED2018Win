@@ -1,7 +1,8 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-undef */
-var sliderContain = document.querySelector('#sliderContainer');
-var buttonSlide = document.getElementsByClassName('button_slide');
-var elements = document.getElementsByClassName('slider');
+const  sliderContain = document.querySelector('#sliderContainer');
+const  buttonSlide = document.getElementsByClassName('button_slide');
+const elements = document.getElementsByClassName('slider');
 
 sliderContain.addEventListener('click', function (event) {
     if (event.target.classList.contains('next')) {
